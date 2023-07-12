@@ -37,7 +37,7 @@
 % X Figura Analisi Energetica Pendolo Semplice;
 % V Sistemi di Punti Materiali;
 % V Grafico Sistema di Riferimento c.d.m.;
-% X Urti Anaelastici Libro;
+% V Urti Anaelastici Libro;
 % V Sistemare Sommatorie;
 % V Aggiustare Cerchi In Prospettiva;
 % V Gittata per h=0 al posto delle cazzate che ho scritto smh;
@@ -3566,19 +3566,32 @@ con una velocità:
 
 
 Un urto anaelastico è un urto dove non viene conservata 
-l'energia: $K_f<K_i$, si disperde nell'ambiente una porzione 
+l'energia: $K_f<K_i$, si disperde nell'\\ambiente una porzione 
 dell'energia cinetica iniziale. Di conseguenza, le velocità 
 finali saranno minori dei loro valori in un urto elastico. 
 \\
-Un urto viene definito completamente anaelastico quando l'energia 
-cinetica viene dissipata completamente durante l'urto $K_f=0$, quindi i 
-corpi dopo l'urto saranno in uno stato di quiete $v_{(1,2),f}=0$. 
+Un urto viene definito perfettamente anaelastico se i due corpi dopo la collisione rimangono a contatto. Per cui la velocità dei due corpi corrisponde 
+alla velocità del centro di massa del sistema dopo l'urto. L'energia cinetica non viene conservata, per cui una porzione verrà dissipata nell'ambiente 
+esterno sotto forma di calore, mentre la quantità di moto viene conservata come in tutti gli urti. 
 
+Dati due corpi che si urtano di urto perfettametne anaelastico, avranno una velocità finale:
+\begin{gather*}
+    \vec{q}_{1,i}+\vec{q}_{2,i}=\vec{q}_{1,f}+\vec{q}_{2,f}\\
+    m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}=(m_1+m_2)\vec{v}_f
+\end{gather*}
+\begin{equation}
+    \vec{v}_f=\displaystyle\frac{m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}}{2(m_1+m_2)}
+\end{equation}
 
-L'energia cinetica del sistema sarà nulla nel sistema di 
+Poiché la velocità dei corpi coincide alla velocità del centro di massa, 
+l'energia cinetica del sistema sarà nulla nel sistema di 
 riferimento concorde al centro di massa $S_{c.d.m.}$, mentre sarà uguale all'energia 
 cinetica del centro di massa in un qualsiasi sistema inerziale 
-ad esso $K(S)=K_{c.d.m.}$.
+ad esso $K(S)=K_{c.d.m.}$. Per cui l'energia dissipata durante l'urto può essere calcolata come la differenza tra l'energia cinetica prima dell'urto e 
+l'energia cinetica del centro di massa. 
+\begin{equation}
+    E_{dis.}=K_i-K_{c.d.m.}
+\end{equation}
 
 \subsection{Momento}
 
@@ -4466,7 +4479,7 @@ possibile trovare la variazione di energia interna del
 sistema
 poiché dipende solamente dallo stato iniziale e finale del sistema. 
 \begin{equation*}
-    Q_1-W_1=Q_2-W_2=\Delta_{AB}
+    Q_1-W_1=Q_2-W_2=\Delta U_{AB}
 \end{equation*}
 Dal punto di vista meccanico l'energia interna di un 
 sistema termodinamico agisce 
@@ -4639,7 +4652,7 @@ il primo principio:
     \Delta U^{(S+A)}=\Delta U^A+\Delta U^S=\Delta U^S=0
 \end{gather*}
 Allora per un gas ideale la variazione di energia 
-interna dipende dala sola temperatura: $U=U(T)$.
+interna dipende dalla sola temperatura: $U=U(T)$.
 
 
 
@@ -4845,7 +4858,7 @@ Vengono definite:
 \begin{itemize}
     \item Macchina Termica:= ciclo che ruota in senso orario, 
     assorbendo calore e fornendo lavoro all'ambiente;
-    \item Macchina Frigorifera: circlo che ruota in senso 
+    \item Macchina Frigorifera:= circlo che ruota in senso 
     antiorario, cedendo calore e subendo lavoro dall'ambiente.
 \end{itemize}
 Lo stesso ciclo termodinamico può essere sia frigorifero che 
