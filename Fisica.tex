@@ -19,10 +19,10 @@
 
 \renewcommand{\contentsname}{Indice}
 
-
-%   To Do List:
+%To Do List:
+%\begin{abstract}    
 % V Finire di Aggiungere il Resto deli Argomenti;
-%   Titolo Meglio (Appunti di Fisica, AA 2022/2023, etc);
+%   Titolo Meglio (Appunti di Fisica, AA 2022/2023, etc); (nah)
 % V Introduzione SI
 % V Sistemare radici quadrate;
 % V Dim. Proprietà Operazioni tra i Vettori;
@@ -31,7 +31,6 @@
 % V Risultante delle forze;
 % V Sistemare grafico frquenza forzante;
 % V Grafici Forze Conservative;
-% X Grafico Energia Potenziale;
 % V Dim. Forze Conservative 1, 2;
 % V Figura Analisi Energetica Pendolo Semplice;
 % V Sistemi di Punti Materiali;
@@ -44,12 +43,10 @@
 % V Curva Inclinata (Accenni);
 % V Figura Trasformazione irreversibile come isocopa e isobara;
 % V \cancelto{value}{expression} nelle equazioni dove può essere utile;
-% X Introduzione massa->massa di plank
 % V Energia Potenziale dipedne da riferimento
 % V Induzione, Convezione, Irraggiamento
 % V Ciclo di Carnot Figura Sistemare;
-
-
+%\end{abstract}
 
 \numberwithin{equation}{subsection}
 
@@ -126,16 +123,13 @@ Sapendo che l'energia emessa dal fotone è:
 $E= \lambda h$, la sua lunghezza 
 d'onda $\lambda$ è data dal prodotto della velocità del fotone 
 per la sua frequenza: $\lambda  = cf$.
-
-
-
 Quindi si può ricavare la frequenza, e di conseguenza il 
 periodo, dal fotone sostituendo nell'equazione per l'energia: 
 \begin{gather*}
     E = cfh\\
     f = \displaystyle\frac{E}{ch}\\
     T = \displaystyle\frac{ch}{E}\\
-    1s := 9{,}192631770\times 10^9 \times T = 9{,}192631770\times 10^9 \times \displaystyle\frac{ch}{E}
+    1\,s := 9{,}192631770\times 10^9 \times T = 9{,}192631770\times 10^9 \times \displaystyle\frac{ch}{E}
 \end{gather*}
 
 Dove $h$ è la costante di Plank, $c$ è la velocità della luce nel vuoto, e $E$ è l'energia emessa dal fotone, misurabile.
@@ -147,7 +141,7 @@ distanza percorsa dalla luce nel vuoto in
 $1/(2{,}99792458\times 10^8)s$:
 
 \begin{equation*}
-    1m := \displaystyle\frac{c}{2{,}99792458\times 10^8}s
+    1\,m := \displaystyle\frac{c}{2{,}99792458\times 10^8}s
 \end{equation*}
 
 \subsection{Massa}
@@ -157,8 +151,9 @@ massa necessaria per equilibrare in una bilancia di Watt una
 quantità di corrente proporzionale alla costante di Planck:
 
 \begin{equation*}
-    1kg := \left(\displaystyle\frac{ h}{ 6{,}62607015 \times 10^{-34}}\right)\frac{\displaystyle s}{\displaystyle m^{2}}
+    1\,kg := \left(\displaystyle\frac{ h}{ 6{,}62607015 \times 10^{-34}}\right)\frac{\displaystyle s}{\displaystyle m^{2}}
 \end{equation*}
+
 \clearpage
 
 \section{Vettori}
@@ -167,7 +162,7 @@ Un vettore è un oggetto matematico definito da modulo, direzione e verso. Poich
 \begin{center}\begin{tikzpicture}
     \draw[thick, ->](0,0) -- (2,1);
     \node[text width = 1cm] at(0,0) {P};
-    \node[text width = 0cm] at (0.8, 0.9) {$\vec{v}$};
+    \node[black] at (0.8, 0.9) {$\vec{v}$};
     \draw[dashed] (-1, -.5) -- (3, 1.5);
 \end{tikzpicture}\end{center}
 
@@ -288,7 +283,7 @@ Dato un vettore, vengono definiti componenti del vettore le sue proiezioni ortog
     \node[black] at (1.5, 1.2) {$\vec{v}$};
     \pic["$\theta$", draw=black, -, angle eccentricity=1.2, angle radius=1.5cm] {angle=x--origin--vettore};
     \draw[->, thick] (origin) -- (1.5, 0);
-    \node[text width = 0cm] at (1.5, -0.3) {$\vec{v}_x$};
+    \node[black] at (1.5, -0.3) {$\vec{v}_x$};
     \draw[->, thick] (origin) -- (0, 1);
     \node[black] at (0.2, 1.2) {$\vec{v}_y$};
     \draw[dashed] (1.5, 1) -- (1.5, 0);
@@ -421,6 +416,7 @@ $\vec{v}\times(\vec{w}\times\vec{u}) \neq (\vec{v}\times\vec{w})\times\vec{u}$:
 \end{tikzpicture}\end{center}
 
 \subsection{Coordinate Sferiche}
+
 Considerando un sistema di riferimento tridimensionale 
 $x, y, z$, si può rappresentare un vettore usando le sue 
 componenti: $\vec{v} = v_x\hat{x} + v_y\hat{y} + v_z\hat{z}$,
@@ -439,7 +435,7 @@ Si considera la proiezione del vettore rispetto al piano formato da due assi, e 
 
 \begin{center}\begin{tikzpicture}[scale=2]
     \coordinate (O) at (0, 0);
-    \node[text width = 0cm] at (0.1, -0.2) {$O$};
+    \node[black] at (0.1, -0.2) {$O$};
     \draw[->] (-1,0)--(2,0) coordinate (x) node[right]{$x$};
     \draw[->] (0,-1)--(0,2) node[above]{$z$};
     \draw[->] (-0.5, -0.5) -- (1, 1) node[right] {$y$};
@@ -470,6 +466,7 @@ il punto materiale analizzato si può trovare in un intervallo di tempo $\Delta 
 \begin{equation}
     \Gamma := \left\{Q\:\mbox{t.c}\: Q = P(t)\right\}
 \end{equation}
+
 
 Un punto materiale rappresenta il centro di massa di un corpo, approssimando
 il suo andamento come se tutta la massa fosse accumulata in unico punto.
@@ -504,7 +501,7 @@ in questo modo si ottiene la legge oraria del punto nelle
 tre direzioni dello spazio, ognuna descrive il comportamento del 
 punto in una singola direzione:
 
-\begin{center}\begin{tikzpicture}[scale=1.4]
+\begin{center}\begin{tikzpicture}[scale=1.3]
     \coordinate (O) at (-4,0);
     \draw[->] (-4.5, 0) -- (-2, 0) coordinate (t) node[above]{$t$};
     \draw[->] (-4,-0.5) --(-4,2) coordinate (x) node[above]{$x$};
@@ -806,7 +803,7 @@ Un moto armonico è definito da varie grandezze fisiche:
     da dove comincia il moto, misurata in radianti [$rad$].
 \end{itemize}
 
-La legge oraria generalre di un moto armonico è definita da 
+La legge oraria generale di un moto armonico è definita da 
 una funzione sinusoidale o cosinusoiale: $x(t) = A(t)\cos(\varphi+\omega t)$ oppure $ x(t) = A(t)\sin(\varphi+\omega t)$.\\ 
 In un moto armonico semplice l'ampiezza massima non dimuisce o 
 aumenta nel tempo quindi la sua legge oraria sarà:  
@@ -821,7 +818,7 @@ Per convenzione si usa il seno per la legge oraria della posizione
 di un moto armonico: $x(t) = A\sin(\varphi + \omega t)$. Nell' 
 istante di tempo $t_0 = 0$, se la fase è nulla: $x(0) = 0$.\\
 La velocità e l'accellerazione del moto armonico si ottengono 
-derivando la legge oraria dell'accellerazione:
+derivando la legge oraria dell'\\accellerazione:
 
 \begin{gather}
     v(t) = \dot x(t) = \omega Acos(\varphi+\omega t)\\
@@ -954,8 +951,11 @@ del punto si applica la sequente sostituzione:
 \begin{equation}
     \Gamma:y(x)\displaystyle=-\frac{g}{2v_{x,0}^{2}}x^{2}+\frac{v_{y,0}}{v_{x,0}}x+h
 \end{equation}
+
 La legge oraria del moto $y(x)$ corrisponde ad una parabola rivolta verso 
-il basso.\\
+il basso.
+
+
 
 Per trovare la gittata, bisogna trovare il punto della traiettoria 
 dove si annula la componente $y$:
@@ -1318,7 +1318,7 @@ verso l'alto ($\beta$), orario se è diretto verso il basso($\beta'$):
 
 Nel sistema di riferimento $S(\tau(t),\nu(t),\beta)$, 
 si può rappresentare 
-la velocità angolare e l'accellerazione angolare come vettori:
+la velocità angolare e l'\\accellerazione angolare come vettori:
 \begin{equation}
     \vec{\omega}(t)=\omega(t)\cdot\hat{\beta}{,}\:\: \vec{\alpha}(t)=\alpha(t)\cdot\hat{\beta}
 \end{equation}
@@ -1337,7 +1337,7 @@ Quindi si possono riscrivere la equazioni del moto circolare come:
 Dati 3 punti esiste una sola circonferenza passante per essi, 
 quindi si può approssimare una qualsiasi traiettoria come una serie 
 di moti circolari in ogni intorno della posizione per vari istanti di tempo $t_i$. Il centro dei moti circolari viene definito centro di curvatura, 
-poiché il punto ruota in un certo intervallo di tempo intorno a quel punto. 
+poiché il punto ruota in un certo intervallo di tempo intorno a quel punto, mentre il raggio di quel moto circolare viene definito raggio di curvatura. 
 Il versore $\hat{\beta}(t)$ determina il cambiamento di piano della 
 traiettoria in 3 dimensioni:
 
@@ -2208,13 +2208,13 @@ soluzioni del polinomio caratteristico saranno:
 \end{gather*}
 La soluzione dell'equazione differenziale sarà quindi:
 \begin{gather*}
-    \displaystyle x(t)=C_1e^{\left(-\displaystyle\frac{\gamma}{2}+ i\Omega\right)t}+C_2e^{\left(-\displaystyle\frac{\gamma}{2}- i\Omega\right)t}\\
+    \displaystyle x(t)=C_1e^{\left(-\frac{\gamma}{2}+ i\Omega\right)t}+C_2e^{\left(-\frac{\gamma}{2}- i\Omega\right)t}\\
     x(t)=e^{-\frac{\gamma}{2}t}\left(C_1e^{i\Omega t}+C_2e^{-i\Omega t}\right)
 \end{gather*}
 Poiché $C_1,C_2\in\mathbb{C}$, mentre la posizione $x(t)$ è una funzione $x:\mathbb{R}^+\to\mathbb{R}$:
 \begin{gather*}
     x(t)\in\mathbb{R}\Rightarrow \Im(x(t))=0\\
-    \Im\left(e^{-\displaystyle\frac{\gamma}{2}t}(C_1\cos(\Omega t)+iC_1\sin(\Omega t)+C_2\cos(\Omega t)-iC_2\sin(\Omega t))\right)=0\\
+    \Im\left(e^{-\frac{\gamma}{2}t}(C_1\cos(\Omega t)+iC_1\sin(\Omega t)+C_2\cos(\Omega t)-iC_2\sin(\Omega t))\right)=0\\
     \begin{cases}
         \Im((C_1+C_2)\cos(\Omega t))=0\\
         \Re(i(C_1-C_2)\sin(\Omega t))=0
@@ -2796,9 +2796,9 @@ lavoro necessario per spostare un corpo dallo stato $0$ allo stato $v_B$:
 
 
 Si può esprimere il lavoro compiuto da una forza tra due stati $A$ e $B$ rispetto all'energia cinetica del corpo nei due stati:
-\begin{equation}
+\begin{equation*}
     W_{\Gamma_{AB}}=\Delta K_{AB}
-\end{equation}
+\end{equation*}
 Ne segue il teorema delle forze vive o dell'energia cinetica:
 \begin{quotation}
     Indipendentemente dal tipo di forza agente durante lo spostamento di un punto materiale, il lavoro
@@ -2836,11 +2836,10 @@ del corpo nei punti $A$ e $B$.
 
 Viene definita energia potenziale in un punto, il lavoro necessario per spostare un corpo da uno stato di riferimento allo stato in un punto $P$. Essendo l'energia potenziale 
 definita come una variazione sarà sempre definita a meno di una costante $c=U(O)$, dove $O$ è il centro del sistema di riferimento usato per calcolare l'energia potenziale, 
-convenzionalemente si considera l'energia nello stato di riferimento $U(O)=0$. L'energia potenziale sarà quindi espresssa come: 
+convenzionalemente si considera l'energia nello stato di riferimento $U(O)=0$. Considerando l'energia potenziale nulla in O, l'energia potenziale può essere espresssa come: 
 \begin{equation}
-    \Delta U_{OP}=U(P)-\cancelto{0}{U(O)}=-W_{0\to P}
-\end{equation}
-considerando l'energia potenziale nulla in $0$. 
+    \Delta U_{OP}=U(P)-\cancelto{0}{U(O)}=-W_{O\to P}
+\end{equation} 
 
 \subsubsection{Teorema della Conservazione dell'Energia}
 \begin{quotation}
@@ -3023,7 +3022,7 @@ Jacobiano $\mathbf{J}U$ si può analizzare il comportamento di $U$
 per trovare punti di equilibrio.
 \\
 Hopfield dimostrò che nell'intorno di un punto di stabilità 
-il sistema tende all'equilibrio, ovvero resiste agli errori. 
+il sistema tende all'quilibrio, ovvero resiste agli errori. 
 In $1$ dimensione il comportamento di un sistema attorno ad un 
 punto di equilirbio $x_0$ sarà definito da:
 \begin{equation}
@@ -3319,7 +3318,7 @@ oggetti non appartenenti ad esso.
 
 
 
-\'{E} facile notare che per il terzo principio della dinamica 
+\`{E} facile notare che per il terzo principio della dinamica 
 la somma di tutte le forze interne al sistema è nulla. Per ogni 
 forza $\vec{F}_{i\to j}$ generata da un punto $i$ verso un punto $j$ 
 esisterà una forza uguale e contraria $-\vec{F}_{i\to j}=\vec{F}_{j\to i}$, 
@@ -3503,10 +3502,21 @@ centro di massa $S_{c.d.m.}$:
     K=K'+K_{c.d.m.}
 \end{gather*}
 
-Segue per i due teoremi di K\"oning che un sistema di punti materiali $\mathscr{S}$ espresso rispetto ad 
-un sistema di riferimento inerziale $S$, potrà essere sempre espresso 
-rispetto ad un sistema di riferimento $S_{c.d.m.}$ solidale al centro di massa del sistema:
+Segue per i due teoremi di K\"oning che le grandezze principali di sistema di punti materiali $\mathscr{S}$ espresso rispetto ad 
+un sistema di riferimento inerziale $S$, possono essere sempre espresse 
+rispetto ad un sistema di riferimento $S_{c.d.m.}$ solidale al centro di massa del sistema. Non è necessaria una formulazione di un terzo teorema di K\"oning poiché 
+è stato precedentemente dimostrato che per qualsiasi sistema di riferimento inerziale, la quantità di moto totale del sistema di punti materiali $\mathscr{S}$ coincide 
+alla quantità di moto del centro di massa del sistema nello stesso sistema di riferimento. Poiché è più semplice analizzare il comportamento di un singolo punto materiale, 
+centro di massa, 
+invece di un sistema di punti, è consigliabile, se le grandezze sono ottenute in un sistema di riferimento inerziale, analizzare il sistema nel sistema di riferimento 
+solidale al centro di massa: 
 \begin{equation}
+    \begin{matrix}
+        \\
+        i)
+        \\
+        ii)
+    \end{matrix}
     \begin{cases}
         \vec{p}^{tot}(S)=\cancelto{0}{\vec p^{tot}(S_{c.d.m.})}+\vec{p}_{c.d.m.}(S)\\
         \vec{L}^{tot}(S)=\vec{L}^{tot}(S_{c.d.m.})+\vec{L}_{c.d.m.}(S)\\
@@ -3532,8 +3542,8 @@ Nell'intervallo di tempo dell'urto sui due corpi agisce una
 forza impulsiva, proporzionale all'inverso dell'intervallo di tempo in cui avviene l'urto 
 $F(t)\propto \displaystyle\frac{1}{\varepsilon}$. 
 Poiché la forza è una grandezza che non dipende esplicitamente all'intervallo di 
-tempo in cui è stata applicata si usa l'impulso, grandezza definita nella rappresentazione integrale del secondo principio della dinmica, per quantificare 
-l'intensità dell'impulso: 
+tempo in cui è stata applicata si usa l'impulso, grandezza definita nella rappresentazione integrale del secondo principio della dinamica, per quantificare 
+l'\\intensità dell'impulso: 
 \begin{gather*}
     \displaystyle\frac{d\vec{p}}{dt}=\vec{F}\\
     \displaystyle\int_{0}^{\varepsilon}d\vec{p}=\int_{0}^{\varepsilon}\vec{F}dt\\
@@ -3725,7 +3735,7 @@ dell'energia cinetica iniziale sotto forma di calore. Di conseguenza, le velocit
 finali saranno minori dei loro valori in un urto elastico. 
 \\
 Un urto viene definito perfettamente anaelastico se i due corpi dopo la collisione rimangono a contatto. L'energia cinetica non viene conservata, 
-mentre la quantità di moto viene conservata. 
+mentre la quantità di moto viene conservata. Dopo un urto perfettamente anaelastico i due corpi rimangono a contatto, per cui avranno la stessa velocità finale. 
 
 
 Dati due corpi che si urtano di urto perfettametne anaelastico, per la conservazione della quantità di moto:
@@ -3734,7 +3744,7 @@ Dati due corpi che si urtano di urto perfettametne anaelastico, per la conservaz
     m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}=(m_1+m_2)\vec{v}_f
 \end{gather*}
 \begin{equation}
-    \vec{v}_f=\displaystyle\frac{m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}}{2(m_1+m_2)}
+    \vec{v}_f=\displaystyle\frac{m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}}{m_1+m_2}
 \end{equation}
 Per cui la velocità dei due corpi corrisponde 
 alla velocità del centro di massa del sistema dopo l'urto. 
@@ -4034,7 +4044,7 @@ La densità di un corpo omogeneo può essere calcolata dal rapporto
 tra la massa totale e la sua dimensione $\rho=\displaystyle\frac{M}{V}$. 
 Per un corpo non omogeneo si ha: 
 \begin{equation}
-    M=\displaystyle\int dm=\int \rho(x,y,z) dV 
+    M=\displaystyle\int_M dm=\int_V \rho(x,y,z) dV 
 \end{equation}
 
 
@@ -4088,7 +4098,7 @@ il suo centro di massa sarà dato da:
 \end{equation*}
 \\
 Se un corpo rigido si muove di un generico moto di traslazione a velocità costante $\vec{V}$, 
-il centro di massa avrà velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int\vec{V}dm}{\int dm}=\vec{V}$. La quantità di moto del corpo rigido sarà quindi 
+il centro di massa avrà velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int_M\vec{V}dm}{\int_M dm}=\vec{V}$. La quantità di moto del corpo rigido sarà quindi 
 $\vec{p}^{tot}=\vec{p}_{c.d.m.}=M\vec{V}$. Essendo la velocità costante, per la prima equazione cardinale si ha $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}=\vec0$. 
 Se la velocità varia nel tempo $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}$. 
 La dinamica è quella di un punto materiale, non c'è rotazione rispetto al centro di massa, per cui il 
@@ -4135,7 +4145,7 @@ di rotazione $z$. In generale il momento angolare $\vec{L}$ non è parallelo all
 e il momento angolare. Considerando solo la componente assiale del momento angolare sull'asse $z$ si ottiene: 
 \begin{gather*}
     dL_z=dL\cos\left(\displaystyle\frac{\pi}{2}-\theta\right)=\omega Rr\sin\theta\:dm=\omega R^2dm\\
-    L_z=\displaystyle\int_M\omega R^2dm=\omega_M\int R^2dm=\omega I_z
+    L_z=\displaystyle\int_M\omega R^2dm=\omega\int_M R^2dm=\omega I_z
 \end{gather*}
 
 Viene definto momento d'inerzia rispetto all'asse $z$ $I_z$: 
@@ -4241,7 +4251,7 @@ L'energia cinetica del corpo in rotazione è data dalla somma delle energie
 cinetiche dei singoli punti, considerando un corpo esteso il 
 numero di punti tenderà all'infinito:
 \begin{equation}
-    K=\displaystyle\lim_{N\to\infty}\sum_{i=1}^{N}\frac{m_iv_i^2}{2}=\int\frac{v^2}{2}dm=\int\frac{\omega^2R^2}{2}dm=\frac{\omega^2}{2}\int R^2dm=\frac{\omega^2I_z}{2}
+    K=\displaystyle\lim_{N\to\infty}\sum_{i=1}^{N}\frac{m_iv_i^2}{2}=\int_M\frac{v^2}{2}dm=\int_M\frac{\omega^2R^2}{2}dm=\frac{\omega^2}{2}\int_M R^2dm=\frac{\omega^2I_z}{2}
 \end{equation}
 Viene così definita l'energia cinetica rotazionel di un corpo rigido. 
 
@@ -4259,14 +4269,14 @@ Si considera un asse $z$ di un sistema di riferimento $S$, e
 un asse $z_{c.d.m.}$ parallelo di un sistema di riferimento $S_{c.d.m.}$. 
 I centri dei due sistemi $O$ e $c.d.m.$ sono distanti $\vec{R}_{O(c.d.m.)}$, 
 la distanza dall'asse $z$ di un punto del corpo in $S$ espresso rispetto al 
-sistema $S_{c.d.m.}$ sarà: $\vec{r}_O=\vec{r}_{(c.d.m.)}+\vec{R}_{O(c.d.m.)}$,  
-dove $\vec{r}_{(c.d.m.)}$ è la stessa distanza nel sistema $S_{c.d.m.}$. 
+sistema $S_{c.d.m.}$ sarà: $\vec{r}(S_O)=\vec{r}(S_{c.d.m.})+\vec{R}_{O(c.d.m.)}$,  
+dove $\vec{r}(S_{c.d.m.})$ è la stessa distanza nel sistema $S_{c.d.m.}$. 
 Considerando il momento di inerzia nel sistema $S_O$. 
 \begin{gather*}
-    I_z=\displaystyle\int_M {r}_O^2dm\\
-    \int_M({r}_{(c.d.m.)}+{R}_{O(c.d.m.)})^2dm\\
-    \int_M r_{(c.d.m.)}^2+R_{O(c.d.m.)}^2+2r_{c.d.m.}R_{O(c.d.m.)}dm\\
-    \int_M r_{(c.d.m.)}^2dm+R_{O(c.d.m.)}^2\int_M dm+2R_{O(c.d.m.)}\cancelto{0}{\int_Mr_{(c.d.m.)}dm}\\
+    I_z=\displaystyle\int_M {r}^2(S_O)dm\\
+    \int_M({r}(S_{c.d.m.})+{R}_{O(c.d.m.)})^2dm\\
+    \int_M r^2(S_{c.d.m.})+R_{O(c.d.m.)}^2+2r(S_{c.d.m.})R_{O(c.d.m.)}dm\\
+    \int_M r^2(S_{c.d.m.})dm+R_{O(c.d.m.)}^2\int_M dm+2R_{O(c.d.m.)}\cancelto{0}{\int_Mr(S_{c.d.m.})dm}\\
     I_z(S_{c.d.m.})+R_{O(c.d.m.)}^2M
 \end{gather*}
 Il componente $\displaystyle\int_M r(S_{c.d.m.})dm=r_{c.d.m.}(S_{c.d.m.})M$, corrisponde alla posizione del centro di massa nel sistema di riferimento del centro di massa, per cui è nulla. 
@@ -4648,7 +4658,7 @@ Per cui fornendo energia ad un sistema, essa viene immagazzinata sotto forma di 
 
 
 Il lavoro esercitato dal sistema sull'ambiente si può 
-esprimere come il lavoro esercitato dall'ambiente sul sistema 
+esprimere come il lavoro esercitato dall'\\ambiente sul sistema 
 ad una pressione $p_0$ a causa della variazione di volume 
 del sistema:
 \begin{equation*}
@@ -4670,16 +4680,13 @@ poiché dipende solamente dallo stato iniziale e finale del sistema.
 \end{equation*}
 Dal punto di vista meccanico l'energia interna di un 
 sistema termodinamico agisce 
-come una batteria, immaganizzando lavoro analogamente all'energia potenziale. 
+come l'energia potenziale, immaganizzando lavoro. 
 Applicata una trasformazione infinitesima, si avrà:
 \begin{equation*}
     \delta Q-\delta W=dU
 \end{equation*}
-Per alcuni sistema il lavoro può essere espresso come la 
-pressione $p$ necessaria per una variazione di volume $\Delta V$. 
 
-
-
+Per delle trasformazioni isobare, il differenziale del lavoro $\delta W$ corrisponde ad un differenziale esatto $\delta W=pdV$. 
 Allora si potrà descrivere il calore in termini dell'energia 
 interna e del lavoro:
 \begin{equation*}
@@ -4692,9 +4699,8 @@ si può quindi esprimere il calore specifico come:
 \end{equation*}
 Per i gas, è più conveniente esprimere il calore specifico 
 rispetto al numero di moli $n$. Una mole è definita come un numero 
-di Avogadro $N_A\approx 6\times10^{23}$ di molecole $1\:[mol]:=\displaystyle\frac{N}{N_A}$, 
-dove $N$ è il numero di molecole totali nel gas, uguali al numero di Avogadro $N_A$ per una mole. In caso il gas contenga un numero di molecole 
-differente $N$, corrisponderà ad un numero di moli $n$ e avrà calore specifico molare:
+di Avogadro $N_A\approx 6\times10^{23}$ di molecole $n\:[mol]:=\displaystyle\frac{N}{N_A}=\frac{n\times N_A}{N_A}$, 
+dove $N$ è il numero di molecole totali nel gas. Il calore specifico molare verrà quindi espresso come: 
 \begin{equation*}
     c=\displaystyle\frac{1}{n}\frac{\delta Q}{dT}
 \end{equation*}
@@ -4711,16 +4717,16 @@ trasmesso da un gas ideale dipendo dall'energia cinetica delle
 molecole. 
 
 Sulla base della legge isoterma di Boyle, sulle leggi isobare e isocore di Volta-Gay Lussac e sulla legge di Avogadro è stato possibile determinare un'equazione di stato 
-generale per un qualsiasi gas ideale. Per cui un qualsiasi gas in uno stato di equilibrio che rispetta questa equazione può essere considerato un gas ideale: 
+generale per un qualsiasi gas ideale. Per cui un qualsiasi gas in uno stato di equilibrio che rispetta questa equazione viene considerato un gas ideale: 
 \begin{equation}
     pV=nRT
 \end{equation}
 Dove $n$ è il numero di moli, $T$ è la temperatura in Kelvin, 
 $R$ è la costante dei gas ideali. Se il gas viene espresso 
-rispetto rispetto al numero di moli, si usa la costante di 
+rispetto rispetto al numero di molecole, si usa la costante di 
 Boltzman $k_B=\displaystyle\frac{R}{N_A}$:
 \begin{equation*}
-    pV=\displaystyle\frac{N}{N_A}RT=Nk_BT
+    pV=nRT=\displaystyle\frac{N}{N_A}RT=Nk_BT
 \end{equation*} 
 Dato l'equazione di stato di un qualsiasi gas reale, questa tenderà asintoticamente all'equazione di stato di un gas ideale al diminuire della pressione del gas. 
 
@@ -4733,7 +4739,7 @@ fisico-chimiche del sistema. In un sistema chiuso il numero di moli
 rimane costante $n=cost.$. Viene considerata una delle $3$ variabili 
 costante, nella rappresentazione di Clayperyon viene scelta 
 la temperatura. Le trasformazioni vengono quindi rappresentate 
-nel piano di Clayperyon $(p,V)$ usando solo $2$ variabili. 
+nel piano di Clayperyon $(p,V)$ come delle curve.  
 
 
 
@@ -5010,8 +5016,8 @@ Joule verificò sperimentalmente la seguente relazione:
 
 \subsubsection{Relazione di Mayer}
 
-Data una qualsiasi trasformazione reversibile di un gas ideale essa può essere sempre rapprenteta come una trasformazione isocbara ed una isoterma. Per cui uno scambio infinitesimo di calore $\delta Q$ 
-corrisponde alla somma tra la variazione infinitesime di energia interna $dU$ ed il lavoro esercitato dal gas $\delta W$: 
+Data una qualsiasi trasformazione reversibile di un gas ideale essa può essere sempre rapprenteta come una trasformazione isobara ed una isoterma. Per cui uno scambio infinitesimo di calore $\delta Q$ 
+corrisponde alla somma tra la variazione infinitesime di energia interna $dU$ durante la trasformazione isobara ed il lavoro esercitato dal gas $\delta W$ durante la trasformazione isoterma: 
 \begin{gather*}
     \delta Q=\delta W+dU=p\:dV+c_Vn\:dT\\
     \delta Q :=c_gn\:dT\\
@@ -5020,6 +5026,9 @@ corrisponde alla somma tra la variazione infinitesime di energia interna $dU$ ed
 \end{gather*}
 In una trasformazione qualsiasi, il calore specifico molare sarà sempre maggiore o uguale al calore specifico molare a volume costante. 
 In una trasformazione isobara si considera il calore specifico molare a pressione costante $c_p=c_g$: 
+\begin{gather*}
+    c_p=\displaystyle\frac{p}{n}\frac{d}{dT}\left(\frac{nRT}{p}\right)+c_V
+\end{gather*}
 \begin{equation}
     c_p=R+c_V
 \end{equation}
@@ -5684,7 +5693,7 @@ lavoro della trasformazione $AB$ e della trasformazione $CD$, entrambe isoterme 
 Il lavoro dato dalle due trasformazioni adiabatiche $BC$ e $DA$ corrisponde a:
 \begin{gather*}
     W_{BC}=-\Delta U_{BC}=-c_Vn\Delta T_{BC}=c_Vn(T_2-T_1)>0\\
-    W_{DA}=-\Delta U_{DA}=-c_Vn\Delta T_{DA}=c_Vn(T_1-T_2)<0
+    W_{DA}=-\Delta U_{DA}=-c_Vn\Delta T_{DA}=c_Vn(T_1-T_2)<0\\
     W_{BC}=-W_{DA}
 \end{gather*}
 Verrà trasferito calore solamente durante le trasformazioni isoterme, per cui 
@@ -5845,13 +5854,19 @@ Questa macchina $\tilde{R}+X$ rappresenta una macchina di Kelvin, poiché produc
 \end{tikzpicture}\end{center}
 
 Poiché non può esistere una macchina di Kelvin, non potrà neanche esistere la macchina $X$. Quindi per ogni macchina $R$, la sua efficienza sarà 
-$\eta_R\leq1-\displaystyle\frac{T_1}{T_2}$. Si può dimostrare che l'efficienza di una macchina frigorifera qualsiasi $R$ è 
+$\eta_R\leq1-\displaystyle\frac{T_1}{T_2}$. Si può dimostrare anaalogamente che l'efficienza di una macchina frigorifera qualsiasi $R$ è 
 $\varepsilon_R\leq\varepsilon_C=\displaystyle\frac{1}{\displaystyle\frac{T_2}{T_1}-1}$. 
-Ciò viene dimostrato sezionando il ciclo termodinamico della macchina $R$. 
-\\
-Per una trasformazione reversibile $R$ tra due temperature $T_1$ e $T_2$, si avrà:
+
+A partià di calore assorbito $Q_A$, la macchina reversibile è quella che fornisce il lavoro massimo $W_{max}$, ovvero a parità di lavoro fornito $W_B$ la macchina reversibile è quella che assorbe 
+il calore minimo $Q_{min}$. 
 \begin{gather*}
-    \displaystyle\frac{|Q_1|}{T_1}-\frac{Q_2}{T_2}=0\\
+    W_{max}=Q_A\eta_{max}=Q_A\eta_C\\
+    Q_{min}=\displaystyle\frac{W_B}{\eta_{max}}=\frac{W_B}{\eta_C}
+\end{gather*}
+\\
+Per un ciclo reversibile $R$ tra due temperature $T_1$ e $T_2$, si avrà:
+\begin{gather*}
+    \eta_R=1-\displaystyle\frac{T_1}{T_2}=1-\displaystyle\frac{|Q_1|}{Q_2}\\
     \displaystyle\frac{|Q_1|}{Q_2}=\frac{T_1}{T_2}\\
     T_2=T_1\displaystyle\frac{|Q_1|}{Q_2}
 \end{gather*}
@@ -5860,23 +5875,17 @@ una temperatura assoluta nulla, poiché sarebbe
 necessario che $\displaystyle\frac{|Q_1|}{Q_2}\to 0$. La temperatura assoluta potrà solamente arrivare asintoticamente al valore di $0K$. 
 Per il terzo principio della termodinamica una temperatura assoluta di $0K$, viene definita un punto ideale irraggiungibile. 
 
-
-A partià di calore assorbito $Q_A$, la macchina reversibile è quella che fornisce il lavoro massimo $W_{max}$, ovvero a parità di lavoro fornito $W_B$ la macchina reversibile è quella che assorbe 
-il calore minimo $Q_{min}$. 
-\begin{gather*}
-    W_{max}=Q_A\eta_{max}=Q_A\eta_C\\
-    Q_{min}=\displaystyle\frac{W_B}{\eta_{max}}=\frac{W_B}{\eta_C}
-\end{gather*}
-
 \subsection{Teorema di Clausius ed Entropia}
 
 Le considerazioni di Carnot sui cicli termodinamici possono essere estese e generalizzate anche su macchine operanti tra più di due sorgenti. Sezionando un qualsiasi ciclo 
-termodinamico in una serie di cicli di Carnot contingui, che operano su una data coppia di temperature, è possibile approssimare il ciclo originario, poiché i contributi 
-adiabatici interni al ciclo vengono attraversati in versi opposti compensandosi a vicenda. Poiché questi cicli sono reversibili si avrà per ognuno dei cicli:
+termodinamico in una serie di cicli di Carnot contingui, che operano su una data coppia di temperature, è possibile approssimare il ciclo originario. Poiché le trasformazioni 
+adiabatiche interne al ciclo vengono attraversate in versi opposti, i loro contributi si compensano a vicenda. 
+Poiché questi cicli sono reversibili si avrà per ognuno dei cicli:
 \begin{gather*}
-    \displaystyle\frac{Q_i}{T_i}+\frac{Q_j}{T_j}=0
+    \displaystyle\frac{Q_i}{|Q_j|}=\frac{T_i}{T_j}\\
+    \displaystyle\frac{Q_i}{T_i}-\frac{|Q_j|}{T_j}=0
 \end{gather*}
-Clausius dimostrò che la somma per ogni sorente di queste componenti è minore uguale a $0$, in base al tipo di trasformazione: 
+Clausius dimostrò che la somma per ogni sorente di queste componenti è minore o uguale a $0$, in base al tipo di trasformazione: 
 \begin{quotation}
     Per ogni sorgente di un ciclo termodinamico può essere definita una quantità $\displaystyle\frac{Q_i}{T_i}$, la cui somma tra ogni sorgente sarà minore di zero, se si tratta di un 
     ciclo irreversibile mentre sarà nulla se si tratta di un ciclo reversibile. 
@@ -5900,7 +5909,7 @@ la distribuzione dell'energia in un dato universo analizzato, minore è l'entrop
 
 
 Considerando una trasformazione reversibile $\tau_{rev}$ tra due stati $A$ e $B$, si potrà applicare 
-l'integrale di Clausius tra i due stati del sistema:
+l'\\integrale di Clausius tra i due stati del sistema:
 \begin{equation}
     \int_{\tau_{AB}}\displaystyle\frac{\delta Q}{T}=\int_{S_A}^{S_B}dS=\Delta S_{AB}
 \end{equation}
@@ -5930,9 +5939,9 @@ sarà minore di $0$:
 \begin{gather*}
     \eta<\eta_C\\
     \oint_{\Gamma}\displaystyle\frac{\delta Q}{T}<0\\
-    \int_{\Gamma_{\mbox{rev}}}\displaystyle\frac{\delta Q}{T}+\int_{\Gamma_{\mbox{irr}}}\frac{\delta Q}{T}<0\\
-    \Delta S_{BA}+\displaystyle\int_{\Gamma_{\mbox{irr}}}\frac{\delta Q}{T}<0\\
-    \displaystyle\int_{\Gamma_{\mbox{irr}}}\frac{\delta Q}{T}<-\Delta S_{BA}=\Delta S_{AB}
+    \int_{\Gamma_{{rev}}}\displaystyle\frac{\delta Q}{T}+\int_{\Gamma_{{irr}}}\frac{\delta Q}{T}<0\\
+    \Delta S_{BA}+\displaystyle\int_{\Gamma_{{irr}}}\frac{\delta Q}{T}<0\\
+    \displaystyle\int_{\Gamma_{{irr}}}\frac{\delta Q}{T}<-\Delta S_{BA}=\Delta S_{AB}
 \end{gather*}
 Per cui in una qualsiasi trasformazione $\Gamma$ tra due stati $A$ e $B$:
 \begin{equation*}
@@ -5943,8 +5952,8 @@ Se si considera una trasformazione adiabatica qualsiasi, allora l'entropia del s
     \displaystyle\int_{\Gamma_{AB}}\frac{\cancelto{0}{\delta Q}}{T}=0\leq\Delta S_{AB}\\
     S_B\geq S_A
 \end{gather*}
-L'entropia di un sistema termicamente isolato non può diminuire, aumenta se la trasformazione è irreversibile, mentre resta costante se è reversibile. Per cui 
-si epsime il principio dell'aumento dell'entropia, per un sistema isolato: 
+L'entropia di un sistema termicamente isolato non può diminuire, aumenta se la trasformazione è irreversibile, mentre resta costante se è reversibile. Viene così definito 
+il principio dell'aumento dell'entropia per un sistema isolato: 
 \begin{equation*}
     dS\geq0
 \end{equation*}
@@ -5976,8 +5985,8 @@ Date due sorgenti a contatto, $T_1$ e $T_2>T_1$, che si scambiano una quantità 
 
 In una trasformazione isoterma di un gas ideale si avrà:
 \begin{gather*}
-    \Gamma_{\mbox{rev}}:\Delta S_{AB}=\displaystyle\int_{\Gamma_{AB}}\frac{\delta Q}{T}=\frac{1}{T}\int\delta Q=\frac{\Delta Q_{AB}}{T}\Rightarrow T\Delta S_{AB}=\Delta Q_{AB}\\
-    \Gamma_{\mbox{irr}}:\Delta S_{AB}>\frac{\Delta Q_{AB}}{T}
+    \Gamma_{{rev}}:\Delta S_{AB}=\displaystyle\int_{\Gamma_{AB}}\frac{\delta Q}{T}=\frac{1}{T}\int\delta Q=\frac{\Delta Q_{AB}}{T}\Rightarrow T\Delta S_{AB}=\Delta Q_{AB}\\
+    \Gamma_{{irr}}:\Delta S_{AB}>\frac{\Delta Q_{AB}}{T}
 \end{gather*}
 Per cui il calore generato da una reazione isoterma reversibile è maggiore del calore generato da una reazione irreversibile. 
 
