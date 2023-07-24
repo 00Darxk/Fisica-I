@@ -10,19 +10,24 @@
 \usepackage{mathrsfs}  
 \usepackage{lmodern}
 \usepackage{braket}
+\usepackage{hyperref}
 
 
 \usetikzlibrary{decorations.pathmorphing,patterns}
 \usetikzlibrary{quotes,angles,decorations.pathmorphing}
 \tikzset{snake it/.style={decorate, decoration=snake}}  
 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+}
 
 \renewcommand{\contentsname}{Indice}
 
 %To Do List:
 %\begin{abstract}    
 % V Finire di Aggiungere il Resto deli Argomenti;
-%   Titolo Meglio (Appunti di Fisica, AA 2022/2023, etc); (nah)
+% V Titolo Meglio (Appunti di Fisica, AA 2022/2023, etc); (nah)
 % V Introduzione SI
 % V Sistemare radici quadrate;
 % V Dim. Proprietà Operazioni tra i Vettori;
@@ -50,13 +55,19 @@
 
 \numberwithin{equation}{subsection}
 
-\title{Fisica}
-\author{}
-\date{}
+\title{Appunti di Fisica I}
+\author{Giacomo Sturm}
+\date{AA: 2022/2023 - Ing. Informatica}
 
 \begin{document}
 
 \maketitle
+
+\vspace{10mm}
+
+\begin{center}
+    Sorgente del file LaTeX disponibile su \url{https://github.com/00Darxk/Fisica-I-LaTeX}
+\end{center}
 
 \clearpage
 
@@ -167,10 +178,10 @@ Un vettore è un oggetto matematico definito da modulo, direzione e verso. Poich
 \end{tikzpicture}\end{center}
 
 Il vettore $\vec{v}$, applicato sul punto $P$, in figura viene definito del modulo ($|\vec{v}| = v$) rappresentato dalla lunghezza del segmento, dalla direzione rappresentata dalla retta su cui poggia, e dal verso rappresentato dalla freccia alla fine del segmento.
-Si usa la notazione $\vec{v}\in\vec{V}{\left(P\right)}$ per indicare che  il dato vettore appartiene alla classe di vettori applicati su $P$. Poich\'{e} il punto di applicazione di un vettore non cambia il comportamento delle operazioni tra vettori per convenzione si considera, se non viene specificato, il punto di applicazione coincidente con l'origine uno spazio vettoriale di dimensione $n$: $\vec{V}^{n}\left(O\right)$.
+Si usa la notazione $\vec{v}\in\vec{V}{\left(P\right)}$ per indicare che  il dato vettore appartiene alla classe di vettori applicati su $P$. Poich\'{e} il punto di applicazione di un vettore non cambia il comportamento delle operazioni tra vettori per convenzione si considera, se non viene specificato, il punto di applicazione coincidente con l'origine di uno spazio vettoriale di dimensione $n$: $\vec{V}^{n}\left(O\right)$.
 
 \subsection{Somma tra Vettori}
-Dati due vettori appartenenti allo stesso spazio vettoriale: $\vec{v}, \vec{w} \in \vec{V}^{n}\left(O\right)$, viene definita l'operazione binari interna somma ($+$) secondo le sequenti proprietà:
+Dati due vettori appartenenti allo stesso spazio vettoriale: $\vec{v}, \vec{w} \in \vec{V}^{n}\left(O\right)$, viene definita l'operazione binaria interna somma ($+$) secondo le sequenti proprietà:
 
 \begin{align*}
     \vec{v} + \vec{w} &\in \vec{V}^{n}\left(O\right)\\
@@ -268,7 +279,7 @@ Dato un vettore, vengono definiti componenti del vettore le sue proiezioni ortog
 
 \begin{gather}
     \vec{v}\cdot\hat{x} = \cos\theta\:v = v_x\\
-    \vec{v}\cdot\hat{y} = \cos(2\pi - \theta)\:v = \sin\theta\:v = v_y
+    \vec{v}\cdot\hat{y} = \cos\left(\displaystyle\frac{\pi}{2} - \theta\right)\:v = \sin\theta\:v = v_y
 \end{gather}
 
 \`{E} possibile rappresentare un vettore tramite i suoi componenti: $\vec{v} = \vec{v}_x + \vec{v}_y = v_x\hat{x} + v_y\hat{y}$, dove $\vec{v}_x$ e $\vec{v}_y$ sono i vettori componenti di $\vec{v}$.
@@ -294,8 +305,8 @@ A differenza del vettore le sue componenti dipendono dal sistema di riferimento 
 
 \subsection{Coordinate Polari}
 In coordinate cartesiane il punto $P$ viene indicato con ($x_P, y_P$); in coordinate polari viene indicato con ($\rho_P, \theta_P$), dove 
-$\rho$ è rappresenta la distanza del punto dall'origine e $\theta$ rappresenta l'angolo che forma il segmento $OP$ con il semiasse uscente dall'origine e parallelo a l'asse $x$.
-Per cambiare sistema di coordinate del punto $P$: 
+$\rho$ rappresenta la distanza del punto dall'origine e $\theta$ rappresenta l'angolo che forma il segmento $OP$ con il semiasse uscente dall'origine e parallelo a l'asse $x$.
+Per cambiare sistema di coordinate del punto $P$ si considerano le seguenti espressioni:  
 
 \begin{center}
 \(x_P = \rho \cos\theta\)\\
@@ -339,7 +350,7 @@ Per ottenere la distanza dall'origine $\rho$ si considera:
     v=\rho
 \end{equation} 
 
-si è dimostrato che il modulo del vettore $\vec{v}$ è uguale alla distanza dall'origine $\rho$.
+Si è dimostrato che il modulo del vettore $\vec{v}$ è uguale alla distanza dall'origine $\rho$.
 
 \subsection{Prodotto Vettoriale tra due Vettori}
 Dati due vettori $\vec{v}$ e $\vec{w}$, viene definito il vettore prodotto vettoriale l'operazione $f(\vec{v},\vec{w})=\vec{v}\times\vec{w}:V^n(O)\to V^n(O)$: 
@@ -347,18 +358,18 @@ Dati due vettori $\vec{v}$ e $\vec{w}$, viene definito il vettore prodotto vetto
     \vec{v}\times\vec{w} := v\cdot w\sin\theta\:\hat{v}\times\hat{w}
 \end{equation}
     
-La direzione del vettore $\hat{w}\times\hat{w}$ viene ottenuta mediante la regola della mano destra
+La direzione del vettore $\hat{v}\times\hat{w}$ viene ottenuta mediante la regola della mano destra
 di conseguenza l'ordine dei vettori determina il verso del vettore prodoto vettoriale, e si ha: $\hat{v}\times\hat{w} = -\hat{w}\times\hat{v}$.
 
 
 
-Poiché si considera il seno dell'angolo tra i due vettori se essi sono paralleli, il prodotto vettoriale risultante è nullo, mentre se essi 
+Poiché si considera il seno dell'angolo tra i due vettori, se essi sono paralleli il prodotto vettoriale risultante è nullo, mentre se essi 
 sono perpendicolari il prodotto vettoriale risultante è massimo. 
 
 
 Il modulo del prodotto vettoriale tra due vettori risulta essere l'area del 
 parallelogramma descritto dai vettori applicati su uno stesso punto, come se si stesse applicando il metodo del parallelogramma, per cui 
-il prodotto vettoriale risulta essese l'area con segno descritta dai due vettori. 
+il prodotto vettoriale risulta essere l'area con segno descritta dai due vettori. 
 Per il prodotto vettoriale vale la proprietà distrubutiva 
 $\vec{v}\times(\vec{w} +\vec{u}) = \vec{v}\times\vec{w} + \vec{v}\times\vec{u}$, 
 ma essendo 
@@ -594,7 +605,8 @@ Si definisce accellerazione istantanea la derivata della velocità istantanea ri
 
 Avente direzione perpendicolare alla tangente alla 
 traiettoria nell'istante di tempo $t$, e verso, individuto dal segno di $a$, dipendente dalla convessità o concavità della traiettoria
-nell'intorno dell'istante di tempo $t$, a differenza del segno della velocità $v$. 
+nell'intorno dell'istante di tempo $t$, a differenza del segno della velocità $v$, che indica il verso 
+del moto del punto.  
 
 
 L'accellerazione del punto lungo la traiettoria $\Gamma$ in tre dimensioni viene espressa come:
@@ -626,16 +638,16 @@ oraria della posizione integrando su un intervallo $[t_0,t]$ le leggi orarie not
 \subsubsection{Moto Rettilineo Uniforme}
 Un punto che si muove con un accellerazione nulla $\vec{a}=\vec{0}$ avrà 
 una veloticà costante $\vec{v}(t)=\vec{v}_0$ e compierà un moto definito rettilineo uniforme. 
-Se è data la posizione nell'istante di tempo $t_0$ $\vec{s}(t_0)=\vec{s}_0$, 
+Se è data la posizione nell'istante di tempo $t_0$ $\vec{r}(t_0)=\vec{r}_0$, 
 è possibile 
 ottenere la legge oraria della posizione:
 \begin{gather*}
-    \displaystyle\frac{d\vec{s}(t)}{dt}=\vec{v}(t)=\vec{v}(t_0)=\vec{v}_0\\
-    \displaystyle\int_{t_0}^{t}d\vec{s}(\tau)=\int_{t_0}^{t}\vec{v}_0d\tau\\
-    \vec{s}(t)-\vec{s}(t_0)=\vec{v}_0(t-t_0)
+    \displaystyle\frac{d\vec{r}(t)}{dt}=\vec{v}(t)=\vec{v}(t_0)=\vec{v}_0\\
+    \displaystyle\int_{t_0}^{t}d\vec{r}(\tau)=\int_{t_0}^{t}\vec{v}_0d\tau\\
+    \vec{r}(t)-\vec{r}(t_0)=\vec{v}_0(t-t_0)
 \end{gather*}
 \begin{equation}
-    \vec{s}(t)=\vec{s}(t_0)+\vec{v}_0(t-t_0)
+    \vec{r}(t)=\vec{r}(t_0)+\vec{v}_0(t-t_0)
 \end{equation}
 Questa legge oraria descrive un moto rettilineo uniforme, dove 
 lo spostamento cresce linearmente rispetto al tempo.
@@ -644,8 +656,8 @@ lo spostamento cresce linearmente rispetto al tempo.
     \coordinate (O) at (-3,0);
     \node[below] at (-3.2, 0) {$O$};
     \draw[->] (-3.5, 0) -- (-0.8, 0) coordinate (t) node[above]{$t$};
-    \draw[->] (-3,-0.5) --(-3,1.5) coordinate (s) node[above]{$s_i(t)$};
-    \draw[-, thick] (-3, 1)  -- (-2.7, 1) node[above] {$s_{i,0}$};
+    \draw[->] (-3,-0.5) --(-3,1.5) coordinate (s) node[above]{$r_i(t)$};
+    \draw[-, thick] (-3, 1)  -- (-2.7, 1) node[above] {$r_{i,0}$};
     \draw[dashed] (-2.7, 1) -- (-2.7, 0) node[below] {$t_0$};
     \draw[-, thick] (-2.7, 1) -- (-1,1.4);
     \draw[dashed] (-1,1.4) -- (-1, 0);
@@ -660,31 +672,35 @@ lo spostamento cresce linearmente rispetto al tempo.
 \end{tikzpicture}\end{center}
 
 \subsubsection{Moto Uniformemente Accellerato}
+
 Un punto che si muove con un'accellerazione costante $\vec{a}(t)=\vec{a}_0$ si muove di moto uniformemente accellerato. 
 Data l'accellerazione $\vec{a}_0$ e
 se è data la posizione e la velocità nell'istante di tempo 
-$t_0$: $\vec{v}(t_0)=\vec{v}_0{,}\:\vec{s}(t_0)=\vec{s}_0$, 
+$t_0$: $\vec{v}(t_0)=\vec{v}_0{,}\:\vec{r}(t_0)=\vec{r}_0$, 
 allora è possibile ottenere la legge oraria dello spostamento:
+
 \begin{gather*}
-    \displaystyle\frac{d\vec{v}(t)}{dt}=\vec{a}(t)=\vec{a}(t_0)=\vec{a}_0\\
+    \displaystyle\frac{d\vec{v}(t)}{dt}=\vec{a}_0\\
     \displaystyle\int_{t_0}^td\vec{v}(\tau)=\int_{t_0}^ta_0d\tau\\
     \vec{v}(t)=\vec{v}(t_0)+\vec{a}_0(t-t_0)\\
-    \displaystyle\frac{d\vec{s}(t)}{dt}=\vec{v}(t)=\vec{v}(t_0)+\vec{a}_0(t-t_0)\\
-    \displaystyle\int_{t_0}^td\vec{s}(\tau)=\int_{t_0}^{t}\vec{v}_0+\vec{a}_0(t-t_0)d\tau\\
-    \vec{s}(t)-\vec{s}_0=\vec{v}_0(t-t_0)+\displaystyle\frac{1}{2}\vec{a}_0(t-t_0)^2
+    \displaystyle\frac{d\vec{r}(t)}{dt}=\vec{v}(t)=\vec{v}(t_0)+\vec{a}_0(t-t_0)\\
+    \displaystyle\int_{t_0}^td\vec{r}(\tau)=\int_{t_0}^{t}\vec{v}_0+\vec{a}_0(t-t_0)d\tau\\
+    \vec{r}(t)-\vec{r}_0=\vec{v}_0(t-t_0)+\displaystyle\frac{1}{2}\vec{a}_0(t-t_0)^2
 \end{gather*}
 \begin{equation}
-    \vec{s}(t)=\vec{s}_0+\vec{v}_0(t-t_0)+\displaystyle\frac{1}{2}\vec{a}_0(t-t_0)^2
+    \vec{r}(t)=\vec{r}_0+\vec{v}_0(t-t_0)+\displaystyle\frac{1}{2}\vec{a}_0(t-t_0)^2
 \end{equation}
+
 Questa legge oraria descrive un moto uniformemente accellerato, 
 dove la posizione cresce quadraticamente rispetto al tempo. 
+
 
 \begin{center}\begin{tikzpicture}[scale = 1.5]
     \coordinate (O) at (-3,0);
     \node[below] at (-3.2,0) {$O$};
     \draw[->] (-3.5, 0) -- (-0.8, 0) coordinate (t) node[above]{$t$};
-    \draw[->] (-3,-0.5) --(-3,2) coordinate (s) node[above]{$s_i(t)$};
-    \draw[-, thick] (-3, 0.3) node[left] {$s_{i,0}$} -- (-2.7,0.5);
+    \draw[->] (-3,-0.5) --(-3,2) coordinate (s) node[above]{$r_i(t)$};
+    \draw[-, thick] (-3, 0.3) node[left] {$r_{i,0}$} -- (-2.7,0.5);
     \draw[dashed] (-2.7, 0.5) -- (-2.7, 0) node[below] {$t_0$};
     \draw plot[smooth, domain=-2.7:-1](\x,{0.5+0.5*(\x+2.7)^2});
     \draw[dashed] (-1,1.945) -- (-1, 0);
@@ -716,8 +732,8 @@ Il moto di caduta di un punto materiale da un'altezza iniziale $y_0$
 con un'accellerazione 
 $\vec{a}(t) = \vec{g}$, 
 è un moto uniformemente accellerato. Si esplicita il verso dell'accellerazione considerando $\vec{a}(t)=-g\hat y$. Con una velocità nulla, avrà  
-legge oraria: $\vec y(t)= y_0\hat{y} -\displaystyle\frac{1}{2}gt^{2}\hat{y}$.\\
-
+legge oraria: $\vec y(t)= y_0\hat{y} -\displaystyle\frac{1}{2}gt^{2}\hat{y}$.
+\\
 Se il punto viene lanciato, o verso l'alto o verso il basso
 con una velocità di modulo $v_0$ la legge oraria sarà: 
 $\vec y(t) = y_0\hat{y} \pm v_0t\hat{y}-\displaystyle\frac{1}{2}gt^{2}\hat{y}$.
@@ -745,9 +761,8 @@ cadere verso il basso.
 \begin{gather*}
     \vec{v}(t) = \vec{v}_0  + \vec{g}(t-t_0),\:\exists t_{max} \:\mbox{t.c}\:\vec{v}_y(t_{max}) = \vec{0}\\
     \vec0= v_0\hat{y} - g(t_{max}-t_0)\hat{y}\\
-    t_{max} = \displaystyle\frac{v_0}{g} + t_0\\
-    y_{max} = y(t_{max}) = y_0 + v_0\left(\displaystyle\frac{v_0}{g}\right) -
-    \displaystyle\frac{1}{2}g\left(\displaystyle\frac{v_0}{g}\right)^{2}
+    t_{max} = \displaystyle\frac{v_0}{g} + t_0,\,t_0=0\\
+    y_{max} = y(t_{max}) = y_0 + v_0\left(\displaystyle\frac{v_0}{g}\right) -\displaystyle\frac{1}{2}g\left(\displaystyle\frac{v_0}{g}\right)^{2}
 \end{gather*}
 \begin{equation}
     y_{max}=y_0 + \displaystyle\frac{v_0^{2}}{2g}
@@ -776,12 +791,13 @@ negativo si considera:
 \end{equation}.
 
 \subsubsection{Moto Armonico o Oscillatorio}
+
 Un moto armonico è un tipo di moto in cui il sistema torna 
 alle stesse condizioni dopo un periodo.
 Il periodo è la quantita di tempo necessaria 
 al sistema per compiere un'oscillazione completa.
-$T = \Delta t$: $\vec{f}(t) = \vec{f}(t + T)$.\\
-
+$T = \Delta t$: $\vec{f}(t) = \vec{f}(t + T)$.
+\\
 Alcuni moti oscillatori comuni sono il moto di una molla e il 
 moto di un pendolo.
 
@@ -799,34 +815,36 @@ Un moto armonico è definito da varie grandezze fisiche:
     \item Pulsazione ($\omega$): velocità in cui viene 
     effettuata un'oscillazione completa ($2\pi$), $\omega = \displaystyle\frac{2\pi}{T} = 2\pi\nu$, 
     misurata in radianti al secondo $\left[\displaystyle\frac{rad}{s}\right]$.
-    \item Fase Inizial ($\varphi$): indica il punto dell'oscillazione 
+    \item Fase Iniziale ($\varphi$): indica il punto dell'oscillazione 
     da dove comincia il moto, misurata in radianti [$rad$].
 \end{itemize}
 
 La legge oraria generale di un moto armonico è definita da 
-una funzione sinusoidale o cosinusoiale: $x(t) = A(t)\cos(\varphi+\omega t)$ oppure $ x(t) = A(t)\sin(\varphi+\omega t)$.\\ 
+una funzione sinusoidale o cosinusoidale: $x(t) = A(t)\cos(\varphi+\omega t)$ oppure $ x(t) = A(t)\sin(\varphi+\omega t)$.\\ 
 In un moto armonico semplice l'ampiezza massima non dimuisce o 
 aumenta nel tempo quindi la sua legge oraria sarà:  
 $x(t) = A\cos(\varphi + \omega t) =A\cos(\varphi + 2\pi\nu t) = A\cos\left(\varphi + \displaystyle\frac{2\pi}{T}t\right)$.
 All'istante $t_0 = 0$, $x(t_0) = A\cos(\varphi + \omega t_0) = 
 A\cos(\varphi)$, se la fase iniziale è nulla, all'istante di 
 tempo iniziale il punto si trovo nella posizione 
-di ampiezza massima: $x(0) = A\cos(0) = A$. \\
+di ampiezza massima: $x(0) = A\cos(0) = A$. 
+\\
 Una funzione sinusoidale rappresenta lo stesso moto di una funzione cosinusoidale, solamente quadrato di fase, ovvero sfasato di $\displaystyle\frac{\pi}{2}$, 
 per cui è possibile usare il seno ed il coseno per analizzare lo stesso moto armoninco. 
 Per convenzione si usa il seno per la legge oraria della posizione 
 di un moto armonico: $x(t) = A\sin(\varphi + \omega t)$. Nell' 
-istante di tempo $t_0 = 0$, se la fase è nulla: $x(0) = 0$.\\
+istante di tempo $t_0 = 0$, se la fase è nulla: $x(0) = 0$. 
+\\
 La velocità e l'accellerazione del moto armonico si ottengono 
 derivando la legge oraria dell'\\accellerazione:
 
 \begin{gather}
-    v(t) = \dot x(t) = \omega Acos(\varphi+\omega t)\\
-    a(t)= \ddot x(t) = -\omega^{2}Asin(\varphi+\omega t) = -\omega^{2}x(t)
+    v(t) = \dot x(t) = \omega A\cos(\varphi+\omega t)\\
+    a(t)= \ddot x(t) = -\omega^{2}A\sin(\varphi+\omega t) = -\omega^{2}x(t)
 \end{gather}
 
-La velocità risulta quadrata di fase poiché è sfasata di $\displaystyle\frac{\pi}{2}$ rispetto alla posizione, mentre la legge oraria l'accellerazione 
-risulta essere in opposizione di fase rispetto alla posizione poiché è sfasata di $\pi$. 
+La velocità risulta quadrata di fase poiché è sfasata di $\displaystyle\frac{\pi}{2}\,rad$  rispetto alla posizione, mentre la legge oraria dell'accellerazione 
+risulta essere in opposizione di fase rispetto alla posizione poiché è sfasata di $\pi\,rad$. 
 
 Se la legge oraria di un punto materiale rispetta l'equazione $\ddot x(t)+\omega x(t)=0$, allora quel punto si muove di moto armonico semplice. Quest'equazione 
 rappresenta la condizione necessaria per un moto armonico semplice. 
@@ -849,12 +867,12 @@ si può esprimere rispetto alla sola legge oraria della posizione:
     \draw[->] (-3.5, 0) -- (-1, 0) node[above]{$t$};
     \draw[->] (-3,-1.2)--(-3,2)node[above]{$x(t)$};
     \draw[-] plot[smooth, domain=-3:-0.97] (\x, {sin(4*(\x+3) r)});
-    \draw[dashed] (-3,1) node[left] {$A$} -- (-1,1) node[above]{$Asin(\omega t)$};
+    \draw[dashed] (-3,1) node[left] {$A$} -- (-1,1) node[above]{$A\sin(\omega t)$};
     \draw[dashed] (-3,-1) node[left] {$-A$} -- (-1,-1);
 
 
     \node[below] at (0.2,0) {$O$};
-    \draw[->] (-0.5, 0) -- (2, 0) node[above]{$t$}node[below]{$\omega Acos(\omega t)$};
+    \draw[->] (-0.5, 0) -- (2, 0) node[above]{$t$}node[below]{$\omega A\cos(\omega t)$};
     \draw[->] (0,-1.2)--(0,2)node[above]{$\dot x(t)$} ;
     \draw[-] plot[smooth, domain=0:1.97] (\x, {cos(4*\x r)});
     \draw[dashed] (0,1) node[left] {$\omega A$} -- (2,1);
@@ -865,7 +883,7 @@ si può esprimere rispetto alla sola legge oraria della posizione:
     \draw[->] (3,-1.2)--(3,2)node[above]{$\ddot x(t)$};
     \draw[-] plot[smooth, domain=3:4.97] (\x, {-sin(4*(\x-3) r)});
     \draw[dashed] (3,1) node[left] {$\omega^{2} A$} -- (5,1);
-    \draw[dashed] (3,-1) node[left] {$-\omega^{2} A$} -- (5,-1)node[below]{$-\omega^{2}Asin(\omega t)$};
+    \draw[dashed] (3,-1) node[left] {$-\omega^{2} A$} -- (5,-1)node[below]{$-\omega^{2}A\sin(\omega t)$};
 
 \end{tikzpicture}\end{center}
 
@@ -1008,7 +1026,7 @@ si ha per un vettore velocità:
 
 Quando un punto materiale ruota intorno ad un punto si muove di moto circolare.
 Poiché la traiettoria è una circonferenza avente come centro il 
-punto intorno a cui il punto materiale ruota, il modulo del vettrore posizione 
+punto intorno a cui il punto materiale ruota, il modulo del vettore posizione 
 per qualunque istante di tempo rimane invariato, ciò che cambia nel tempo è 
 la sua direzione e verso: $\vec{r}(t)=r\cdot\hat{r}(t)$.
 Il versore $\hat{r}(t)$ può essere scritto in componenti: 
@@ -1201,10 +1219,11 @@ al diminuire di $\Delta t$ tende a diventare ortogonale alla velocità:
 
 Questa accellerazione viene chiamata accellerazione centripeta.
 
-\subsubsection{Moto Circolare Periodico}
-Dato un punto materiale in moto circolare uniforma, se dopo un perdiodo 
+
+
+Dato un punto materiale in moto circolare uniforme, se dopo un perdiodo 
 $T=\Delta t$, ritorna alla posizione iniziale, si definisce moto 
-periodico. Si può la posizione angolare considerando 
+periodico. Si può ottenere la posizione, integrando la velocità angolare, se è nota la posizione angolare iniziale  
 $\theta(t_0) = 0$: 
 
 \begin{gather*}
@@ -1289,9 +1308,9 @@ si trova.
 
 \subsubsection{Moto Vario}
 Si può aggiungere al sistema di riferimento $S(\tau(t), \nu(t))$, un altro 
-asse, chiamato $\beta$ ortgonale al piano ($\hat{\beta}=\hat{\tau}(t)\times\hat{\nu}(t)$) creato dai primi due 
+asse, chiamato $\beta$ ortgonale al piano ($\hat{\beta}=\hat{\tau}(t)\times\hat{\nu}(t)$) sulla base di $\tau$ e $\nu$ 
 che rappresenta una rotazione in senso antiorario se è diretto 
-verso l'alto ($\beta$), orario se è diretto verso il basso($\beta'$):
+verso l'alto ($\beta$), orario se è diretto verso il basso ($\beta'$):
 
 \begin{center}\begin{tikzpicture}[scale=2]
     \coordinate(O) at(0,0);
@@ -1388,15 +1407,13 @@ rispetto alla funzione $f$:
 \end{equation}
 
 La funzione errore $R_k$ è un infinitesimo di ordine $k$: 
-$R_k \leq O((t-t_0)^{k})$.\\
-
-Data lo spostamento $\vec{s}(t)$, si può esprimere tramite la sua 
-serie di Taylor: 
+$R_k \leq O((t-t_0)^{k})$.
+Date l'accellerazione e la velocità nell'istante di tempo $t_0$ è possibile approssimare la legge oraria della posizione $\vec{r}(t)$, tramite il suo sviluppod i Taylor: 
 
 \begin{gather*}
     \vec{r}(t)=\sum_{i=0}^{2}\displaystyle\vec{r}^{(i)}(t_0)\frac{(t-t_0)^k}{i!}+O((t-t_0)^{3})\\
     \vec{r}(t)=\vec{r}(t_0) + \vec{r}^{(1)}(t_0)(t-t_0)+\vec{r}^{(2)}(t_0)\displaystyle\frac{(t-t_0)^{2}}{2}+O((t-t_0)^{3})\\
-    {\vec{r}}(t)=\vec{r}_0+\vec{v}_0(t-t_0)+\vec{a}_0\displaystyle\frac{(t-t_0)^{2}}{2}+R_k
+    {\vec{r}}(t)=\vec{r}_0+\vec{v}_0(t-t_0)+\vec{a}_0\displaystyle\frac{(t-t_0)^{2}}{2}+R_2
 \end{gather*}
 \begin{equation}
     {\vec{r}}(t)\approx\vec{r}_0+\vec{v}_0(t-t_0)+\vec{a}_0\displaystyle\frac{(t-t_0)^{2}}{2}
@@ -1497,8 +1514,8 @@ moto:
 
 La costante di proporzionalità $\displaystyle\frac{1}{c_0}$ viene chiamata massa 
 inerziale $m$ e quantifica quanto un corpo si oppone al moto ovvero l'inerzia 
-del corpo, e 
-coincide nella meccanica newtoniana alla massa fisica del corpo.\\
+del corpo.
+\\
 Questo legame tra accellerazione e forza agente sul corpo è valido 
 anche in campo vettoriale: 
 \begin{equation}
@@ -1545,25 +1562,24 @@ forza risultante agente sul sistema sarà nulla:
 
 \subsubsection{Equilibrio}
 Se su un corpo agiscono più forze, i contributi delle singole forze sono indipendenti tra di loro, per cui è possibile considerare una sola forza, definita risultante, pari 
-alla somma vettoriale di tutte le forze applicate. 
-
-Un corpo si dice sia in uno stato di equilibrio se la 
+alla somma vettoriale di tutte le forze applicate. Un corpo si dice sia in uno stato di equilibrio se la 
 risultante è nulla. 
 
 Applicando 
 il primo principio della dinamica si individuano due tipi di 
 equilibrio:
 \begin{itemize}
-    \item Equilbirio Statico: Si applica il princio di inerzia, 
+    \item Equilibrio Statico: Si applica il principio di inerzia, 
     il corpo si trova in uno stato di quiete;
     \item Equilibrio Dinamico: Si applica il primo principio, 
     il corpo si muove di moto rettilineo uniforme.
 \end{itemize}
+
 Un corpo in moto circolare uniforme si trova in equilbirio 
 dinamico, avendo una velocita costante. Ma avrà un'
 accellerazione centripeta costante. La risultante delle forze sarà 
 comunque nulla poiché sul corpo agirà una forza apparente che 
-bilancia la forza centripeta.\\
+bilancia la forza centripeta.
  
 \subsection{Forze}
 
@@ -1586,7 +1602,6 @@ Dalla forza di gravità derivano:
     \item Forza Elastica.
 \end{itemize}
 
-
 \subsubsection{Forza Peso}
 
 Viene definita la forza peso $\vec{F}_P$ o $\vec{P}$ la forza di attrazione gravitazionale tra un
@@ -1598,7 +1613,8 @@ come un punto avente la stessa massa del pianeta nel suo centro:
 \end{equation}
 
 Viene definito il vettore di accellerazione gravitazionale: 
-$\vec{g}=G\displaystyle\frac{M}{r^{2}}\hat{r}$.\\
+$\vec{g}=G\displaystyle\frac{M}{r^{2}}\hat{r}$.
+\\
 Poiché la massa ineraziale è diversa dalla massa gravitazionale 
 l'accellerazione di un corpo in caduta libera è indipendente 
 dalla massa ineraziale del corpo. Su un corpo in caduta libera agirà solamente la forza peso, dipendente dalla massa gravitazionale, per il secondo 
@@ -1606,15 +1622,18 @@ principio, la somma delle forze è uguale alla massa inerziale del corpo moltipl
 \begin{equation*}
     \sum\vec{F}=\vec{F}_P=m_i\vec{a}
 \end{equation*}
-Per cui si avrà che la forza peso di un corpo sia direttamente proporzionale alla forza agente su un corpo in caduta libera ad un'accellerazione $\vec{a}$, 
-per cui anche le masse saranno tra di loro direttamente proporzionali rispetto ad una costante di proprozionalità $c_0$:
+
+Per cui si avrà che la forza peso di un corpo sia coincidente alla forza agente su un corpo in caduta libera ad un'accellerazione $\vec{a}$, 
+per cui le masse saranno tra di loro direttamente proporzionali rispetto ad una costante di proprozionalità $c_0$:
+
 \begin{equation*}
     m_g\vec{g}=m_i\vec{a}\Rightarrow m_g=c_0m_i
 \end{equation*}
+
 Sulla base di evidenze sperimentali si è scoperto che la costante di proporzionalità vale $1$, per cui un corpo allo stato di quiete su cui agisce 
 solamente la forza peso, sarà soggetto alla stessa accellerazione di un corpo in caduta libera $\vec{a}=\vec{g}$. Perciò la massa gravitazionale è 
 esattamente uguale alla massa inerziale, nonostante rappresentino due fenomeni distinti: la resistenza di un corpo ad uno spostamento e 
-l'attrazione gravitazionale tra due corpi.\\
+l'attrazione gravitazionale tra due corpi.
 
 \subsubsection{Reazione Vincolare}
 
@@ -1665,14 +1684,14 @@ quiete, quindi si oppone alla forza esterna agente su di esso,
 ed ha direazione uguale alla direzione del moto, ma verso 
 opposto. Il suo modulo aumenta fino al raggiungimento di 
 un valore massimo, dopo il quale non riesce più a impedire 
-il moto.\\
-\'{E} proporzionale all'inerzia del corpo: $F_A\propto F_P$. Il 
-modulo massimo che può assumere dipende dalla costante di attrito 
-statio $\mu_s$ tra il corpo ed il piano di appoggio:
+il moto.
+\\
+\`{E} direttamente proporzionale all'inerzia del corpo: $F_A\propto F_P$, è uguale all'inerzia del corpo per una certa costante di proporzionalità. Per un valore massimo 
+$F_{max}$ la costante di proporzionalità corrisponde alla costante di attrito statico $\mu_s$. 
 
 \begin{gather*}
     \vec{F}_{max}\:\mbox{t.c.}\:\sum\vec{F}=\vec{0}\\
-    F_{max}\hat{x}+F_A(-\hat{x})=\vec{0}
+    F_{max}\hat{x}+F(-\hat{x})=\vec{0}
 \end{gather*}
 \begin{equation}
     F_{max}=\mu_sN=\mu_smg
@@ -1805,7 +1824,7 @@ forza di modulo $F=mg\left(\displaystyle\frac{\sin\alpha}{\mu_s}-\cos\alpha\righ
 
 \subsubsection{Tensione}
 Considerando un filo non estensibile, di massa trascurabile che 
-lega un corpo ad un vincolo. Se il corpo lega una massa ad un vincolo, e si trova in stato di quiete, allora la risultatne delle forze applicate al filo deve essere 
+lega un corpo ad un vincolo. Se il corpo lega una massa ad un vincolo, e si trova in stato di quiete, allora la risultante delle forze applicate al filo deve essere 
 necessariamente nulla. Se il filo non si estende allora le stesse forze dovranno essere applicate su qualsiasi punto del filo. Considerando l'estremo dove è collegata 
 la massa, la sua forza peso $\vec{F}_P$ viene bilanciata da una forza definita tensione $\vec{T}$ di verso opposto. Considerando l'altro estremo collegato al vincolo, poiché 
 le forze devono agire su ogni punto del filo, la tensione sarà applicata anche sul vincolo, per essere in quiete è necessaria l'azione di una reazione vincolare normale al piano 
@@ -1872,12 +1891,13 @@ verrà quindi descritto dall'equazione:
 
 Consdireando l'equazione sull'asse $\tau$: 
 \begin{equation}
-    \ddot\theta(t)=-\displaystyle\frac{g}{l}sin\theta(t)
+    \ddot\theta(t)=-\displaystyle\frac{g}{l}\sin\theta(t)
 \end{equation}
 si definisce $\displaystyle\omega_p^{2}=\frac{g}{l}$ la 
-pulsazione del pendolo.\\
-Considerando l'intorno $[0,\theta(t_0)]$, 
-con $\theta(t_0) << 1$, 
+pulsazione del pendolo.
+\\
+Considerando l'intorno $[0\,rad,\theta(t_0)]$, 
+con $\theta(t_0) << 1\,rad$, 
 si può approssimare $\sin\theta(t)$ mediante la sua serie di Taylor: 
 $\sin\theta(t) = \theta(t)+O(\theta^{3}(t))\Rightarrow\ddot\theta(t)\approx-\theta(t)\omega_p^{2}$, 
 quindi si può approssimare il moto del pendolo ad un moto 
@@ -1896,23 +1916,23 @@ e avrà un periodo:
 Si considera $\theta_0$ la posizione iniziale del 
 pendolo: 
 \begin{equation*}
-    \theta_0=\theta(0)=Asin\varphi
+    \theta_0=\theta(0)=A\sin\varphi
 \end{equation*}
 Si considera il pendolo in uno stato di quiete nell istante $t=0$, 
 quindi:
 \begin{gather*}
-    \dot\theta(t=0)=0=\omega_pAcos\varphi\\
+    \dot\theta(t=0)=0=\omega_pA\cos\varphi\\
     \varphi=\displaystyle\frac{\pi}{2}
 \end{gather*}
 \begin{equation}
-    \theta_0=Asin\frac{\pi}{2}=A
+    \theta_0=A\sin\frac{\pi}{2}=A
 \end{equation}
 Date queste condizioni le equazioni del moto del pendolo diventano: 
 \begin{equation*}
     \begin{cases}
-        \displaystyle\theta(t)=\theta_0sin\left(\frac{\pi}{2}+\omega_pt\right)=\theta_0cos(\omega_pt)\\
-        \displaystyle\dot\theta(t)=\theta_0\omega_pcos\left(\frac{\pi}{2}+\omega_pt\right)=-\theta_0\omega_psin(\omega_pt)\\
-        \displaystyle\ddot\theta(t)=-\theta_0\omega_p^{2}sin\left(\frac{\pi}{2}+\omega_pt\right)=-\theta_0\omega_p^{2}cos(\omega_pt)
+        \displaystyle\theta(t)=\theta_0\sin\left(\frac{\pi}{2}+\omega_pt\right)=\theta_0\cos(\omega_pt)\\
+        \displaystyle\dot\theta(t)=\theta_0\omega_p\cos\left(\frac{\pi}{2}+\omega_pt\right)=-\theta_0\omega_p\sin(\omega_pt)\\
+        \displaystyle\ddot\theta(t)=-\theta_0\omega_p^{2}\sin\left(\frac{\pi}{2}+\omega_pt\right)=-\theta_0\omega_p^{2}\cos(\omega_pt)
     \end{cases}
 \end{equation*}
 
@@ -2086,7 +2106,7 @@ chiamata costante di attrito viscoso, si misura in Newton al
 secondo per metro $\left[\displaystyle\frac{N\cdot s}{m}\right]$.
 \\
 Considerando un corpo che si muove dentro un liquido con una velocità iniziale $\vec{v}_0=v_{0}\hat{y}$, per cui il corpo risenti di una forza di attrito viscoso $\vec{F}_{vis}=-b\vec{v}=-bv\hat{y}$. 
-Se si muovesse anche in un'altra direzione $x$, il corpo sarebbe soggetto ad un attrito viscoco $\vec{F}_{vis}=-F_{vis,x}\hat{x}-F_{vis,y}\hat y$. 
+Se si muovesse anche in un'altra direzione $x$, il corpo sarebbe soggetto ad un attrito viscoco $\vec{F}_{vis}=-b\vec{v}=-bv_x\hat x -bv_y\hat y$. 
 
 \begin{center}\begin{tikzpicture}[scale=2]
     \draw[-](-0.5,0)--(2.5,0);
@@ -2190,31 +2210,31 @@ di equazione si trova considerando:
     \end{cases}
 \end{gather*} 
 
-$\displaystyle\frac{b}{m}$ viene chiamato tempo caratteristico 
+$\displaystyle\frac{b}{2m}$ viene chiamato tempo caratteristico 
 $\gamma$ e $\displaystyle\frac{k}{m}$ 
 la pulsazione della molla $\omega_M^{2}$:
 \begin{equation}
-    \ddot x(t)+\gamma\dot x(t)+\omega_M^{2}x(t)=0
+    \ddot x(t)+2\gamma\dot x(t)+\omega_M^{2}x(t)=0
 \end{equation}
 Se il polinomio caratteristico ha due soluzioni complesse, 
 la massa tende al punto di riposo, oscillando. Se ha 
 due soluzioni reali, la massa tende alla posizione di riposo 
 senza oscillare.\\
-Se $\Delta=1-\displaystyle\frac{4\omega_M^{2}}{\gamma^{2}} <0\Rightarrow \gamma^{2} < 4\omega_M^{2}$, 
+Se $\Delta=1-\displaystyle\frac{\omega_M^{2}}{\gamma^{2}} <0\Rightarrow \gamma^{2} < \omega_M^{2}$, 
 la massa oscilla fino alla posizione di riposo, le due 
 soluzioni del polinomio caratteristico saranno:
 \begin{gather*}
-    \lambda_{1,2}=-\displaystyle\frac{\gamma}{2}\pm\sqrt{1-\displaystyle\frac{4\omega_M^{2}}{\gamma^{2}}}\displaystyle\frac{\gamma}{2}=-\frac{\gamma}{2}\pm i\Omega
+    \lambda_{1,2}=-\gamma\pm\gamma\sqrt{1-\displaystyle\frac{\omega_M^{2}}{\gamma^{2}}}=-\gamma\pm i\Omega
 \end{gather*}
 La soluzione dell'equazione differenziale sarà quindi:
 \begin{gather*}
-    \displaystyle x(t)=C_1e^{\left(-\frac{\gamma}{2}+ i\Omega\right)t}+C_2e^{\left(-\frac{\gamma}{2}- i\Omega\right)t}\\
-    x(t)=e^{-\frac{\gamma}{2}t}\left(C_1e^{i\Omega t}+C_2e^{-i\Omega t}\right)
+    \displaystyle x(t)=C_1e^{\left(-\gamma+ i\Omega\right)t}+C_2e^{\left(-\gamma- i\Omega\right)t}\\
+    x(t)=e^{-\gamma t}\left(C_1e^{i\Omega t}+C_2e^{-i\Omega t}\right)
 \end{gather*}
 Poiché $C_1,C_2\in\mathbb{C}$, mentre la posizione $x(t)$ è una funzione $x:\mathbb{R}^+\to\mathbb{R}$:
 \begin{gather*}
     x(t)\in\mathbb{R}\Rightarrow \Im(x(t))=0\\
-    \Im\left(e^{-\frac{\gamma}{2}t}(C_1\cos(\Omega t)+iC_1\sin(\Omega t)+C_2\cos(\Omega t)-iC_2\sin(\Omega t))\right)=0\\
+    \Im\left(e^{-\gamma t}(C_1\cos(\Omega t)+iC_1\sin(\Omega t)+C_2\cos(\Omega t)-iC_2\sin(\Omega t))\right)=0\\
     \begin{cases}
         \Im((C_1+C_2)\cos(\Omega t))=0\\
         \Re(i(C_1-C_2)\sin(\Omega t))=0
@@ -2227,11 +2247,11 @@ Poiché $C_1,C_2\in\mathbb{C}$, mentre la posizione $x(t)$ è una funzione $x:\m
 \end{gather*}
 Allora l'equazione del moto sarà:
 \begin{gather*}
-    x(t)=e^{-\frac{\gamma}{2}t}(C_1e^{i\Omega t}+C_1^*e^{-i\Omega t})\\
-    x(t)=2Ae^{-\frac{\gamma}{2}t}\left(\displaystyle\frac{e^{i(\Omega t+\varphi)}+e^{-i(\Omega t+\varphi)}}{2}\right)\\
+    x(t)=e^{-\gamma t}(C_1e^{i\Omega t}+C_1^*e^{-i\Omega t})\\
+    x(t)=2Ae^{-\gamma t}\left(\displaystyle\frac{e^{i(\Omega t+\varphi)}+e^{-i(\Omega t+\varphi)}}{2}\right)\\
 \end{gather*}
 \begin{equation}
-    x(t)=2Ae^{-\frac{\gamma}{2}t}\cos\left(\Omega t +\varphi\right) 
+    x(t)=2Ae^{-\gamma t}\cos\left(\Omega t +\varphi\right) 
 \end{equation}
 Se consideriamo la massa in uno stato di quiete nell'istante 
 di tempo $t=0$ allora:
@@ -2245,7 +2265,7 @@ di tempo $t=0$ allora:
 La legge oraria del moto, con un'oscillazione di 
 semiperiodo $T=\displaystyle\frac{2\pi}{\Omega}$, sarà: 
 \begin{equation}
-    x(t)=x_{in}e^{-\frac{\gamma}{2}t}\cos(\Omega t)
+    x(t)=x_{in}e^{-\gamma t}\cos(\Omega t)
 \end{equation}
 
 \begin{center}\begin{tikzpicture}[scale=2]
@@ -2255,16 +2275,16 @@ semiperiodo $T=\displaystyle\frac{2\pi}{\Omega}$, sarà:
     \node[above]at(-0.2,0){$x_0$};
     \node[below]at(-0.1,0){$O$};
     
-    \node[left]at(0,1){$x_{in}e^{-\frac{\gamma}{2}t}$};
-    \node[left]at(0,-1){$-x_{in}e^{-\frac{\gamma}{2}t}$};
-    \node[above]at(3,0.2){$x_{in}e^{-\frac{\gamma}{2}t}\cos(\Omega t)$};
+    \node[left]at(0,1){$x_{in}e^{-\gamma t}$};
+    \node[left]at(0,-1){$-x_{in}e^{-\gamma t}$};
+    \node[above]at(3,0.2){$x_{in}e^{-\gamma t}\cos(\Omega t)$};
 
     \draw[-]plot[smooth,domain=0:3](\x,{e^-(\x)});
     \draw[-]plot[smooth,domain=0:3](\x,{-e^-(\x)});
     \draw[-]plot[smooth,domain=0:3](\x,{(e^-(\x))*cos(4*\x r)});
 \end{tikzpicture}\end{center}
 
-Se $\gamma^{2}<4\omega_M^{2}$, allora l'oscillazione è fortemente 
+Se $\gamma^{2}<\omega_M^{2}$, allora l'oscillazione è fortemente 
 smorzata e la legge oraria della posizione sarà:
 \begin{equation*}
     x(t)=Ae^{\lambda_1t}+Be^{\lambda_2t}
@@ -2272,7 +2292,7 @@ smorzata e la legge oraria della posizione sarà:
 Considerando la massa in quiete nell'istante di tempo $t=0$: 
 \begin{gather*}
     x_{in}=x(0)=A+B\\
-    \dot x(0)=A\lambda_1+B\lambda_2=0=-\displaystyle\frac{\gamma}{2}(A+B)+\frac{\sqrt{\Delta}}{2}(A-B)\\
+    \dot x(0)=A\lambda_1+B\lambda_2=0=-\gamma(A+B)+\sqrt{\Delta}(A-B)\\
     \displaystyle\frac{\gamma}{\sqrt{\Delta}}x_{in}+B=A\\
     B=\displaystyle\frac{1}{2}x_{in}\left(1-\displaystyle\frac{\gamma}{\sqrt{\Delta}}\right)\\
     A=\displaystyle\frac{1}{2}x_{in}\left(1+\displaystyle\frac{\gamma}{\sqrt{\Delta}}\right)
@@ -2300,7 +2320,7 @@ La legge oraria sarà quindi:
 Se viene applicata una forzante $F(t)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)$ 
 al corpo, il moto sarà descritto da: 
 \begin{equation}
-    \ddot x(t)+\gamma\dot x(t)+\omega_M^{2}x(t)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)
+    \ddot x(t)+2\gamma\dot x(t)+\omega_M^{2}x(t)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)
 \end{equation}
 La soluzione particolare $x_p(t)$ dell'equazione si ottiene considerando:
 \begin{gather*}
@@ -2310,41 +2330,42 @@ La soluzione particolare $x_p(t)$ dell'equazione si ottiene considerando:
         \ddot x_p(t)=-A\omega_f^{2}\sin(\omega_f t+\varphi)
     \end{cases}\\
     -A\omega_f^{2}\sin(\omega_f t+\varphi)+
-    A\omega_f\gamma \cos(\omega_f t+\varphi)+
+    2A\omega_f\gamma \cos(\omega_f t+\varphi)+
     A\omega_M^{2}\sin(\omega_f t+\varphi)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)
 \end{gather*}
 Espandendo la somma dei coseni e seni si ottiene: 
 \begin{equation*}
     -A\omega_f^{2}(\sin(\omega_f t)\cos\varphi+\sin\varphi \cos(\omega_f t))+
-    A\omega_f\gamma(\cos(\omega t)\cos\varphi-\sin(\omega t)\sin\varphi)+\\
+    2A\omega_f\gamma(\cos(\omega t)\cos\varphi-\sin(\omega t)\sin\varphi)+\\
 \end{equation*}
 \begin{equation*}
     A\omega_M^{2}(\sin(\omega_f t)\cos\varphi+\sin\varphi \cos(\omega_f t))=\displaystyle\frac{F_0}{m}\sin(\omega_f t)
 \end{equation*}
 \begin{gather*}
     \begin{cases}
-        \sin(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\cos\varphi-A\omega_f\gamma \sin\varphi)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)\\
-        \cos(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\sin\varphi+A\omega_f\gamma \cos\varphi)=0
+        \sin(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\cos\varphi-2A\omega_f\gamma \sin\varphi)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)\\
+        \cos(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\sin\varphi+2A\omega_f\gamma \cos\varphi)=0
     \end{cases}\\
     \begin{cases}
-        (\omega_M^{2}-\omega_f^{2})A\cos\varphi-A\omega_f\gamma \sin\varphi=\displaystyle\frac{F_0}{m}\\
-        (\omega_M^{2}-\omega_f^{2})A\sin\varphi+A\omega_f\gamma \cos\varphi=0\Rightarrow\displaystyle \tan\varphi=\frac{-\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}
+        (\omega_M^{2}-\omega_f^{2})A\cos\varphi-2A\omega_f\gamma \sin\varphi=\displaystyle\frac{F_0}{m}\\
+        (\omega_M^{2}-\omega_f^{2})A\sin\varphi+2A\omega_f\gamma \cos\varphi=0\Rightarrow\displaystyle \tan\varphi=-\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}
     \end{cases}\\
     \begin{cases}
-        \displaystyle A\frac{\omega_M^{2}-\omega_f^{2}}{\sqrt{1+\left(\frac{-\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}-A\omega_f\gamma\sqrt{1-\left(\displaystyle\frac{1}{\sqrt{1+\left(\frac{-\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}\right)^{2}}=\frac{F_0}{m}\\
-        \displaystyle\frac{1}{\sqrt{1+\left(\frac{-\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}=\cos\varphi
+        \displaystyle A\frac{\omega_M^{2}-\omega_f^{2}}{\sqrt{1+\left(-\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}-2A\omega_f\gamma\sqrt{1-\left(\displaystyle\frac{1}{\sqrt{1+\left(-\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}\right)^{2}}=\frac{F_0}{m}\\
+        \displaystyle\frac{1}{\sqrt{1+\left(-\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}\right)^{2}}}=\cos\varphi
     \end{cases}\\
     \begin{cases}
-        A\left(\displaystyle\frac{(\omega_M^{2}-\omega_f^{2})^{2}+\omega_f^{2}\gamma^{2}}{\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+\omega_f^{2}\gamma^{2}}}\right)=A\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+\omega_f^{2}\gamma^{2}}=\displaystyle\frac{F_0}{m} \\
-        \tan\varphi=\displaystyle\frac{-\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}
+        A\left(\displaystyle\frac{(\omega_M^{2}-\omega_f^{2})^{2}+4\omega_f^{2}\gamma^{2}}{\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+4\omega_f^{2}\gamma^{2}}}\right)=A\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+4\omega_f^{2}\gamma^{2}}=\displaystyle\frac{F_0}{m} \\
+        \tan\varphi=-\displaystyle\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}
     \end{cases}
 \end{gather*}
 \begin{equation}
-    A=\frac{F_0}{m}\frac{1}{\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+\omega_f^{2}\gamma^{2}}}
+    A(\omega_f)=\frac{F_0}{m}\frac{1}{\sqrt{(\omega_M^{2}-\omega_f^{2})^{2}+4\omega_f^{2}\gamma^{2}}}
 \end{equation}
 L'ampiezza della soluzione particolare $x_p(t)$ dipenderà 
 dalla pulsazione della forzante, della molla e dal tempo 
-caratteristico: $x_p(t)=A(\omega_f)\sin(\omega_f t+\varphi)$ \\
+caratteristico: $x_p(t)=A(\omega_f)\sin(\omega_f t+\varphi)$. 
+\\
 Se i valori della costante di tempo $\gamma\approx0$ allora 
 l'ampiezza in funzione della pulsazione della forzante diventa:
 \begin{equation}
@@ -2371,8 +2392,8 @@ il fenomeno di risonanza, ma con ampiezza minore:
 \end{tikzpicture}\end{center}
 
 \subsection{Moti Relativi e Forze Apparenti}
-Un corpo analizzato in un sistema di riferimento sarà descritto tramite le coordinate di quel sistema, considerando un altro sistema cambierà 
-l'espressione in coordinate del comportamento del corpo interno al sistema.
+Le leggi fisiche non dipendono dal sistema di riferimento, mentre le espressioni matematiche dipendono dal sistema di coordinate scelto per l'analisi. 
+Considerando un altro sistema di riferimento, cambierà l'espressione in coordinate del comportamento di un corpo interno al sistema.
 
 \begin{center}\begin{tikzpicture}
     \draw[->](-0.5,0)--(3,0)node[above]{$x$};
@@ -2399,6 +2420,10 @@ rispetto ad un osservatore esterno.
 
 Questo tipo di sistema di riferimento viene definito 
 inerziale, per cui ogni altro sistema di riferimento in moto rettilineo uniforme rispetto ad un sistema inerziale, è anch'esso un sistema di riferimento inerziale. 
+In un sistema di riferimento inerziale vale rigorosamente la legge d'inerzia, ovvero un punto materiale, non soggetto a forze, rimane in moto rettilineo uniforme, oppure, 
+se è in quiete, rimane in quiete. 
+
+
 
 
 Per attuare un 
@@ -2426,7 +2451,7 @@ di direzione dei vettori componenti.
 
 Considerando il sistema 
 ineraziale $S'$, non avendo un'accellerazione relativa a $S$ 
-allora anche la forza risultante agente su un corpo, descrtitta 
+allora anche la forza risultante agente su un corpo, descritta 
 in entrambi i sistemi di riferimento sarà uguale. Per cui per ogni sistema di riferimento inerziale, agiranno le stesse forze, espressioni delle stesse interazioni fisiche. 
 Essendo presenti le stesse forze in ogni sistema di riferimento inerziale non è possible determinare se un sistema inerziale si muova 
 di moto rettilineo uniforme o si trovi in uno stato di quiete. Questo concetto viene descritto con il termine relativià galileiana. 
@@ -2472,11 +2497,11 @@ le espressioni per il cambio di coordinate saranno:
     \end{cases}
 \end{gather}
 Poiché cambia l'accellerazione del corpo, cambierà anche 
-la sua forza risultante. La forza vera agente sul corpo, misurata nel sistema inerziale, non è proporzionale all'accellerazione misurata nel sistema accellerato. 
-Quindi deve esistere una forza apparente, poiché dipende 
-interamente dal cambiamento tra due sistemi di riferimento 
-non inerziali tra di loro, per spiegare la differenza della 
-forza risultante agente sul corpo nei i due sistemi:
+la sua forza risultante. Le forze misurate 
+nei sistemi di riferimento inerziali vengono chiamate forze vere, poiché possono essere calcolate sulla base delle interazioni fondamentali. In un sistema di riferimento non 
+inerziale il valore della forza misurato differisce dal valore calcolato sulla base delle interazioni fondamentali, per cui si devono considerare altre forze per ritornare 
+alla rappresentazione del secondo principio. Queste forze apparenti sono interamente dovute alla scelta del sistema di riferimento, possono essere calcolate esprimendo 
+l'accellerazione, misurata nel sistema inerziale, nel sistema non inerziale:  
 \begin{gather*}
     m\vec{a}=m(\vec{a}+\vec{A})\\
     m\vec{a}'=m\vec{a}-m\vec{A}
@@ -2484,21 +2509,24 @@ forza risultante agente sul corpo nei i due sistemi:
 \begin{equation}
     \vec{F}'_{tot}=\vec{F}_{tot}-m\vec{A}
 \end{equation}
-$m\vec{A}$ rappresenta questa forza apparente. Queste forze presenti solo nei sistemi di riferimento non inerziali vengono definite forze di inerzia. 
+$m\vec{A}$ rappresenta questa forza apparente. Queste forze presenti solo nei sistemi di riferimento non inerziali vengono definite forze di inerzia, non dipendono 
+da interazioni fondamentali.  
 
 \subsubsection{Sistemi non Inerziali con Rotazione e Trascinamento}
 Se il sistema $S'$ non ineriale ruota intorno intorno al centro del 
-sistema $S$, allora i versori di $S'$ rispetto a $S$ 
+sistema $S$ con velocità angolare $\vec{\omega}$, allora anche i versori 
 cambieranno rispetto al tempo:
 
 \begin{equation}
-    \vec{r}=\vec{r}'+\vec{R}=x'\hat{x}'+y'\hat{y}'+z'\hat{z}'+\vec{R}
+    \vec{r}=\vec{r}'+\vec{R}=r'\hat{r}'+\vec{R}
 \end{equation}
 \begin{gather*}
-    \vec{v}=\displaystyle\frac{d\vec{r}}{dt}+\frac{d\vec{R}}{dt}=\frac{dx'}{dt}\hat{x}'+x'\frac{d\hat{x}'}{dt}+\frac{dy'}{dt}\hat{y}'+y'\frac{d\hat{y}'}{dt}+\frac{dz'}{dt}\hat{z}'+z'\frac{d\hat{z}'}{dt}+\vec{V}\\
-    \vec{v}_x'\hat{x}'+x'\omega\hat{\tau}_{x'}+\vec{v}_y'\hat{y}'+y'\omega\hat{\tau}_{y'}+\vec{v}_z'\hat{z}+z'\omega\hat{\tau}_{z'}+\vec{V}\\
-    v_x'\hat{x}'+v_y'\hat{y}'+v_z'\hat{z}'+x'\vec{\omega}\times\hat{x}'+y'\vec{\omega}\times\hat{y}'+z'\vec{\omega}\times\hat{z}'+\vec{V}
+    \vec{v}=\displaystyle\frac{dr'}{dt}\hat{r}'+r'\frac{d\hat{r}'}{dt}+\frac{d\vec{R}}{dt}\\
+    v\hat{r}'+r'\omega\hat{\tau}+\vec{V}\\
+    \vec{v}'+r'\vec{\omega}\times\hat{r}+\vec{V}
 \end{gather*}
+Come in un moto circolare presenta una velocità tangeniale $\vec{\omega}\times\vec{r}'$, ma a differenza di un moto circolare dove il raggio è costante, presenta anche una 
+velocità perpendicolare $v\hat{r}'$ dovuta al cambiamento del raggio della rotazione. 
 \begin{equation}
     \vec{v}'+\vec{\omega}\times\vec{r}'+\vec{V}
 \end{equation}
@@ -2519,19 +2547,15 @@ circolare e di traslazione di $S'$ intorno al centro $O$ e ad alla posizione del
 \end{equation}
 
 Dove $\vec{\omega}\times(\vec{\omega}\times\vec{r}')$ viene 
-defintia accellerazione centrifuga.
-% dovuta alla rotazione del 
-%sistema $S'$ rispetto a $O'$.
+definita accellerazione centrifuga.
 Viene definita accellerazione di Coriolis dovuta al moto del 
-corpo nel sistema $S'$:
+corpo nel sistema $S'$, e alla rotazione del sistema $S'$ rispetto a $S$:
 
 \begin{equation}
-     \vec{a}_C=2\vec{\omega}\times\vec{v}'
+    \vec{a}_C=2\vec{\omega}\times\vec{v}'
 \end{equation}
 
-%dovuta anch'essa alla rotazione del sistema 
-%$S'$ rispetto al polo $O'$.
-Il moto di un corpo in $S'$ analizzato rispetto al sistema 
+In generale il moto di un corpo in $S'$ analizzato rispetto al sistema 
 di riferimento $S$ sarà dato da:
 
 \begin{equation}
@@ -2548,6 +2572,20 @@ sistema $S$, allora in $S'$ sarà soggetto ad una forza:
 \begin{equation}
     \vec{F}'_{tot}=m(\vec{a}-\vec{a}_{tr}-\vec{a}_C)=\vec{F}_{tot}-\vec{F}_{tr}-\vec{F}_C
 \end{equation}
+
+
+
+Se il sistema $S'$ si muove di solo moto rotatorio attorno al sistema inerziale $S$:
+\begin{equation}
+    \begin{cases}
+        \vec{r}=\vec{r}'+\vec{R}\\
+        \vec{v}=\vec{v}'+\vec{\omega}\times\vec{r}'\\
+        \vec{a}=\vec{\alpha}\times\vec{r}'+\vec{\omega}\times(\vec{\omega}\times\vec{r}')+2\vec{\omega}\times\vec{v}'
+    \end{cases}
+\end{equation}
+Se ruota con una velocità angolare $\vec{\omega}$ costante, allora la componente $\vec{\alpha}\times\vec{r}'$ sarà nulla. 
+Il sistema $S'$ si può muovere di moto di trascinamento o rotatorio  o rototraslatorio rispetto al sistema $S$. \`{E} inerziale solo se si muove di moto trascinamento rettilineo uniforme, in 
+tutti gli altri casi il sistema $S'$ non è inerziale. 
 
 \subsection{Energia}
 
@@ -5880,14 +5918,22 @@ Per il terzo principio della termodinamica una temperatura assoluta di $0K$, vie
 Le considerazioni di Carnot sui cicli termodinamici possono essere estese e generalizzate anche su macchine operanti tra più di due sorgenti. Sezionando un qualsiasi ciclo 
 termodinamico in una serie di cicli di Carnot contingui, che operano su una data coppia di temperature, è possibile approssimare il ciclo originario. Poiché le trasformazioni 
 adiabatiche interne al ciclo vengono attraversate in versi opposti, i loro contributi si compensano a vicenda. 
-Poiché questi cicli sono reversibili si avrà per ognuno dei cicli:
+Se questi cicli sono reversibili si avrà per ognuno dei cicli:
 \begin{gather*}
     \displaystyle\frac{Q_i}{|Q_j|}=\frac{T_i}{T_j}\\
     \displaystyle\frac{Q_i}{T_i}-\frac{|Q_j|}{T_j}=0
 \end{gather*}
-Clausius dimostrò che la somma per ogni sorente di queste componenti è minore o uguale a $0$, in base al tipo di trasformazione: 
+Se uno dei cicli di Carnot è irreversibile, avrà un'efficienza $\eta_C$ minore dell'efficienza del ciclo reversbile $\eta$, si avrà per questo ciclo: 
+\begin{gather*}
+    \eta_C<\eta\\
+    1-\displaystyle\frac{|Q_i|}{Q_j}<1-\frac{T_i}{T_j}\\
+    \displaystyle\frac{|Q_i|}{Q_j}>\frac{T_i}{T_j}\\
+    \displaystyle\frac{Q_j}{T_j}-\frac{|Q_i|}{T_i}<0
+\end{gather*}
+Sulla base di queste osservazioni Clausus descrisse il seguente teorema: 
 \begin{quotation}
-    Per ogni sorgente di un ciclo termodinamico può essere definita una quantità $\displaystyle\frac{Q_i}{T_i}$, la cui somma tra ogni sorgente sarà minore di zero, se si tratta di un 
+    Per ogni sorgente di un ciclo termodinamico può essere definita una quantità $\displaystyle\frac{Q_i}{T_i}$, dove $Q_i$ è il calore scambiato dalla sorgente, mentre $T_i$ è 
+    la temperatura in Kelvin della stessa. La somma tra ogni sorgente di questa quantità sarà minore di zero, se si tratta di un 
     ciclo irreversibile mentre sarà nulla se si tratta di un ciclo reversibile. 
 \end{quotation}
 Per un numero di suddivisioni tendenti all'infinito, si potrà considerare un integrale sulla curva 
@@ -5961,7 +6007,7 @@ Questa rappresenta la formulazione matematica del secondo principio della termod
 
 
 
-Se l'entropia del sistema diminuisce, allora dovrà essere compensata dall'aumente dell'entropia dell'ambiente e viceversa:
+Se l'entropia del sistema diminuisce, allora dovrà essere compensata dall'aumento dell'entropia dell'ambiente e viceversa:
 \begin{gather*}
     \Delta S^U=\Delta  S^A+\Delta S^S\geq0
 \end{gather*}
@@ -5974,18 +6020,16 @@ l'entropia dell'universo tenderà ad aumentare spostaneamente nel tempo:
 \begin{equation}
     \Delta S>0
 \end{equation}
-Lo stato di un sistema tenderà quindi al disordine, ovvero ad uno stato di maggiore entropia, solo se il sistema è isolato rispetto all'ambiente esterno. \`'{E} possibile 
-che in un sistema l'entropia diminuisca, allora l'entropia dell'ambiente dovrà aumentare. 
-\\
-Date due sorgenti a contatto, $T_1$ e $T_2>T_1$, che si scambiano una quantità di calore $Q$, l'entropia complessiva risulta dall'espressione:
+Lo stato di un sistema tenderà quindi al disordine, ovvero ad uno stato di maggiore entropia, solo se il sistema è isolato rispetto all'ambiente esterno. 
 
 
 
 
 
-In una trasformazione isoterma di un gas ideale si avrà:
+
+In una trasformazione isoterma si avrà:
 \begin{gather*}
-    \Gamma_{{rev}}:\Delta S_{AB}=\displaystyle\int_{\Gamma_{AB}}\frac{\delta Q}{T}=\frac{1}{T}\int\delta Q=\frac{\Delta Q_{AB}}{T}\Rightarrow T\Delta S_{AB}=\Delta Q_{AB}\\
+    \Gamma_{{rev}}:\Delta S_{AB}=\displaystyle\int_{\Gamma_{AB}}\frac{\delta Q}{T}=\frac{1}{T}\int_{Q_A}^{Q_B}\delta Q=\frac{\Delta Q_{AB}}{T}\Rightarrow T\Delta S_{AB}=\Delta Q_{AB}\\
     \Gamma_{{irr}}:\Delta S_{AB}>\frac{\Delta Q_{AB}}{T}
 \end{gather*}
 Per cui il calore generato da una reazione isoterma reversibile è maggiore del calore generato da una reazione irreversibile. 
@@ -5995,15 +6039,15 @@ In una trasformazione adiabatica o isoentropica, l'entropia rimarrà costante:
 \begin{equation*}
     \Delta S_{AB}=\displaystyle\int_{\Gamma_{AB}}\frac{\cancelto{0}{\delta Q}}{T}=0
 \end{equation*}
-Date due sorgenti a contatto, aventi temperature $T_1$ e $T_2>T_1$, la variazione di entropia della prima sorgente sarà: $\Delta S_1=\displaystyle\frac{Q}{T_1}$, mentre 
-la variazione di entropia della seconda sorgente sarà: $\Delta S_2=-\displaystyle\frac{Q}{T_2}$. Per cui:
+Date due sorgenti a contatto, aventi temperature $T_1$ e $T_2>T_1$ che si scambiano una quantità di calore $Q$, la variazione di entropia del 
+sistema si ottiene tramite la seguente espressione: 
 \begin{gather*}
     \Delta S_1=\displaystyle\int_{A}^B\frac{dQ}{T_1}=\frac{Q}{T_1}\\
     \Delta S_2=\displaystyle\int_{A}^B\frac{dQ}{T_2}=-\frac{Q}{T_2}\\
     |\Delta S_2|<\Delta S_1\Rightarrow\Delta S=Q\left(\displaystyle\frac{1}{T_1}-\frac{1}{T_2}\right)>0
 \end{gather*}
 
-Per un gas ideale dato il differenziale dell'entropia $dS$, si potrà esprimere rispetto al lavoro ed all'energia interna del sistema:
+Per un gas ideale dato il differenziale dell'entropia $dS$, si può esprimere rispetto al lavoro ed all'energia interna del sistema:
 \begin{gather*}
     dS=\displaystyle\frac{\delta Q}{T}=\frac{dU+\delta W}{T}\\
     \delta  W=p\:dV=\displaystyle\frac{nRT}{V}dV,\:dU=c_Vn\:dT\\
