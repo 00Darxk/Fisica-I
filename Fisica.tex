@@ -432,7 +432,8 @@ Considerando un sistema di riferimento tridimensionale
 $x, y, z$, si può rappresentare un vettore usando le sue 
 componenti: $\vec{v} = v_x\hat{x} + v_y\hat{y} + v_z\hat{z}$,
 oppure si può rappresentare mediante coordinate sferiche.
-Si considera la proiezione del vettore rispetto al piano formato da due assi, e scompone quel vettore con coordinate polari, in seguito si considera l'angolo formato dal vettore con il terzo asse perpendicolare al piano $\vec{v}$($\rho, \theta, \varphi$):\\
+Si considera la proiezione del vettore rispetto al piano formato da due assi, e scompone quel vettore con coordinate polari, in seguito si considera l'angolo formato dal vettore con il terzo asse perpendicolare al piano $\vec{v}$($\rho, \theta, \varphi$):
+
 
 \begin{gather*}
     v_x = \rho \cos\varphi\\
@@ -485,8 +486,8 @@ La traiettoria di un punto materiale è indipendente dal sistema di rifermento u
 per analizzarla. Convenzionalmente si usano sistemi di riferimento aventi
 assi ortogonali e destrosi, in modo tale che: $\hat{i}\times\hat{j} = \hat{k},\: 
 \hat{j}\times\hat{k} = \hat{i},\: \hat{k}\times\hat{i} = \hat{j}$ per un sistema di 
-riferimento avente tre assi ($i, j, k$).\\
-
+riferimento avente tre assi ($i, j, k$).
+\\
 Considerando una traiettoria $\Gamma$ in un sistema di riferimento ($i,j,k$),
 si può definire un vettore posizione $\vec{r}(t)$, che rappresenta in 
 funzione del tempo la posizione del punto materiale che segue quella data
@@ -692,7 +693,7 @@ allora è possibile ottenere la legge oraria dello spostamento:
 \end{equation}
 
 Questa legge oraria descrive un moto uniformemente accellerato, 
-dove la posizione cresce quadraticamente rispetto al tempo. 
+dove la posizione aummenta quadraticamente rispetto al tempo. 
 
 
 \begin{center}\begin{tikzpicture}[scale = 1.5]
@@ -861,7 +862,7 @@ si può esprimere rispetto alla sola legge oraria della posizione:
     \displaystyle x(t) = -\omega\iint x(t)dt^{2}
 \end{equation}
 
-\begin{center}\begin{tikzpicture}[scale=1.6]
+\begin{center}\begin{tikzpicture}[scale=1.4]
 
     \node[below] at (-3.2,0) {$O$};
     \draw[->] (-3.5, 0) -- (-1, 0) node[above]{$t$};
@@ -2345,7 +2346,9 @@ Espandendo la somma dei coseni e seni si ottiene:
     \begin{cases}
         \sin(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\cos\varphi-2A\omega_f\gamma \sin\varphi)=\displaystyle\frac{F_0}{m}\sin(\omega_f t)\\
         \cos(\omega_f t)((\omega_M^{2}-\omega_f^{2})A\sin\varphi+2A\omega_f\gamma \cos\varphi)=0
-    \end{cases}\\
+    \end{cases}
+\end{gather*}
+\begin{gather*}
     \begin{cases}
         (\omega_M^{2}-\omega_f^{2})A\cos\varphi-2A\omega_f\gamma \sin\varphi=\displaystyle\frac{F_0}{m}\\
         (\omega_M^{2}-\omega_f^{2})A\sin\varphi+2A\omega_f\gamma \cos\varphi=0\Rightarrow\displaystyle \tan\varphi=-\frac{2\omega_f\gamma}{(\omega_M^{2}-\omega_f^{2})}
@@ -2377,7 +2380,7 @@ ad aumentare all'infinito: si verifica il fenomeno della
 risonanza. Per valori di $\gamma$ vicini allo zero, è presente 
 il fenomeno di risonanza, ma con ampiezza minore:
 
-\begin{center}\begin{tikzpicture}[scale=2]
+\begin{center}\begin{tikzpicture}[scale=1.8]
     \draw[->](-0.5,0)--(2.5,0)node[above right]{$\omega_f$};
     \draw[->](0,-0.25)--(0,3)node[right]{$A(\omega_f)$};
 
@@ -2594,14 +2597,14 @@ Il lavoro è una grandezza fisica, misurata in Joule $\left[J\right]$, che quant
 necessaria per compiere un certo spostamento $\Delta s$: 
 
 \begin{equation}
-    W=\vec{F}\cdot\vec{\Delta s}\:\left[N\cdot s\right]=\left[J\right]
+    W=\vec{F}\cdot\vec{\Delta s}=F\Delta s\cos\theta\:\left[N\cdot s\right]=\left[J\right]
 \end{equation}
 
 Il lavoro lega diversi stati in cui si puoi trovare il corpo, 
 indipendentemente dal tempo. Il lavoro dipende 
-dalla solo componente della forza concorde allo spostamento. 
+dalla solo componente della forza parallela allo spostamento. 
 Se la forza è concorde allo spostamento $\theta<\displaystyle\frac{\pi}{2}$, il punto materiale su cui è applicata la forza accellera, il lavoro generato risulta positivo e viene chiamato lavoro motore. Se la 
-forza applicata è discorde allo spostamento $\theta>\displaystyle\frac{\pi}{2}$, il corpo decellera, il lavoro generato risulta negativo e viene chiamato lavoro resistente. 
+forza applicata è discorde allo spostamento $\theta>\displaystyle\frac{\pi}{2}$, il punto decellera, il lavoro generato risulta negativo e viene chiamato lavoro resistente. 
 Se la forza applicata è perpendicolare allo spostamento, la velocità del punto rimane costante, genera un'accellerazione centripeta ed il lavoro risulta nullo. 
 
 
@@ -2610,15 +2613,15 @@ Se lo spostamento è una traiettoria curva, si considera la
 traiettoria divisa in segmenti $\Delta s$, su cui si 
 applica la forza $\vec{F}$. Il lavoro totale sarà allora dato 
 dalla somma di tutti i lavori su ogni segmento della 
-traiettoria, se il numero di segmenti tende all'infinito $n\to\infty$ 
+traiettoria. Se il numero di segmenti tende all'infinito $n\to\infty$ 
 allora i segmenti diventeranno di lunghezza infinitesima, e la 
-sommatoria diventa un integrale lungo la traiettoria:
+sommatoria diventa un integrale lungo la traiettoria $\Gamma$:
 
 \begin{gather*}
     \displaystyle W_{A\to B}\approx\sum_{i=0}^{n}\vec{F}\cdot\vec{\Delta s_i}
 \end{gather*}   
 \begin{equation}
-    W_{A\to B}=\lim_{n\to\infty}\sum_{i=0}^{n}\vec{F}\cdot\vec{\Delta s_i}=\int_{A}^{B}\vec{F}\cdot\vec{ds}=\int_{A}^{B}\vec{F}\cdot\hat{s}ds=\int_{A}^{B}F_sds
+    W_{A\to B}=\lim_{n\to\infty}\sum_{i=0}^{n}\vec{F}\cdot\hat{s}_i{\Delta s_i}=\int_{A}^{B}\vec{F}\cdot\hat{s}ds=\int_{A}^{B}F_sds
 \end{equation}
 
 Dove $F_s$ è il modulo della componente della forza parallela 
@@ -2665,11 +2668,12 @@ Il lavora complessivo sarà dato dalla somma dei lavori sulle due traiettorie $A
 
 Se la forza $\vec{F}$ agente sul corpo è conservativa, allora il lavoro 
 da $A$ a $B$ sarà uguale e contrario del lavoro da $B$ a $C$, 
-quindi il lavoro complessivo sarà nullo.\\
+quindi il lavoro complessivo sarà nullo.
+\\
 Se agiscono più forze sul corpo, il lavoro sarà dato dal 
 lavoro della risultante, quindi dalla risultante dei lavori:
 \begin{equation}
-    W_{\Gamma}=\displaystyle\int_{\Gamma}\vec{F}_{tot}d\vec{r}=\sum_{i=0}^{n}\int_{\Gamma}\vec{F}_id\vec{r}=\sum_{i=0}^{n}W_i
+    W_{\Gamma}=\displaystyle\int_{\Gamma}\vec{F}_{tot}d\vec{r}=\sum_{i=1}^{n}\int_{\Gamma}\vec{F}_id\vec{r}=\sum_{i=1}^{n}W_i
 \end{equation}
 
 Dato un sistema di riferimento $d\vec{r}=\hat{s}ds$, si potrà 
@@ -2692,28 +2696,26 @@ lungo l'asse $z$, il suo lavoro sarà:
 \begin{equation}
     W_{A\to B}=-mg\Delta z
 \end{equation}
-\begin{center}\begin{tikzpicture}[scale=2.5]
-    \draw[-]plot[smooth]coordinates{(-0.5,0.2)(0,0.1)(0.5,0.5)(1,0.7)(1.5,0.5)};
-    \draw[->](-0.25,0)--(1.5,0)node[above]{$t$};
-    \draw[->](0,-0.25)--(0,1)node[right]{$z$};
-
-    \draw[->](0.5,0.5)--(0.5,0.2)node[right]{$\vec{F}_P$};
-
-    \node[above right]at(0,0.2){$z_A$};
-    \draw[dashed](-0.5,0.2)node[above]{$A$}--(0,0.2);
-    \node[left]at(0,0.5){$z_B$};
-    \draw[dashed](1.5,0.5)node[above]{$B$}--(0,0.5);
-
-\end{tikzpicture}\end{center}
-
-
 
 Se la variazione di quota è negativa, allora il corpo 
 scende e la forza peso avrà un lavoro positivo, mentre 
 se la variazione di quota è positiva il corpo sale e avrà 
 lavoro negativo.
-\\
-Considerando un oscillatore armonico senza attrito, la massa 
+
+\begin{center}\begin{tikzpicture}[scale=2.5]
+    \draw[->](-0.25,0)--(1.25,0)node[above]{$t$};
+    \draw[->](0,-0.25)--(0,1.25)node[right]{$z$};
+
+    \draw[-]plot[smooth, domain=0:1](\x, {1-(\x)^2});
+    \node[left]at(0,1){$B$};
+    \node[below]at(1,0){$A$};
+    \draw[->](0,1)--(0,0.5)node[right]{$\vec{F}_P$};
+\end{tikzpicture}\end{center}
+
+
+
+
+Considerando un oscillatore armonico armonico senza attrito, la massa 
 sarà soggetta ad una forza elastica $\vec{F}_{el}$ che causerà uno 
 spostamento lungo l'asse $x$, con un certo lavoro.
 \begin{center}\begin{tikzpicture}[scale=2.5]
@@ -2732,8 +2734,7 @@ spostamento lungo l'asse $x$, con un certo lavoro.
     \draw[dashed] (-3,-0.5) node[left] {$-x_{in}$} -- (-1.5,-0.5);
 \end{tikzpicture}\end{center} 
 Il lavoro dello spostamento $x_A\to x_C$ è nullo, poiché la molla 
-ritorna alla stessa posizione iniziale. Viene considerata la posizione 
-iniziale coincidente con l'origine dell'asse $x$. 
+ritorna alla stessa posizione iniziale.  
 Il lavoro $W_{A\to B}$ sarà:
 \begin{equation}
     W_{A\to B}=\displaystyle\int_{x_A}^{x_B}\vec{F}_{el}\cdot\hat{x}dx=\int_{x_A}^{x_B}-kxdx=-k\frac{\Delta( x^{2})}{2}
@@ -2741,10 +2742,10 @@ Il lavoro $W_{A\to B}$ sarà:
 
 La forza peso e la forza elastica sono due forze conservative, in 
 generale una forza conservativa è una forza, che produce un lavoro 
-indipendente dal percorso effettuato, dipende solo dagli stati iniziali 
-e finali del corpo. Per cui esisterà una primitiva della forza in funzione della posizione $\vec{F}(\vec{r})$, questa primitiva $-U(\vec{r})$ 
-viene chiamata energia potenziale. Il lavoro generato da una forza conservativa lungo 
-la traiettoria $\Gamma$ dal punto $A$ al punto $B$ sarà dato da: 
+indipendente dal percorso effettuato, dipende solo dalla differenza degli stati iniziali 
+e finali del corpo. Per cui si può esprimere il lavoro come la differenza di una funzione di stato $-U(\vec{r})$, primitiva della funzione $\vec{F}(\vec{r})$, 
+chiamata energia potenziale. Il lavoro generato da una qualsiasi forza conservativa lungo 
+la traiettoria $\Gamma$ dal punto $A$ al punto $B$ sarà quindi dato da: 
 \begin{equation}
     W_{A\to B}=\displaystyle\int_{\Gamma_{AB}}\vec{F}\cdot d\vec{r}=-\left(U_B-U_A\right)=-\Delta U_{AB}
 \end{equation}
@@ -2759,7 +2760,7 @@ Se la forza non è conservativa allora il componente $\vec{F}\cdot d\vec{r}$ rap
 e non dalla differenza di due stati. 
 \\
 Una forza è conservativa se il lavoro compiuto non dipende dal percorso compiuto dallo spostamento, se indipendentemente dal percorso il lavoro complessivo per compiere uno 
-spostamento nullo $A\to B\to A$ è nullo, se il lavoro può essere espresso come una differenza di energia potenziale oppure se il differenziale $\delta W$ rappresenta un 
+spostamento complessivo nullo $A\to B\to A$ è nullo, se il lavoro può essere espresso come una differenza di energia potenziale oppure se il differenziale $\delta W$ rappresenta un 
 differenziale esatto. 
 Una forza è conservativa se:
 \begin{align*}
@@ -2788,7 +2789,7 @@ dal percorso del punto, il suo lavoro generato sarà:
 \begin{equation}
     W_{A\to B}=\displaystyle\int_{\Gamma_{AB}}\vec{F}_{att}d\vec{r}=\int_{s_A}^{s_B}-\mu mgds=-\mu g\int_{s_A}^{s_B}ds=-\mu g\mathscr{L}(\Gamma_{AB})
 \end{equation}
-Dove $\mathscr{L}$ rappresenta la lunghezza dello spostamento effettuato dal punto lungo la traiettoria effettiva. In generale una forza non conservativa sarà proporzionale alla distanza percorsa dal corpo 
+Dove $\mathscr{L}$ rappresenta la lunghezza dello spostamento effettuato dal punto lungo la traiettoria effettiva. In generale una forza non conservativa dipenderà dalla distanza percorsa dal corpo 
 su cui agisce la forza. 
 
 \subsubsection{Potenza}
@@ -2807,10 +2808,10 @@ si considera la potenza istantanea:
 Esprime la rapidità in cui viene svolto il lavoro. A parità di lavoro, ha maggiore potenza ciò che lo eroga in minor tempo.  
 
 
-L'energia può essere espressa anche come kilowatt-ora $kWh$. $1\:kWh$ rappresenta l'energia necessaria per fornire una potenza di un kilowatt per un ora. Può essere 
+L'energia può essere espressa anche come kilowatt-ora $kWh$. Un $kWh$ rappresenta l'energia necessaria per fornire una potenza di un kilowatt per un ora. Può essere 
 convertita in Joule considerando:
 \begin{equation*}
-    kWh=10^3W\cdot3,6\times10^3h=3,6\times10^6J=3,6MJ
+    1\,kWh=10^3W\cdot3,6\times10^3s=3,6\times10^6J=3,6MJ
 \end{equation*}
 
 Per cui corrisponde a $3,6$ megajoule di energia. 
@@ -2824,20 +2825,16 @@ Il lavoro calcolato rispetto alla velocità del corpo sarà:
 \begin{equation*}
     W=\int_{\Gamma_{AB}}m\vec{v}\cdot d\vec{v}=m\int_{v_A}^{v_B}vdv=\displaystyle\frac{1}{2}mv_B^2-\frac{1}{2}mv_A^2
 \end{equation*}
-Viene definita energia cinetica $K$ la funzione di stato corrispondente all'energia necesssaria per compiere questo 
+Viene definita energia cinetica $K$ la funzione di stato, in funzione della velocità, corrispondente all'energia necesssaria per compiere questo 
 lavoro, indipendente dal tipo di forza agente sul corpo. Se si 
 considera $v_A=0$, allora l'energia cinetica in $B$ sarà uguale al 
 lavoro necessario per spostare un corpo dallo stato $0$ allo stato $v_B$:
 \begin{equation}
-    W_{0\to B}=\displaystyle\frac{1}{2}mv_B^{2}=\frac{1}{2m}p^2_B=K_B
+    W_{0\to B}=\displaystyle\frac{1}{2}mv_B^{2}=\frac{1}{2}\frac{p^2_B}{m}=K_B
 \end{equation}
 
 
-Si può esprimere il lavoro compiuto da una forza tra due stati $A$ e $B$ rispetto all'energia cinetica del corpo nei due stati:
-\begin{equation*}
-    W_{\Gamma_{AB}}=\Delta K_{AB}
-\end{equation*}
-Ne segue il teorema delle forze vive o dell'energia cinetica:
+Il teorema delle forze vive o dell'energia cinetica descrive la relazione tra il lavoro e l'energia cinetica: 
 \begin{quotation}
     Indipendentemente dal tipo di forza agente durante lo spostamento di un punto materiale, il lavoro
     prodotto da esse sarà dato dalla sola variazione di energia cinetica:
@@ -2845,6 +2842,9 @@ Ne segue il teorema delle forze vive o dell'energia cinetica:
         W=\Delta K
     \end{equation}
 \end{quotation}  
+Tramite la variazione di energia cinetica si può esplicitare il cambiamento della velocità in seguito all'azione di una forza. Se il lavoro della forza è positivo, l'energia 
+cinetica finale è maggiore dell'energia cinetica iniziale, quindi la velocità aumenta. Se il lavoro è negativo l'energia cinetica iniziale è maggiore dell'energia cinetica 
+finale, per cui la velocità del corpo diminuisce. Se la variazione di energia cinetica è nulla, allora la velocità si conserva. 
 
 \subsubsection{Energia Potenziale}
 Considerando un corpo in due sistemi di riferimento diversi, distanti 
@@ -2864,10 +2864,7 @@ Il lavoro quindi non dipenderà dal sistema di riferimento usato per
 analizzare il comportamento del corpo. 
 Se invece fosse stata una forza non conservativa, allora il 
 lavoro sarebbe dipendente dalla lunghezza del percorso $\mathscr{L} (\Gamma_{AB})$, 
-indipendente anch'essa dal sistema di riferimento scelto.
-
-
-
+indipendente anch'essa dal sistema di riferimento scelto. 
 Lo stesso vale per l'energia cinetica, dipendente dalla velocità 
 del corpo nei punti $A$ e $B$.
 
@@ -2881,7 +2878,7 @@ convenzionalemente si considera l'energia nello stato di riferimento $U(O)=0$. C
 
 \subsubsection{Teorema della Conservazione dell'Energia}
 \begin{quotation}
-    Se in un sistema agiscono solo forze conservative allora la variazione di energia cinetica corrisponde all'opposto della variazione dell'energia potenziale. 
+    Se in un sistema agiscono solo forze conservative, la variazione di energia cinetica corrisponde all'opposto della variazione di energia potenziale. 
 \end{quotation}
 
 \begin{gather*}
@@ -2894,15 +2891,17 @@ convenzionalemente si considera l'energia nello stato di riferimento $U(O)=0$. C
         U_B<U_A
      \end{cases}\\
 \end{gather*}
+L'energia cinetica diminuisce, mentre l'energia potenziale aumenta. Poiché la variazione di energia cinetica corrisponde alla variaizone di energia potenziale, l'energia 
+potenziale allo stato iniziale viene in parte convertita in energia cinetica nello stato finale: 
 \begin{equation}
     \Delta K_{AB}=-\Delta U_{AB}
 \end{equation}
 
-Se l'energia potenziale è nulla nel punto $B$, e l'energia cinetica 
-è nulla nel punto $A$, allora:
-\begin{equation}
+Se l'energia potenziale è nulla allo stato $B$, e l'energia cinetica 
+è nulla allo stato $A$, allora:
+\begin{equation*}
     U_B=K_A
-\end{equation}
+\end{equation*}
 l'energia potenziale in $B$ verrà convertita in energia cinetica in $A$.
 Se $\Gamma$ è sempre alla stessa 
 quota rispetto ad un sistema di riferimento allora $\Delta U=0$, 
@@ -2911,11 +2910,11 @@ altre forze anche l'energia cinetica è nulla.
 
 \subsubsection{Energia Meccanica}
 Viene definita la grandezza energia meccanica, somma tra 
-l'energia potenziale e cinetica in un punto $P$:
+l'energia potenziale e cinetica nello stesso stato $P$:
 \begin{equation}
     E=K+U
 \end{equation}
-Se su un corpo agiscono solo forze conservative allora:
+Se su un corpo agiscono solo forze conservative allora l'energia si conserva: 
 \begin{gather*}
     W=-\Delta U = \Delta K\\    
     K_B+U_B=K_A+U_A\\
@@ -2925,7 +2924,7 @@ Se su un corpo agiscono solo forze conservative allora:
 \begin{equation}
     \Delta E=0
 \end{equation}
-quindi in un sistema dove agiscono solo forze conservative la 
+Quindi in un sistema dove agiscono solo forze conservative la 
 variazione di energia meccanica è nulla, ovvero l'energia si 
 trasforma solamente da potenziale a cinetica e viceversa. 
 
@@ -2944,7 +2943,7 @@ conservativa:
 \begin{equation}
     W^{n.c.}=\Delta E
 \end{equation}
-quindi in un sistema dove agiscono forze non conservative, il 
+Quindi in un sistema dove agiscono forze non conservative, il 
 lavoro derivato da esse sarà uguale alla variazione di energia 
 meccanica del sistema. Analogamente se in un sistema la 
 variazione di energia meccanica è diversa da zero, allora 
@@ -2958,6 +2957,13 @@ Se su un corpo agiscono solo forze conservative allora:
     W=\int_{\Gamma}\vec{F}\cdot d\vec{r}=\int_{\Gamma}-dU\\
     \vec{F}=-\displaystyle\frac{dU}{d\vec{r}}=-\vec{\nabla}\cdot U=-\left(\displaystyle\frac{\partial U}{\partial x}\hat{x}+\frac{\partial U}{\partial y}\hat{y}+\frac{\partial U}{\partial z}\hat{z}\right)
 \end{gather*} 
+Il componente $-\vec{\nabla}U$ rappresenta l'opposto del gradiente della superficie $U(x,y,z)$, quindi rappresenta un vettore che punta verso i punti di minimo dell'energia 
+potenziale. Il componente $\vec{\nabla}$ rappresenta l'operatore differenziale vettoriale avente come componenti per ogni direzione $\hat{x}_i$ la derivata parziale rispetto 
+a quella coordinata:
+\begin{gather*}
+    \vec{\nabla}:=\displaystyle\frac{\partial}{\partial x_1}\hat{x}_1+\cdots+\frac{\partial}{\partial x_n}\hat{x}_n
+\end{gather*}
+Per l'energia potenziale presenta tre componenti per le tre direzioni spaziali $(x,y,z)$. 
 
 
 Viene definita la funzione di stato potenziale $V(x)$. In una dimensione corrisponde ad una qualsiasi primitiva della forza conservativa $\vec{F}$:
@@ -2983,12 +2989,12 @@ funzione sulle $x$ rispetto alla variazione delle $y$: $\displaystyle\frac{\part
 
 Non necessariamente queste derivate miste sono uguali: 
 $\displaystyle\frac{\partial^{2} V}{\partial y\partial x}\stackrel{?}{=}\displaystyle\frac{\partial^{2} V}{\partial x\partial y}$.
-Per il Teorema di Schwarz:
+Per il Teorema di Schwarz è possibile risolvere questo problema: 
 \begin{quotation}
     Se le derivate prime di una funzione $F(x,y)$ sono continue, 
     allora le sue derivate miste saranno uguali.
 \end{quotation}
-è possibile risolvere questo problema. 
+
 
 
 
@@ -2996,7 +3002,7 @@ Si definisce differenziale totale o esatto del potenziale $V$:
 \begin{equation*}
     dV(x,y)=\displaystyle\frac{\partial V}{\partial x}dx+\frac{\partial V}{\partial y}dy
 \end{equation*}
-Si definisce differenziale parziale di una funzione $F$:
+Si definisce differenziale parziale di una funzione $F(x,y)$:
 \begin{equation*}
     \delta F=F_1(x,y)dx+F_2(x,y)dy
 \end{equation*}
@@ -3011,20 +3017,22 @@ $V$:
 $\displaystyle\frac{\partial ^{2}V}{\partial x\partial y}=\frac{\partial ^{2}V}{\partial y\partial x}\iff \frac{\partial}{\partial x}F_2=\frac{\partial}{\partial y}F_1$
 Questa condizione è verificata se il potenziale $V$ è una 
 superficie sufficentemente connessa. 
+
+
 Analogamente si può considerare una funzinone in $3$ dimensioni, 
-come il lavoro, che avrò un differenziale parziale: 
+come il lavoro, che ha un differenziale parziale: 
 \begin{equation*}
     \delta W=\vec{F}\cdot d\vec{r}=f_1(x,y,z)dx+f_2(x,y,z)dy+f_3(x,y,z)dz
 \end{equation*}
-se questo differenziale è uguale al differenziale 
-esatto del potenziale: $\delta W =dV$, allora la forza 
-è conservativa poiché si ha: 
+Se questo differenziale è uguale al differenziale 
+esatto del potenziale $\delta W =dV$, allora la forza 
+è conservativa. Questa condizione come per il potenziale bidimensionale è verificata se la superficie $V(x,y,z)$ è sufficientemente connessa. 
 \begin{equation}
     \int_{\Gamma_{AB}}\delta W = \int_{\Gamma_{AB}}dV=V(B)-V(A)
 \end{equation}
-dove il potenziale $V$ corrisponde all'opposto dell'energia 
-potenziale: $U=-V$.
-Segue la seguente relazione:
+Dove il potenziale $V$ corrisponde all'opposto dell'energia 
+potenziale $U=-V$.
+Per cui una forza è conservativa se e solo se il differenziale del lavoro esercitato da quella forza corrisponde all'opposto del differenziale esatto dell'energia potenziale: 
 \begin{equation}
     F:\:\mbox{conservativa}\iff\delta W=-dU
 \end{equation}
@@ -3034,7 +3042,7 @@ Un sistema dinamico, può essere in equilibrio statico o dinamico,
 in entrambi i casi la risultante delle forze agenti sul sistema 
 deve essere nulla, allora:
 \begin{equation*}
-    \vec{F}(\vec{r})=-\vec{\nabla}U=\vec{0}
+    \vec{F}(\vec{r})=-\vec{\nabla}U(\vec{r})=\vec{0}
 \end{equation*}
 Questa funzione avrà punti di minimo corripsondenti a 
 punti di equilibrio stabile del sistema e punti di massimo 
@@ -3044,29 +3052,26 @@ corrispondenti a punti di equilibrio instabile del sistema.
 Per trovare questi punti si deriva nuovamente la funzione 
 ottenendo:
 \begin{equation*}
-    -\nabla^{2}U=\nabla F(\vec{r})
+    -\nabla^{2}U(\vec{r})=\nabla F(\vec{r})
 \end{equation*}
-segue che il sistema è in uno stato di equilibrio stabile nella 
-posizione $\vec{r}\:\mbox{t.c.}\:\nabla F(\vec{r})<0$, poiché 
-corrisponde ad un punto di minimo, mentre è in stato di 
-equilibrio instabile se $\nabla F(\vec{r})>0$.
+Se il sistema si trova in una posizione $\vec{r}$ corrispondente ad un punto di massimo della forza $\nabla F(\vec{r})<0$, il sistema si trova in uno stato di equilibrio stabile, 
+se corrisponde ad un punto di minimo $\nabla F(\vec{r})>0$ il sistema si trova in uno stato di equilibrio instabile. 
 
 
 
 Viene definito l'operatore Jacobiano $\mathbf{J}$, una matrice contentente tutte 
 le possibili derivate miste. Se le derivate miste sono uguali, 
 allora il Jacobiano è una matrice simmetrica. Tramite lo 
-Jacobiano $\mathbf{J}U$ si può analizzare il comportamento di $U$ 
-per trovare punti di equilibrio.
+Jacobiano dell'energia potenziale $\mathbf{J}U(\vec{r})$ si può analizzare l'andamento dell'energia potenziale per trovare eventuali punti di equilibrio. 
 \\
 Hopfield dimostrò che nell'intorno di un punto di stabilità 
-il sistema tende all'quilibrio, ovvero resiste agli errori. 
+il sistema tende all'equilibrio, ovvero resiste agli errori. 
 In $1$ dimensione il comportamento di un sistema attorno ad un 
 punto di equilirbio $x_0$ sarà definito da:
 \begin{equation}
     F(x_0)=-\displaystyle\frac{dU}{dx}(x_0)=0
 \end{equation}
-si considerano valori di $x\approx x_0$, allora la forza può 
+Si considerano valori in un intorno di raggio $\varepsilon$ del punto di equilibrio $x_0$ $x\in I_{x_0}(\varepsilon)$, allora la forza può 
 essere approssimata mediante la sua serie di Taylor:
 \begin{gather*}
     F(x)\approx F(x_0)+\displaystyle\frac{dF}{dx}(x_0)(x-x_0)\\
@@ -3075,20 +3080,20 @@ essere approssimata mediante la sua serie di Taylor:
 \end{gather*}
 Se $x_0$ è un punto di equilibrio instabile allora $\displaystyle\frac{d^{2}U}{dx}(x_0)$ 
 sarà minore di zero, quindi la forza sarà concorde allo 
-spostamento, allontanando il sistema dal punto di equilibrio, mentre 
-se il punto $x_0$ è un punto di equilibrio stabile, si avrà 
-un comportamento della forza discorde allo spostamento, quindi 
-la forza tenderà al punto di equilibrio. Questo andamento  
+spostamento, allontanando il sistema dal punto di equilibrio. 
+Se il punto $x_0$ è un punto di equilibrio stabile, 
+la forza è discorde allo spostamento, quindi 
+il corpo tenderà al punto di equilibrio. Questo andamento  
 è simile al comportamento di una molla:
 \begin{equation}
     F(x)\approx -\left(\displaystyle\frac{d^{2}U}{dx}(x_0)\right)(x-x_0)=-k(x-x_0)
 \end{equation}
-Il sistema si comporterà come se fosse attaccato ad una molla avente 
+Il sistema si comporta come se fosse attaccato ad una molla avente 
 posizione di riposo in $x_0$ e sarà soggetto ad una forza di 
 richiamo indirizzata verso tale punto in presenza di uno 
 spostamento. 
 \\
-Considerando un pendolo semplice, si può approssimare il suo comportamento intorno al punto di equilibrio stabile: 
+Considerando un pendolo semplice, si può approssimare il suo comportamento intorno al punto di equilibrio stabile, considerando $U(0)=0$: 
 \begin{equation*}
     U(\theta) = mgl(1-\cos\theta)\approx mgl\left(1-\left(1-\displaystyle\frac{\theta^{2}}{2}\right)\right)=mgl\frac{\theta^2}{2}
 \end{equation*}
@@ -3116,9 +3121,9 @@ enunciò le sue $3$ leggi sul moto dei pianeti:
 \end{quotation}
 
 Un'ellisse è una conica, ovvero un insieme di punti ottenuto sezionando un cono infinito tridimensionale con un piano. Un'ellisse viene definita 
-come il luogo geometrico dei punti del piano dove la somma delle distanza dai due fuochi dell'ellisse è invariante. Viene definita l'eccentricità 
-di un ellisse $\varepsilon$, una misura che quantificha quanto l'eslissa è schiacciata, ovvero di quanto l'asse maggiore $a$ è più grande dell'asse 
-minore $b$ dell'ellisse, il valore sarà $0$ per un cercio mentre tenerà ad $1$ per un'ellisse avente un'asse $a$ di lunghezza infinita, o un asse minore $b$ di lunghezza nulla. 
+come il luogo geometrico dei punti del piano la cui somma delle distanze tra i due fuochi è invariante. Viene definita l'eccentricità 
+di un ellisse $\varepsilon$, una misura che quantificha quanto l'eslissa è schiacciata, ovvero di quanto l'asse maggiore $a$ è più lungo dell'asse 
+minore $b$ dell'ellisse, il valore sarà $0$ per un cercio mentre tenerà asintotù ad $1$ per un'ellisse avente un'asse $a$ di lunghezza infinita, o un asse minore $b$ di lunghezza nulla. 
 
 \begin{equation*}
     \varepsilon=\sqrt{1-\displaystyle\frac{b^2}{a^2}}\in[0,1)
@@ -3142,10 +3147,10 @@ $\displaystyle\frac{dA(t)}{dt}=cost.$
     \end{tikzpicture}
 \end{center}
 
-L'area descritta in uno stesso intervallo di tempo rimane invariata, per cui dovrà cambiare la velocità dell'orbita del pianete, per manetenere l'area 
-costante, per cui quando i pianeti si trovano vicini al sole, si muoveranno più velocemente poiché descriveranno un'area maggiore, mentre quando si 
-trovano lontani dal sole si muoveranno più lentamente. \\
-
+L'area descritta in uno stesso intervallo di tempo rimane invariata, per cui dovrà cambiare la velocità dell'orbita del pianeta, per manetenere l'area 
+costante, per cui quando i pianeti si trovano vicini al sole, si muovono più velocemente poiché descriveranno un'area maggiore, mentre quando si 
+trovano lontani dal Sole si muovono più lentamente. 
+\\
 La terza legge di Keplero descrive la relazione tra il periodo dell'orbita e la lunghezza dell'asse maggiore dell'ellisse, tramite una costante 
 $k$, che varia per ogni pianeta in base all'eccentricità della loro orbita: 
 \begin{quotation}
@@ -3156,7 +3161,7 @@ $k$, che varia per ogni pianeta in base all'eccentricità della loro orbita:
 \end{quotation}
 
 Newton fornì una dimostrazione dinamica delle leggi di Keplero nel $1666$, approssimando le orbite ellittiche a delle circonferenze, poiché 
-per tutti i pianeti $\varepsilon_p<<1$, eccetto per Mercurio che percorre un'orbita di eccentriticà $\varepsilon_M=0.02$. 
+tutti, eccetto per Mercurio che percorre un'orbita di eccentriticà $\varepsilon_M=0.02$, i pianeti descrivono orbite con eccentriticà $\varepsilon<<1$. 
 
 \begin{center}
     \begin{tikzpicture}[scale=2]
@@ -3170,20 +3175,21 @@ per tutti i pianeti $\varepsilon_p<<1$, eccetto per Mercurio che percorre un'orb
     \end{tikzpicture}
 \end{center}
 
-Per ottenere l'area descritta dall'orbita si considera il modulo del prodotto vettoriale, che rappresenta l'area del parallelograma di lati $d\vec{s}$ e 
-$\vec{r}$. Considerando un'area infinitesima:
+Per ottenere l'area descritta dall'orbita si considera il modulo del prodotto vettoriale tra uno spostamento infinitesimo $d\vec{s}$ e la sua posizione nell'orbita $\vec{r}$, 
+che rappresenta l'area del parallelograma di lati $d\vec{s}$ e $\vec{r}$. Si può quindi esprimere l'area infinitesima descritta da uno spostamento infinitesimo di un 
+pianta lungo la sua orbita cicolare secondo la seguente espressione: 
 \begin{equation*}
     dA=\displaystyle\frac{|\vec{r}\times d\vec{s}|}{2}=\frac{rds\sin\alpha}{2}
 \end{equation*}
 
 La variazione di area nel tempo sarà data da:
 \begin{equation*}
-    \displaystyle\frac{dA}{dt}=\frac{r}{2}\sin\alpha\frac{d\vec{s}}{dt}=\frac{r^2\omega}{2}\sin\alpha=cost.
+    \displaystyle\frac{dA}{dt}=\frac{r}{2}\sin\alpha\frac{d{s}}{dt}=\frac{r^2\omega}{2}\sin\alpha
 \end{equation*}
 
-Affinché la velocità areolare rimanga costanta allora la velocità angolare dovrà essere inversamente proporzionale al quadrato della distanza 
-tra il pianeta ed il sole. La sua orbita genererà un'accellerazione centripeta $\vec{a_c}=r\omega^2\hat{r}$. Per cui esisterà una forza diretta verso 
-il sole dal pianeta $\vec{F}=m_p\vec{a}_c=m_pr\omega^2\hat{r}$. Per la terza legge di Keplero si può esprimere la relazione tra il braccio maggiore
+Affinché la velocità areolare rimanga costante allora la velocità angolare deve essere costante, inoltre è inversamente proporzionale al quadrato della distanza 
+tra il pianeta ed il Sole. La sua orbita genera un'accellerazione centripeta $\vec{a}_c=r\omega^2\hat{\nu}$. Per cui esisterà una forza diretta verso 
+il Sole dal pianeta $\vec{F}=m_p\vec{a}_c=m_pr\omega^2\hat{\nu}$. Per la terza legge di Keplero si può esprimere la relazione tra il braccio maggiore
 dell'ellisse con il periodo, per cui si può ottenere la velocità angolare: 
 \begin{equation*}
     \omega=\displaystyle\frac{2\pi}{T}=\frac{2\pi}{\sqrt{ka^3}}
@@ -3191,37 +3197,39 @@ dell'ellisse con il periodo, per cui si può ottenere la velocità angolare:
 La forza agente sul pianeta avrà modulo:
 \begin{gather*}
     F=m_pr\displaystyle\frac{4\pi^2}{ka^3}\\
-    \varepsilon=0\Rightarrow a=b=r,\:F=m_p\displaystyle\frac{4\pi^2}{kr^2}
+    \varepsilon=0\Rightarrow a=b=r\\
+    F=m_p\displaystyle\frac{4\pi^2}{kr^2}
 \end{gather*}
-Anche la forza agente sul pianeta sarà allora inversamente proporzionale al quadrato dell distanza tra il pianeta ed il sole. Per il secondo 
-principio il pianeta eserciterà sul sole una forza uguale e contraria: $\vec{F}_{s\to p}=-\vec{F}_{p\to s}$. 
+Anche la forza agente sul pianeta sarà allora inversamente proporzionale al quadrato della distanza tra il pianeta ed il Sole. Per il secondo 
+principio della dinamica il pianeta eserciterà sul Sole una forza uguale e contraria: $\vec{F}_{s\to p}=-\vec{F}_{p\to s}$. 
 \begin{gather*}
-    F_{s\to p}=m_p\displaystyle\frac{4\pi^2}{k_pr^2}=-m_s\displaystyle\frac{4\pi^2}{k_sr^2}=F_{p\to s}\\
+    \left|\vec{F}_{s\to p}\right|=m_p\displaystyle\frac{4\pi^2}{k_pr^2}=m_s\displaystyle\frac{4\pi^2}{k_sr^2}=\left|\vec{F}_{p\to s}\right|\\
     m_sk_p=m_pk_s
 \end{gather*}
-Si suppone esista una costante $k_s\neq k_p$ anche per il sole. \\
+Si suppone esista una costante $k_s\neq k_p$ anche per il sole. 
+\\
 Viene definita la costante di gravitazione universlale, indipendente dalla coppia di pianeti considerati:
 \begin{equation}
-    G:=\displaystyle\frac{4\pi^2}{m_sk_p}=\frac{4\pi^2}{m_pk_s}=cost.
+    G:=\displaystyle\frac{4\pi^2}{m_ik_j}=\frac{4\pi^2}{m_jk_i}=cost.
 \end{equation}
 
-Per cui la forza agente si può esprimere la forza rispetto a questa nuova costante:
+Per cui la forza agente si può esprimere rispetto a questa nuova costante:
 \begin{equation}
-    F=m_p\displaystyle\frac{4\pi^2}{kr^2}\cdot\frac{m_s}{m_s}=G\frac{m_sm_p}{r^2}
+    F=m_p\displaystyle\frac{4\pi^2}{k_pr^2}\cdot\frac{m_s}{m_s}=G\frac{m_sm_p}{r^2}
 \end{equation}
 
-Questa forza viene espressa in generale senza sapere a priori il valore delle masse gravitazionali, poiché è possibile calcolare $G$ rispetto a due 
-corpi qualsiasi che si attraggono. 
-
+Questa forza viene espressa in generale senza sapere a priori il valore delle masse gravitazionali, poiché è possibile calcolare la costante di gravitazione universale $G$ 
+rispetto a due corpi qualsiasi che si attraggono. 
 
 
 A fine settecento Cavendish misurò con estrema precisione il valore della costante $G$, usando una bilancia di torsione, formata da un filo avvolto 
 su sé stesso connesso ad un'asta in grado di ruotare sull'asse del filo, con due masse alle estremità. Le due masse agli estremi vengono esposte 
-a dei corpi aventi una massa molto elevata, provocando una forza gravitazionale sulle due masse sull'asta, facendola ruotare. Ruotando sul filo 
-agirà un momento torcente, fino ad una nuova posizione di equilibrio del sistema, dovuta a questo momento torcente calcolabile.\\
-
-Si dimostra come la forza di attrazzione gravitazionale è una forza conservativa. \\
-Data $\vec{F}=F(r)d\hat{r}$, si considera l'integrale del lavoro: $W=\displaystyle\int_{\Gamma}F(r)\hat{r}\cdot d\vec{s}$. Analizzando  
+a dei corpi aventi una massa molto elevata, provocando una forza gravitazionale sulle due masse sull'asta, generando un momento torcente. L'asta ruoterà fino ad una nuova 
+posizione di equilibrio del sistema, dovuta a questo momento torcente. Sapendo le masse dei corpi connessi all'asta, dei corpi esterni generatori della forza 
+gravitazionale e la distanza tra questi è possibile, misurando la rotazione effettuata, calcolare il momento torcente ed in seguito la costante di gravitazione universale $G$. 
+\\
+Si vuole determinare se la forza gravitazionale è una forza conservativa o meno. 
+Data $\vec{F}=F(r)d\hat{r}$, si considera l'integrale del lavoro $W=\displaystyle\int_{\Gamma}F(r)\hat{r}\cdot d\vec{s}$. Analizzando  
 la traiettoria compiuta dal pianeta è possibile notare come il prodotto scalare $\hat{r}\cdot d\vec{s}$, corrisponda al modulo della variazione 
 infinitesima del vettore posisione nella traiettoria, per cui:
 \begin{equation*}
@@ -3244,16 +3252,21 @@ Essendo $F(r)$ una funzione di stato avrà sempre una primitiva, quindi è una f
 \begin{equation*}
     W=\displaystyle\int_{r_1}^{r_2}F(r)dr=f(r_2)-f(r_1)
 \end{equation*}
-Date due masse $m$ e $M$ di distanza $r$, la forza di attrazione gravitazionle tra i due corpi produrrà un lavoro: 
+Date due masse $m$ e $M$ di distanza $r$, il modulo della forza gravitazionale tra i due sarà dato da:  
 \begin{equation}
-    F(r)=-GmM\displaystyle\frac{1}{r^2}\Rightarrow W=\displaystyle\int_{r_1}^{r_2}F(r)dr=GmM\left(\frac{1}{r_2}-\frac{1}{r_1}\right)
+    F(r)=GmM\displaystyle\frac{1}{r^2}
 \end{equation}
 Essendo una forza conservativa si può ricavare l'energia potenziale integrando la forza gravitazionle:
 \begin{equation}
-    U(r)=-F(r)=\displaystyle\int GmM\frac{1}{r^2}dr=-\frac{GmM}{r}
+    U(r)=-F(r)=\displaystyle-\int GmM\frac{1}{r^2}dr=-\frac{GmM}{r}+c
 \end{equation}
-Data l'energia potenziale è possibile calcolarsi, se si considera l'eneriga meccanica conservata, la velocità necessaria per un corpo di 
-massa $m$ per uscire dall'orbita terrestre. Ovvero si considera raggiunga, in un intervallo di tempo infinito, una distanza infinita dalla terra, per 
+Si può esprimere il lavoro della forza gravitazionale come differenza di energia potenziale:
+\begin{equation}
+    W=-\Delta U=GmM\Delta\left(\displaystyle\frac{1}{r}\right)
+\end{equation}
+
+Data l'energia potenziale è possibile calcolarsi, se non agiscono altre forze non conservative, la velocità necessaria per un corpo di 
+massa $m$ per uscire dall'orbita terrestre. Ovvero si considera raggiunga asintoticamente una distanza infinita dalla terra, per 
 cui la sua energia potenziale in quel punto sarà nulla:
 \begin{gather*}
     U(r_0)+K(v_0)=\cancelto{0}{U(r_f)}+K(v_f)\\
@@ -3270,27 +3283,22 @@ Questa velocità viene definita velocità di fuga dalla terra.
 
 
 
-In caso si consideri un sistema di riferimento avente centro nel sole, sul corpo analizzato agirà una forza apparente, poiché le analisi 
-precedenti sono state effettuate rispetto al sistema di riferimento intrinseco del corpo. Sul corpo agirà una forza centripeta, calcolata 
+In caso si consideri un sistema di riferimento avente centro nel Sole, sul corpo agiranno delle forze d'inerzia, poiché le analisi 
+precedenti sono state effettuate rispetto al sistema di riferimento intrinseco del corpo, in moto rotazionale rispetto al Sole. Sul corpo agirà una forza centripeta, calcolata 
 precedentemente $m\omega^2r$, per cui la risultante delle forze agenti sul pianeta sarà:
 \begin{equation*}
-    F=-\displaystyle\frac{GmM}{r^2}+m\omega^2r
+    F=\displaystyle\frac{GmM}{r^2}-m\omega^2r
 \end{equation*}
 Il corpo avrà un certo momento angolare $L=|\vec{r}\times m\vec{v}|=m\omega r^2$, poiché si tratta di un'orbita ellittica il vettore direzione 
 sarà perpendicolare al vettore velocità. Si potrà quindi esprimere la forza risultante rispetto al modulo del momento angolare:
 \begin{equation*}
-    F=-\displaystyle\frac{GmM}{r^2}+\frac{L^2}{mr^3}
+    F=\displaystyle\frac{GmM}{r^2}-\frac{L^2}{mr^3}
 \end{equation*}
 Poiché il momento angolare dipende solamente dalla distanza, essendo la velocità angolare costante, la forza risultante sarà conservativa, e si potrà 
 calcolare l'energia potenziale. Si definisce energia potenziale efficace l'energia potenziale calcolata in questo sistema di riferimento:
 \begin{equation}
     U^{eff}(r)=-\int F(r)dr=-\displaystyle\frac{GmM}{r}+\frac{L^2}{2mr^2}
 \end{equation}
-Per cui per dei corpi vicini al sole, l'energia potenziale efficace dipenderà dalla componente $\displaystyle\frac{L^2}{2mr^2}$, e sarà positiva, quindi 
-il corpo si dirigerà verso il sole. Diminuerà all'aumentare di $r$ fino al raggiungimento di un punto di equilibrio stabile per un valore 
-$r_0$, dopo il quale l'energia potenziale tenderà asintoticamente a $0^-$. Un corpo ad una distanza $r_0$ dal sole quindi sarà in un orbita attorno al 
-punto di energia minima $U(r_0)$, formando piccole oscillazioni, per cui la funzione potenziale potrà essere approssimata con una parabola in 
-tutto il semipiano negativo. Per $U(r)\geq0$, il potenziale continuerà a crescere fino ad infinito, potrà quindi essere approssimato come un'iperbole. 
 
 \begin{center}
     \begin{tikzpicture}[scale=2]
@@ -3305,14 +3313,25 @@ tutto il semipiano negativo. Per $U(r)\geq0$, il potenziale continuerà a cresce
     \end{tikzpicture}
 \end{center}
 
-Se si considera il sole in movimento, allora si avrà un un problema dei due corpi. Si considera il sistema di due punti isolato, per cui:
+Per cui per dei corpi vicini al Sole, prevale la componente $\displaystyle\frac{L^2}{2mr^2}$, e l'energia potenziale efficace sarà positiva, quindi 
+il corpo si muoverà verso il sole. Diminuerà all'aumentare della distanza $r$ fino al raggiungimento di un punto di equilibrio stabile, corrispondente ad un punto 
+di minimo per l'energia potenziale, per un valore 
+$r_0$, dopo il quale l'energia potenziale tenderà asintoticamente a $0^-$. Un corpo ad una distanza $r_0$ dal sole quindi sarà in un orbita attorno al 
+punto di energia minima $U(r_0)$, compiendo piccole oscillazioni, per cui la funzione potenziale potrà essere approssimata con una parabola in 
+tutto il semipiano negativo. Per $U(r)\geq0$, il potenziale continuerà a crescere fino ad infinito, potrà quindi essere approssimato come un'iperbole. 
+
+
+
+
+Se si considera il Sole in movimento, allora i due corpi si muoveranno l'uno rispepetto all'altro di moto rototraslatorio. Si considera la conservazione della quantità di moto 
+e del momento angolare: 
 \begin{gather*}
     \vec{p}_{tot}=cost.=m\vec{v_p}+M\vec{v_s}\\
     \vec{L}_{tot}=cost.
 \end{gather*}
 Il corpo con massa maggiore avrà quindi una velocità relativamente minore. Poiché l'energia cinetica del sistema è costante, per una quantità di moto costante, 
-se l'energia potenziale efficace è costante, l'energia meccanica del sisema si conserverà. Il moto viene analizzato rispetto alla distanza 
-del centro di massa dal sole $\vec{R}_{(c.d.m.)}$ e la distanza relativa tra i due corpi $\vec{r}=\vec{r}_s-\vec{r}_p$. 
+se l'energia potenziale efficace è costante, l'energia meccanica del sistema si conserverà. Il moto viene analizzato rispetto alla distanza 
+del centro di massa dal Sole $\vec{R}_{(c.d.m.)}$ e la distanza relativa tra i due corpi $\vec{r}=\vec{r}_s-\vec{r}_p$. 
 
 \clearpage
 
@@ -3340,8 +3359,7 @@ comportamento nello spazio:
 
 \end{tikzpicture}\end{center}
 
-Per ogni punto $P_i$ sarà possibile descrivere il suo 
-comportamento tramite la dinamica e o cienmatica. 
+Per ogni punto $P_i$ è possibile descrivere le sue interazioni dinamiche ed il suo comportamento cinematico. 
 Per trovare la forza totale agente su un unico punto $P_i$, si 
 considerano tutte le interazioni tra quel punto e i restanti punti 
 appartenenti al sistema $\mathscr{S}$:
@@ -3352,55 +3370,55 @@ Vengono definite forze interne al sistema, tutte le forze
 dovute ad interazioni tra elementi appartenenti ad esso.
 Mentre vengono definite forze esterne al sistema, tutte le forze 
 dovute all'interazione tra punti appartenenti al sistema con 
-oggetti non appartenenti ad esso. 
+elementi non appartenenti ad esso. 
 
 
 
-\`{E} facile notare che per il terzo principio della dinamica 
+Per il terzo principio della dinamica 
 la somma di tutte le forze interne al sistema è nulla. Per ogni 
 forza $\vec{F}_{i\to j}$ generata da un punto $i$ verso un punto $j$ 
-esisterà una forza uguale e contraria $-\vec{F}_{i\to j}=\vec{F}_{j\to i}$, 
-per cui la somma di tutte le coppie di forze tra loro opposte 
-sarà uguale alla somma di tutte le forze interne, e sarà quindi nulla:
+esiste una forza uguale e contraria $-\vec{F}_{i\to j}=\vec{F}_{j\to i}$ dal punto $j$ verso il punto $i$. 
+Per cui la somma di tutte le coppie di forze tra loro opposte 
+è uguale alla somma di tutte le forze interne, ed è quindi nulla:
 \begin{equation}
     \vec{F}_{tot}^{int}=\displaystyle\sum_{j=1}^{N}\vec{F}_i^{int}=\sum_{i=1}^{N}\left(\sum_{j=1}^{N}\vec{F}_{i\to j}\right)=\sum_{(i,j)=(1,1)}^{(N,N)}\vec{F}_{i\to j}+\vec{F}_{j\to i}=\vec{0}
 \end{equation}
-considerando nulla la forza: $\vec{F}_{i\to i}$.
-Quindi la forza totale di un sistema $\mathscr{S}$ sarà data da:
+Considerando nulla la forza che agisci sullo stesso punto $\vec{F}_{i\to i}=\vec{0}$.
+Quindi la forza totale agente un sistema di punti materiali $\mathscr{S}$ è data da:
 \begin{equation}
-    \vec{F}_{tot}=\vec{F}^{est}_{tot}+\cancelto{0}{\vec{F}^{int}_{tot}}=\vec{F}^{est}_{tot}
+    \vec{F}_{tot}=\vec{F}^{est}_{tot}+\cancelto{\vec0}{\vec{F}^{int}_{tot}}=\vec{F}^{est}_{tot}
 \end{equation}
 
 
 Se la somma delle forze esterne applicate sul sistema 
-è nulla allora: $\vec{F}_{tot}=\vec{0}$, quindi il sistema 
-si troverà in uno stato di quiete o di moto rettilineo uniforme. 
+è nulla allora la forza totale agente sul sistema è nulla $\vec{F}_{tot}=\vec{0}$, quindi il sistema 
+si trova in uno stato di quiete o di moto rettilineo uniforme. 
 
 \subsection{Centro di Massa}
-Il centro di massa di un sisema $\mathscr{S}$ è definito come 
-un punto, non necessariamente appartenente al sistema, che può essere usato per approssimare tutto il sistema. 
+Il centro di massa di un sistema $\mathscr{S}$ è definito come 
+un punto, non necessariamente reale, che può essere usato per approssimare il comportamento del sistema. 
 Il centro di massa si trova in una posizione $\vec{r}_c$ 
-rispetto ad un sistema di riferimento $S$ definita come:
+rispetto ad un sistema di riferimento $S$ definita come la media ponderata, rispetto alle masse, delle posizioni di ogni punto materiale del sistema: 
 \begin{equation}
     \vec{r}_{c.d.m.}=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}
 \end{equation}
 Può essere calcolato proceduralemente:
 \begin{equation*}
-    \vec{r}_{c.d.m.}=\displaystyle\vec{r}'_{c.d.m.}+\frac{m_{N+1}\vec{r}_{N+1}}{m_{N+1}}=\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}+\frac{m_{N+1}\vec{r}_{N+1}}{m_{N+1}}=\frac{\sum_{i=1}^{N+1}m_i\vec{r}_i}{\sum_{i=1}^{N+1}m_i}
+    \vec{r}_{c.d.m.}=\displaystyle\frac{\sum_{i=1}^Nm_i\vec{r}'_{c.d.m.}+m_{N+1}\vec{r}_{N+1}}{\sum_{i=1}^Nm_i+m_{N+1}}=\frac{\sum_{i=1}^{N+1}m_i\vec{r}_i}{\sum_{i=1}^{N+1}m_i}
 \end{equation*}
-Se viene traslato il sistema di $\vec{R}$, la posizione del 
-centro di massa verrà anch'essa traslata della stessa quantità:
+Se il sistema è traslato di $\vec{R}$, la posizione del 
+centro di massa è anch'essa traslata della stessa quantità:
 \begin{equation*}
     \vec{r}'_{c.d.m.}=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}'_i}{\sum_{i=1}^{N}m_i}=\displaystyle\frac{\sum_{i=1}^{N}m_i(\vec{r}_i+\vec{R})}{\sum_{i=1}^{N}m_i}=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{R}}{\sum_{i=1}^{N}m_i}+\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}=\vec{R}+\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}=\vec{R}+\vec{r}_{c.d.m.}
 \end{equation*}
 
-La posizione del centro di massa di un sistema di punti rispetto ai punti materiali è indipendente dal sistema di riferimento, invece le sue coordinate ripendono dal sistema 
-adottato. 
+La posizione del centro di massa di un sistema di punti rispetto ai punti materiali è indipendente dal sistema di riferimento, invece la sua espressione in coordinate 
+dipende dal sistema di riferimento adottato. 
 
 
 
-Se le massi sono costanti, ed i punti sono mobili nel tempo, 
-allora il centro di massa si muoverà nel tempo ed avrà una sua velocità
+Se le masse sono costanti, ed i punti sono mobili nel tempo, 
+allora il centro di massa ha una certa velocità $\vec{v}_{c.d.m.}$:
 \begin{equation}
     \vec{v}_{c.d.m.}=\frac{d}{dt}\left(\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}\right)=\displaystyle\frac{\sum_{i=1}^{N}m_i\frac{d\vec{r}_i}{dt}}{\sum_{i=1}^{N}m_i}=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{v}_i}{\sum_{i=1}^{N}m_i}=\displaystyle\frac{\sum_{i=1}^{N}\vec{p}_i}{\sum_{i=1}^{N}m_i}
 \end{equation}
@@ -3417,8 +3435,8 @@ moto del centro di massa:
 \begin{equation}
     M\vec{v}_{c.d.m.}=\vec{p}_{c.d.m.}=\vec{p}^{tot}
 \end{equation}
-con $M=\displaystyle\sum_{i=1}^{N}m_i$. 
-Considerando la forza risultante agente su un punto $P_i$:
+Con $M=\displaystyle\sum_{i=1}^{N}m_i$. 
+Si considera per ogni punto $P_i$ l'espressione del suo moto rispetto alla forza agente su di esso: 
 \begin{gather*}
     m_i\vec{a}_i=\vec{F}_i^{tot}\\
     \displaystyle\sum_{i=1}^{N}m_i\vec{a}_i=\sum_{i=1}^{N}\vec{F}_i^{tot}\\
@@ -3436,38 +3454,43 @@ Viene quindi definita prima equazione cardinale la relazione tra le forze estern
 \begin{equation*}
     (i)\:M\vec{a}_{c.d.m.}=\vec{F}^{est}
 \end{equation*}
-Il centro di massa di un sistema di punti materiali si muove come un punto dove è concentrata tutta la massa del sistema su cui è applicata la risultante delle forze 
+Il centro di massa di un sistema di punti materiali si muove come un punto materiale dove è concentrata tutta la massa del sistema su cui è applicata la risultante delle forze 
 esterne del sistema. L'azione delle forze interne non può modificare il moto del centro di massa, ma può modificare il comportamento di un singolo punto del sistema. 
 
 \subsection{Sistema Isolato}
-Viene definito sistema isolato un sistema dove la somma delle 
-forze esterni agenti su di esso è nulla $\vec{F}^{est}=\vec{0}$, 
-allora per la prima equazione cardinale $M\vec{a}_{c.d.m.}=\vec{0}$. 
-Segue che il centro di massa, quindi il sistema, si muoverà di moto rettilineo 
-uniforme o sarà in stato di quiete. La quantità di moto interna del sistema $\vec{p}^{int}$ 
-sarà conservata, poiché $\displaystyle\frac{d}{dt}\vec{p}_{c.d.m.}=\vec{0}$.
+Viene definito sistema isolato un sistema di punti materiali dove la risultante delle 
+forze esterni agenti su di esso è nulla $\vec{F}^{est}=\vec{0}$. 
+Per la prima equazione cardinale $M\vec{a}_{c.d.m.}=\vec{0}$, allora il centro di massa, quindi il sistema, si muove di moto rettilineo 
+uniforme o è in stato di quiete. La quantità di moto interna del sistema $\vec{p}^{int}$ 
+è conservata, poiché $\displaystyle\frac{d}{dt}\vec{p}_{c.d.m.}=\vec{0}$.
 \\
-Se la quantità di moto totale è nulla $\vec{p}^{tot}=\vec{0}$, 
-i punti appartenenti al sistema o divergeranno con quantità di 
-moto tali da bilanciarsi, oppure convergeranno nel centro di 
-massa. In quest'ultimo caso la posizione dei punti convergerà 
-ad una posizione $\vec{r}$, la posizione del centro di massa sarà:
+Se la quantità di moto totale del sistema è nulla $\vec{p}^{tot}=\vec{0}$, allora 
+i punti appartenenti al sistema o divergono con quantità di 
+moto tali da bilanciarsi, oppure conbergono nel centro di 
+massa. In quest'ultimo caso la posizione dei punti converge 
+ad una posizione $\vec{r}$, coincidente alla posizione del centro di massa:
 \begin{equation}
     \vec{r}_{c.d.m.}=\displaystyle\frac{\sum_{i_1}^{N}m_i\vec{r}_i}{M}=\vec{r}\frac{\sum_{i_1}^{N}m_i}{M}=\vec{r}
 \end{equation}
 
 \subsection{Sistema di Riferimento del Centro di Massa}
-Se si sceglie un sistema di riferimento $S_{c.d.m.}$ con origine nel centro 
-di massa, che si muove di sola traslazione con un'accellerazione 
+Nella maggior parte dei casi, è più comodo analizzare un sistema di punti materiali rispetto ad un sistema di riferimento solidale al centro di massa del sistema. 
+Se il centro di massa si muove di sola traslazione, allora
+il sistema di riferimento $S_{c.d.m.}$, con origine nel centro 
+di massa, si muove di sola traslazione con un'accellerazione 
 $\vec{A}=\vec{a}_{c.d.m.}=\displaystyle\frac{\vec{F}^{est}}{M}$. 
-La velocità del centro di massa relativa al sistema di punti espresso rispetto a $S_{c.d.m.}$ sarà nulla, quindi avrò una quantità di moto nulla e una quantità di moto 
-totale nulla. Segue che in un sistema $\mathscr{S}$ espresso rispetto a $S_{c.d.m.}$ gli elementi 
-si muoveranno con una quantità di moto tale da bilanciarsi a vicenda. 
+La velocità del centro di massa relativa al sistema di punti espresso rispetto a $S_{c.d.m.}$ è nulla, quindi il centro di massa e il sistema di punti hanno una quantità 
+di moto totale nulla. Quindi in un sistema $\mathscr{S}$ espresso rispetto al sistema di riferimento del centro di massa $S_{c.d.m.}$ gli elementi 
+si muovono con una quantità di moto tale da bilanciarsi a vicenda. 
+
+
+Se la risultante delle forze esterne è diversa da zero, il sistema di riferimento del centro di massa è un sistema non inerziale rispetto al sistema di riferimento $S$ dove 
+è stato definito il sistema di punti. Per passare al sistema di riferimento del centro di massa $S\to S_{c.d.m.}$, si considerano le seguenti espressioni: 
 \begin{equation*}
     \begin{cases}
-        \vec{r}=\vec{r}'+\vec{r}_{c.d.m.}\\ 
-        \vec{v}=\vec{v}'+\vec{v}_{c.d.m.}\\
-        \vec{a}=\vec{a}'+\vec{a}_{c.d.m.}
+        \vec{r}(S)=\vec{r}(S_{c.d.m.})+\vec{r}_{c.d.m.}(S)\\ 
+        \vec{v}(S)=\vec{v}(S_{c.d.m.})+\vec{v}_{c.d.m.}(S)\\
+        \vec{a}(S)=\vec{a}(S_{c.d.m.})+\vec{a}_{c.d.m.}(S)
     \end{cases}
 \end{equation*}
 \begin{center}\begin{tikzpicture}[scale=2]
@@ -3498,23 +3521,25 @@ si muoveranno con una quantità di moto tale da bilanciarsi a vicenda.
     il momento angolare nel sistema di riferimento del centro 
     di massa con il momento angolare del centro di massa.
     \begin{equation}
-        \vec{L}=\vec{L}'+\vec{L}_{c.d.m.}
+        \vec{L}(S)=\vec{L}(S_{c.d.m.})+\vec{L}_{c.d.m.}(S)
     \end{equation}
 \end{quotation}
-I punti nel sistema $S$ espressi rispetto al sistema $S_{c.d.m.}$: $\vec{r}_i=\vec{r}_i'+\vec{r}_{c.d.m.}$, 
-$\vec{r}_i=\vec{r}_i'+\vec{v}_{c.d.m.}$.
-Il momento angolare nel sistetema $S$ è dato da $\vec{L}=\displaystyle\sum_{i=1}^{N}(\vec{r}_i\times\vec{p}_i)$, 
-espresso rispetto al sistema $S_{c.d.m.}$ sarà: 
+Si considerano i punti nel sistema di riferimento $S$ espressi rispetto al sistema di riferimento del centro di massa $S_{c.d.m.}$: $\vec{r}_i(S)=\vec{r}_i(S_{c.d.m.})+\vec{r}_{c.d.m.}(S)$, 
+$\vec{r}_i(S)=\vec{r}_i(S_{c.d.m.})+\vec{v}_{c.d.m.}(S)$.
+Il momento angolare nel sistetema $S$ è dato da $\vec{L}(S)=\displaystyle\sum_{i=1}^{N}(\vec{r}_i(S)\times\vec{p}_i(S))$, 
+considerando le espressioni del cambiamento di coordinate $S\to S_{c.d.m.}$ si esprime il momento anglare rispetto al sistema di riferimento del centro di massa: 
 \begin{gather*}
-    \vec{L}=\displaystyle\sum_{i=1}^{N}(\vec{r}_i'+\vec{r}_{c.d.m.})\times m_i(\vec{v}_i'+\vec{v}_{c.d.m.})\\
-    \displaystyle\sum_{i=1}^{N}\left(\vec{r}_i'\times m_i\vec{v}_i'+\vec{r}_i'\times m_i\vec{v}_{c.d.m.}+\vec{r}_{c.d.m.}\times m_i\vec{v}_i'+\vec{r}_{c.d.m.}\times m_i\vec{v}_{c.d.m.}\right)\\
-    \displaystyle\sum_{i=1}^{N}(\vec{r}_i'\times m_i\vec{v}_i)'+\sum_{i=1}^{N}(\vec{r}_i'm_i)\times \vec{v}_{c.d.m.}+\vec{r}_{c.d.m.}\times\sum_{i=1}^{N}(m_i\vec{v}_i')+\vec{r}_{c.d.m.}\times\sum_{i=1}^{N}(m_i )\vec{v}_{c.d.m.}\\
-    \vec{L}'+\vec{L}_{c.d.m.}
+    \vec{L}(S)=\displaystyle\sum_{i=1}^{N}(\vec{r}_i(S_{c.d.m.})+\vec{r}_{c.d.m.}(S))\times m_i(\vec{v}_i(S_{c.d.m.})+\vec{v}_{c.d.m.}(S))\\
+    \displaystyle\sum_{i=1}^{N}(\vec{r}_i(S_{c.d.m.})\times m_i\vec{v}_i(S_{c.d.m.})+\vec{r}_i(S_{c.d.m.})\times m_i\vec{v}_{c.d.m.}(S)\\
+    +\vec{r}_{c.d.m.}(S)\times m_i\vec{v}_i(S_{c.d.m.})+\vec{r}_{c.d.m.}(S)\times m_i\vec{v}_{c.d.m.}(S))\\
+    \displaystyle\sum_{i=1}^{N}(\vec{r}_i(S_{c.d.m.})\times m_i\vec{v}_i(S_{c.d.m.}))+\cancelto{\vec0}{\sum_{i=1}^{N}(\vec{r}_i(S_{c.d.m.})m_i)\times \vec{v}_{c.d.m.}(S)}\\
+    +\cancelto{\vec0}{\vec{r}_{c.d.m.}(S)\times\sum_{i=1}^{N}(m_i\vec{v}_i(S_{c.d.m.}))}+\vec{r}_{c.d.m.}(S)\times\sum_{i=1}^{N}(m_i)\vec{v}_{c.d.m.}(S)\\
+    \vec{L}(S_{c.d.m.})+\vec{L}_{c.d.m.}(S)
 \end{gather*}
-poiché in $S_{c.d.m.}$ $\vec{r}_{c.d.m.}'=\vec{0}$, 
-si ha che $\vec{r}_{c.d.m.}'=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i'}{M}=\vec{0}$ 
-quindi $\sum_{i=1}^{N}m_i\vec{r}_i'=\vec{0}$, analogamente 
-per la velocità: $\sum_{i=1}^{N}m_i\vec{v}_i'=\vec{0}$. 
+Poiché la posizione del centro di massa nel sistema di riferimento solidale al centro di massa è nulla $\vec{r}_{c.d.m.}(S_{c.d.m.})=\vec{0}$, 
+si ha che $\vec{r}_{c.d.m.}(S_{c.d.m.})=\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i(S_{c.d.m.})}{M}=\vec{0}$ 
+quindi la componente $\sum_{i=1}^{N}m_i\vec{r}_i(S_{c.d.m.})$ è nulla, analogamente si dimostra che la componente $\sum_{i=1}^{N}m_i\vec{v}_i(S_{c.d.m.})$ è nulla, sapendo 
+che la velocità del centro di massa nel sistema di riferimento del centro di massa è nulla.
 
 \subsection{II Teorema di K\"{o}ning}
 \begin{quotation}
@@ -3524,29 +3549,36 @@ per la velocità: $\sum_{i=1}^{N}m_i\vec{v}_i'=\vec{0}$.
     riferimento concorde al centro di massa, sommata all'energia 
     cinetica del centro di massa:
     \begin{equation}
-        K=K'+K_{c.d.m.}
+        K(S)=K(S_{c.d.m.})+K_{c.d.m.}(S)
     \end{equation}
 \end{quotation}
 
-Si rappresenta l'energia cinetica del sistema:
-$K=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv_i^{2}$, e 
-si rappresenta rispetto al sistema di riferimento concorde al 
-centro di massa $S_{c.d.m.}$:
+Si considera l'energia cinetica del sistema di punti nel sistema inerziale $S(S)$ \\
+$K(S)=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv_i^{2}(S)$, e 
+si considera l'espressione del cambiamento di coordinate $S\to S_{c.d.m.}$ della velocità $v_i(S)=v_i(S_{c.d.m.})+v_{c.d.m.}(S)$. Si esprime l'energia cinetica 
+rispetto al sistema di riferimento solidale al centro di massa tramite quest'espressione $S\to S_{c.d.m.}$: 
 \begin{gather*}
-    K=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv^{2},\:v^{2}=\vec{v}\cdot\vec{v}=(\vec{v}'+\vec{v}_{c.d.m.})\cdot(\vec{v}'+\vec{v}_{c.d.m.})\\
-    \displaystyle\frac{1}{2}\sum_{i=1}^{N}m_i(v'^{2}_i+2\vec{v}'_i\vec{v}_{c.d.m.}+v_{c.d.m.}^{2})\\
-    \displaystyle\frac{1}{2}\displaystyle\sum_{i=1}^{N}m_iv'^{2}_i+\displaystyle\sum_{i=1}^{N}m_i\vec{v}'_i\vec{v}_{c.d.m.}+\frac{1}{2}\displaystyle\sum_{i=1}^{N}m_iv_{c.d.m.}^{2}\\
-    K'+\vec{p}'_{tot}\cdot\vec{v}_{c.d.m.}+K_{c.d.m.},\:\vec{p}'_{tot}(S_{c.d.m.})=\vec{0}\\
-    K=K'+K_{c.d.m.}
+    K(S)=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv^{2}(S)
 \end{gather*}
+\begin{gather*}
+    \displaystyle\frac{1}{2}\sum_{i=1}^{N}m_i(v^{2}_i(S_{c.d.m.})+2v_i(S_{c.d.m.}){v}_{c.d.m.}(S)+v_{c.d.m.}^{2}(S))\\
+    \displaystyle\frac{1}{2}\displaystyle\sum_{i=1}^{N}m_iv^{2}(S_{c.d.m.})_i+\cancelto{0}{\displaystyle\sum_{i=1}^{N}\left(m_i{v}_i(S_{c.d.m.})\right)}{v}_{c.d.m.}(S)+\frac{1}{2}\displaystyle\sum_{i=1}^{N}m_iv_{c.d.m.}^{2}(S)
+\end{gather*}
+\begin{gather*}
+    K(S_{c.d.m.})+K_{c.d.m.}(S)
+\end{gather*}
+Il componente $\displaystyle\sum_{i=1}^{N}m_i{v}_i(S_{c.d.m.})$ corrisponde alla quantità di moto del centro di massa nel sistema di riferimento del centro di massa $\vec{p}_{c.d.m.}(S_{c.d.m.})$, 
+ma la quantità di moto del centro di massa è nulla nel sistema di riferimento del centro di massa, per cui quella componente ha un contributo nullo. 
 
-Segue per i due teoremi di K\"oning che le grandezze principali di sistema di punti materiali $\mathscr{S}$ espresso rispetto ad 
+
+
+Segue per i due teoremi di K\"oning che le grandezze principali di un sistema di punti materiali $\mathscr{S}$ espresse rispetto ad 
 un sistema di riferimento inerziale $S$, possono essere sempre espresse 
 rispetto ad un sistema di riferimento $S_{c.d.m.}$ solidale al centro di massa del sistema. Non è necessaria una formulazione di un terzo teorema di K\"oning poiché 
 è stato precedentemente dimostrato che per qualsiasi sistema di riferimento inerziale, la quantità di moto totale del sistema di punti materiali $\mathscr{S}$ coincide 
 alla quantità di moto del centro di massa del sistema nello stesso sistema di riferimento. Poiché è più semplice analizzare il comportamento di un singolo punto materiale, 
 centro di massa, 
-invece di un sistema di punti, è consigliabile, se le grandezze sono ottenute in un sistema di riferimento inerziale, analizzare il sistema nel sistema di riferimento 
+invece di un sistema di punti, è consigliabile, se le grandezze sono ottenute in un sistema di riferimento inerziale, analizzare il sistema di punti nel sistema di riferimento 
 solidale al centro di massa: 
 \begin{equation}
     \begin{matrix}
@@ -3592,12 +3624,12 @@ Poiché la quantità di moto totale del sistema viene conservata
 durante l'urto, viene scambiata una quantità di moto $\Delta\vec{p}$ 
 tra i due corpi durante l'intervallo di tempo $[0,\varepsilon]$. 
 
-Per una forza impulsiva $F$ al diminuire dell'intervallo di tempo, la sua intensità aumenterà fino a tendere asintoticamente per un urto in un tempo infinitesimo, per cui 
-l'impulso avrà un valore non nullo per un intervallo di tempo infinitesimo:
+Per una forza impulsiva $F$ al diminuire dell'intervallo di tempo, la sua intensità aumenterà. Per un urto in un tempo infinitesimo, 
+l'impulso ha un valore non nullo per un intervallo di tempo infinitesimo:
 \begin{equation*}
     \lim_{\varepsilon\to 0}\displaystyle\int_{0}^{\varepsilon}\vec{F}dt\approx\vec{F}\cdot\varepsilon=\vec{J}\neq\vec{0}
 \end{equation*}
-Per una forza non impulsiva, nello stesso intervallo l'impulso dovuto a quella forza sarà nullo $\vec{F}\cdot\varepsilon=\vec{0}$. 
+Per una forza non impulsiva, nello stesso intervallo di timpo l'impulso generato è nullo $\vec{F}\cdot\varepsilon=\vec{0}$. 
 
 \begin{center}\begin{tikzpicture}[scale=2]
     \draw[->](-0.5,0)--(3,0)node[above]{$t$};
@@ -3617,14 +3649,14 @@ Per una forza non impulsiva, nello stesso intervallo l'impulso dovuto a quella f
 \end{tikzpicture}\end{center}
 
 \subsubsection{Elastici}
-Gli urti possono essere rappresentati come uno scambio di quantità di moto tra due corpi, dove la quantità di moto totale del sistema rimane invariata. 
+Gli urti possono essere rappresentati come uno scambio di quantità di moto tra due corpi. 
 Se il sistema composto dai cue corpi è isolato allora la quantità di 
-moto viene conservata durante l'urto. Se sul sistema di punti agiscono forze esterne, se l'intervallo di tempo è sufficientemente ristretto e le forze esterne applicate 
+moto viene conservata durante l'urto. Invece se sul sistema di punti agiscono forze esterne, se l'intervallo di tempo è sufficientemente ristretto e le forze esterne applicate 
 non sono impulsive allora si conserva la quantità di moto. Le forze impulsive che generano l'urto non sono necessariamente conservative, per cui si considerando 
 due tipi di urti: 
 \begin{itemize}
-    \item Urti Elsatici, dove l'energia meccanica del sistema si conserva;
-    \item Urti Anaelastici, dove l'energia meccanica del sistema non si conserva, ma una parte viene dissipata nell'ambiente esterno.
+    \item Urti Elsatici: dove l'energia meccanica del sistema si conserva;
+    \item Urti Anaelastici: dove l'energia meccanica del sistema non si conserva, ma una parte viene dissipata nell'ambiente esterno.
 \end{itemize}
 
 
@@ -3632,7 +3664,7 @@ In un urto elastico i due corpi subiscono delle deformazioni elastiche, riprende
 Nel sistema di riferimento del 
 centro di massa dei due corpi i due punti materiali convergono verso il centro di massa con quantità di moto di modulo uguale e verso opposto, e dopo l'urto ripartono con 
 quantità di moto uguali in modulo e verso opposto. La quantità di moto 
-complessiva è nulla nell'istante iniziale e finale dell'urto, e si conserva l'energia meccanica del sisetma, poiché si tratta di un urto elastico. 
+totale del sistema è nulla durante l'urto, e si conserva l'energia meccanica del sistema, poiché si tratta di un urto elastico. 
 \begin{gather*}
     \begin{cases}
         \vec{p}^{tot}_i=\vec{p}^{tot}_f=\vec{0}\Rightarrow \vec{p}_{1,i}=-\vec{p}_{2,i}\land\vec{p}_{1,f}=-\vec{p}_{2,f}\\
@@ -3640,7 +3672,11 @@ complessiva è nulla nell'istante iniziale e finale dell'urto, e si conserva l'e
     \end{cases}\\
     \begin{cases}
         m_1v_{1,i}=-m_2v_{2,i}\land m_1v_{1,f}=-m_2v_{2,f}\\
-        \displaystyle\frac{1}{m_1}(m_1v_{1,i})^2+\frac{1}{m_2}(m_2v_{2,i})^2=\frac{1}{m_1}(m_1v_{1,f})^2+\frac{1}{m_2}(m_2v_{2,f})^2
+        \displaystyle\frac{1}{2m_1}(m_1v_{1,i})^2+\frac{1}{2m_2}(m_2v_{2,i})^2=\frac{1}{2m_1}(m_1v_{1,f})^2+\frac{1}{2m_2}(m_2v_{2,f})^2
+    \end{cases}\\
+    \begin{cases}
+        \displaystyle m_1v_{1,i}^2+\frac{m_1^2}{m_2}v_{1,i}^2=m_1v_{1,f}^2+\frac{m_1^2}{m_2}v_{1,f}^2\\
+        \displaystyle m_2v_{2,i}^2+\frac{m_2^2}{m_1}v_{2,i}^2=m_2v_{2,f}^2+\frac{m_2^2}{m_1}v_{2,f}^2
     \end{cases}\\
     \begin{cases}
         \displaystyle v_{1,i}^2\left(\displaystyle\frac{m_1}{m_2}+1\right)=v_{1,f}^2\left(\displaystyle\frac{m_1}{m_2}+1\right)\\
@@ -3652,7 +3688,7 @@ complessiva è nulla nell'istante iniziale e finale dell'urto, e si conserva l'e
     \end{cases}     
 \end{gather*}
 Poiché i corpi convergono prima dell'urto e divergono subito 
-dopo, la velocità di un corpo cambia verso dopo l'urto, quindi 
+dopo, le loro velocità cambiano verso dopo l'urto, quindi 
 l'unica soluzione possibile è:
 \begin{equation}
     \begin{cases}
@@ -3666,28 +3702,28 @@ Queste velocità sono calcolate nel sistema di riferimento $S_{c.d.m.}$. Per esp
 $S$ si considera: $v(S)=v(S_{c.d.m.})+v_{c.d.m.}$, $v_{c.d.m.}=\displaystyle\frac{m_1v_1+m_2v_2}{m_1+m_2}$. 
 \begin{gather*}
     \begin{cases}
-        v_{1,f}(S)=v_{1,f}(S_{c.d.m.})+v_{c.d.m.}=-v_{1,i}(S_{c.d.m.})+v_{c.d.m.}=2v_{c.d.m.}-v_{1,i}(S)\\
-        v_{2,f}(S)=v_{2,f}(S_{c.d.m.})+v_{c.d.m.}=-v_{2,i}(S_{c.d.m.})+v_{c.d.m.}=2v_{c.d.m.}-v_{2,i}(S)
+        v_{1,f}(S)=v_{1,f}(S_{c.d.m.})+v_{c.d.m.}(S)=-v_{1,i}(S_{c.d.m.})+v_{c.d.m.}(S)=2v_{c.d.m.}(S)-v_{1,i}(S)\\
+        v_{2,f}(S)=v_{2,f}(S_{c.d.m.})+v_{c.d.m.}(S)=-v_{2,i}(S_{c.d.m.})+v_{c.d.m.}(S)=2v_{c.d.m.}(S)-v_{2,i}(S)
     \end{cases}\\
     \begin{cases}
-        v_{1,f}(S)=\displaystyle\frac{2(m_1v_{1,i}+m_2v_{2,i})-(m_1+m_2)v_{1,i}}{m_1+m_2}\\
-        v_{2,f}(S)=\displaystyle\frac{2(m_1v_{1,i}+m_2v_{2,i})-(m_1+m_2)v_{2,i}}{m_1+m_2}
+        v_{1,f}=\displaystyle\frac{2(m_1v_{1,i}+m_2v_{2,i})-(m_1+m_2)v_{1,i}}{m_1+m_2}\\
+        v_{2,f}=\displaystyle\frac{2(m_1v_{1,i}+m_2v_{2,i})-(m_1+m_2)v_{2,i}}{m_1+m_2}
     \end{cases}
 \end{gather*}
 \begin{equation}
     \begin{cases}
-        v_{1,f}(S)=\displaystyle\frac{(m_1-m_2)v_{1,i}+2m_2v_{2,i}}{m_1+m_2}\\
-        v_{2,f}(S)=\displaystyle\frac{(m_2-m_1)v_{2,i}+2m_1v_{1,i}}{m_1+m_2}
+        v_{1,f}=\displaystyle\frac{(m_1-m_2)v_{1,i}+2m_2v_{2,i}}{m_1+m_2}\\
+        v_{2,f}=\displaystyle\frac{(m_2-m_1)v_{2,i}+2m_1v_{1,i}}{m_1+m_2}
     \end{cases}
 \end{equation}
 
 
-Le velocità iniziali possono avere la stessa direzione, ma il 
-corpo colpito dovrà essere raggiunto dal primo $v_{1,i}>v_{2,i}$, 
-le velocità risultante del corpo colpito non potrà cambiare 
-verso, poiché entrambe le velocità hanno lo stesso verso, mentre 
-la velocità finale del primo corpo potrà rimanere concorde a 
-quella iniziale o potrà essere di verso opposto.
+Se le velocità iniziali hanno la stessa direzione, il 
+corpo colpito deve essere raggiunto dal primo $v_{1,i}>v_{2,i}$, 
+le velocità risultante del corpo colpito non può cambiare di 
+verso, poiché entrambe le velocità hanno lo stesso verso. Mentre 
+la velocità finale del primo corpo può rimanere concorde a 
+quella iniziale o può essere di verso opposto.
 \begin{gather*}
     \displaystyle v_{1,f}=\frac{(m_1-m_2)v_{1,i}+2m_2v_{2,i}}{m_1+m_2}\qquad
     \begin{cases}
@@ -3700,8 +3736,8 @@ quella iniziale o potrà essere di verso opposto.
 
 
 Se i due corpi convergono con velocità iniziali aventi 
-versi opposti, i versi delle velocità finale potranno avere 
-verso opposto, oppure concorde ad una delle due velocità iniziali.
+versi opposti, le velocità finali possono avere 
+versi opposti, oppure concordi ad una delle due velocità iniziali.
 \begin{gather*}
     \displaystyle v_{1,f}=\frac{(m_1-m_2)v_{1,i}+2m_2v_{2,i}}{m_1+m_2}\qquad
     \begin{cases}
@@ -3758,8 +3794,8 @@ verso opposto, oppure concorde ad una delle due velocità iniziali.
 Se un corpo si scontra contro un oggetto immobile all'urto, 
 allora si può analizzare come se avesse una massa inerziale 
 tendente all'infinito, poiché si oppone al moto dell'oggetto. 
-In questo caso il corpo che si scontra rimbalzerà contro l'oggetto 
-con una velocità:
+In questo caso il corpo che si scontra rimbalza contro l'oggetto 
+con una velocità: 
 \begin{equation}
     v_{1,f}=\displaystyle\lim_{m_2\to\infty}\frac{(m_1-m_2)v_{1,i}}{m_1+m_2}=\lim_{m_2\to\infty}\frac{\left(\frac{m_1}{m_2}-1\right)v_{1,i}}{\frac{m_1}{m_2}+1}=\frac{-1\cdot v_{1,i}}{1}=-v_{1,i}
 \end{equation}
@@ -3773,10 +3809,10 @@ dell'energia cinetica iniziale sotto forma di calore. Di conseguenza, le velocit
 finali saranno minori dei loro valori in un urto elastico. 
 \\
 Un urto viene definito perfettamente anaelastico se i due corpi dopo la collisione rimangono a contatto. L'energia cinetica non viene conservata, 
-mentre la quantità di moto viene conservata. Dopo un urto perfettamente anaelastico i due corpi rimangono a contatto, per cui avranno la stessa velocità finale. 
+mentre la quantità di moto viene conservata. Dato che rimangono a contatto hanno la stessa velocità finale. 
 
 
-Dati due corpi che si urtano di urto perfettametne anaelastico, per la conservazione della quantità di moto:
+Dati due corpi che si urtano di urto perfettametne anaelastico, per la conservazione della quantità di moto prima e dopo l'urto si può determinare la velocità finale del sistema: 
 \begin{gather*}
     \vec{p}_{1,i}+\vec{p}_{2,i}=\vec{p}_{1,f}+\vec{p}_{2,f}\\
     m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}=(m_1+m_2)\vec{v}_f
@@ -3785,24 +3821,24 @@ Dati due corpi che si urtano di urto perfettametne anaelastico, per la conservaz
     \vec{v}_f=\displaystyle\frac{m_1\vec{v}_{1,i}+m_2\vec{v}_{2,i}}{m_1+m_2}
 \end{equation}
 Per cui la velocità dei due corpi corrisponde 
-alla velocità del centro di massa del sistema dopo l'urto. 
+alla velocità del centro di massa del sistema. 
 
 
 
-Dato che una porzione dell'energia viene dissipata durante l'urto, le forze interne impulsive, agenti durante l'urti, non sono conservative. Poiché i corpi rimangono 
+Dato che una porzione dell'energia viene dissipata durante l'urto, le forze interne impulsive, non sono conservative. Poiché i corpi rimangono 
 uniti dopo l'urto, si deformano, e l'energia dissipata corrisponde al lavoro necessario per deformare irreversibilmente i due corpi. 
 Poiché la velocità dei corpi coincide alla velocità del centro di massa, 
 l'energia cinetica del sistema sarà nulla nel sistema di 
-riferimento concorde al centro di massa $S_{c.d.m.}$, mentre sarà uguale all'energia 
+riferimento concorde al centro di massa $K(S_{c.d.m.})=0$, mentre sarà uguale all'energia 
 cinetica del centro di massa in un qualsiasi sistema di riferimento inerziale $S$ 
-ad esso $K(S)=K_{c.d.m.}$. Per cui l'energia dissipata durante l'urto può essere calcolata come la differenza tra l'energia cinetica prima dell'urto e 
-l'energia cinetica del centro di massa. Per il secondo teorema di K\"oning, questa differenza è esattamente l'energia cinetica dei due punti materiali prima dell'urto 
+ad esso $K(S)=K_{c.d.m.}(S)$. Per cui l'energia dissipata durante l'urto può essere calcolata come la differenza tra l'energia cinetica prima dell'urto e 
+l'energia cinetica del centro di massa, nello stesso sistema di riferimento inerziale. Per il secondo teorema di K\"oning, questa differenza è esattamente l'energia cinetica dei due punti materiali prima dell'urto 
 nel sistema di riferimeno del centro di massa: 
 \begin{equation}
     E_{dis.}=K_i(S)-K_{c.d.m.}(S)=K_i(S_{c.d.m.})
 \end{equation}
 
-\subsection{Momento}
+\subsection{Momento di un Punto Materiale}
 
 
 Lo stato di un punto può essere descritto mediante variabili 
@@ -3813,7 +3849,7 @@ delle variabili lineari $\vec{r},\:\vec{v},\:\vec{a}$, ma
 mancano i corrispettivi rotazionali della forza $\vec{F}=\displaystyle\frac{d\vec{p}}{dt}$ 
 e del lavoro $W_{\Gamma_{AB}}=\displaystyle\int_{\Gamma_{AB}}\vec{F}d\vec{r}$. 
 \\
-Viene definito il momento $\vec{M}$ di un vettore $\vec{v}$ rispetto ad 
+Viene definito il momento $\vec{M}$ di un vettore $\vec{v}$, applicato ad un punto $Q$ rispetto ad 
 un polo $P$ il prodotto vettoriale tra la distanza dal punto 
 $P$ al punto $Q$ dove è applicato il vettore per il vettore $\vec{v}$ stesso: 
 \begin{equation*}
@@ -3853,17 +3889,15 @@ ad un polo $P$:
     \vec{\tau}_P=\vec{r}_P\times\vec{F}\left[m\cdot N\right]=[J]
 \end{equation}
 
-Quando sono applicate più forze in un punto, il momento risultante risulta uguale al momento della risultante. 
-
+Quando sono applicate più forze in un punto, il momento risultante è uguale al momento della risultante. 
 Derivando il momento angolare applicato su un polo $P$ rispetto al tempo, si ottiene: 
 
-
 \begin{equation}
-    \displaystyle\frac{d\vec{L}_P}{dt}=\frac{d\vec{r}_P}{dt}\times\vec{p}+\vec{r}_P\frac{d\vec{p}}{dt}=\vec{v}_P\times\vec{p}+\vec{r}_P\times\vec{F}=\vec{\tau}_P+\cancelto{0}{\vec{v}_P\times(m\vec{v})}=\vec{\tau}_P
+    \displaystyle\frac{d\vec{L}_P}{dt}=\frac{d\vec{r}_P}{dt}\times\vec{p}+\vec{r}_P\times\frac{d\vec{p}}{dt}=\vec{v}_P\times\vec{p}+\vec{r}_P\times\vec{F}=\cancelto{0}{\vec{v}_P\times(m\vec{v})}+\vec{\tau}_P=\vec{\tau}_P
 \end{equation}
 
 
-Poiché la velocità del punto $P$ e la veolcità 
+Poiché la velocità del punto $P$ e la velocità 
 $\vec{v}$ sono parallele, il loro prodotto vettoriale è nullo.
 Viene 
 definita seconda equazione cardinale la relazione tra il momento angolare e il momento torcente di un sistema, riferiti entrambi rispetto allo stesso polo, se il momento torcente di un sistema è nullo, allora si conserva 
@@ -3873,7 +3907,7 @@ il momento angolare.
 \end{equation*}
 
 
-Un qualsiasi moto può essere approssimato localemente come un moto circolare. Consdierando il lavoro svolto in un moto circolare $W=\displaystyle\int_{s_A}^{s_B}{F}_s ds$, lo spostamento infinitesimo può essere espresso 
+Un qualsiasi moto può essere approssimato localmente come un moto circolare. Considerando il lavoro svolto in un moto circolare $W=\displaystyle\int_{s_A}^{s_B}{F}_s ds$, lo spostamento infinitesimo può essere espresso 
 in termini polari $ds=rd\theta$. Il lavoro si può quindi esprimere rispetto al modulo del momento torcente: 
 \begin{equation*}
     W=\displaystyle\int_{s_A}^{s_B}{F}_s ds=\int_{\theta_A}^{\theta_B}F_srd\theta=\int_{\theta_A}^{\theta_B}\tau d\theta
@@ -3882,8 +3916,7 @@ in termini polari $ds=rd\theta$. Il lavoro si può quindi esprimere rispetto al 
 
 
 
-Feynman analizzò la relazione tra le variabili linerai e 
-rotazionali nel seguente modo. Si considera un punto che si 
+Feynman dimostrò quest'ultima relazione nel seguente modo. Si considera un punto che si 
 muove su un traiettoria circolare su cui agisce una forza $\vec{F}$, 
 e la variazione del vettore posizione del punto $d\vec{r}$. Per 
 variazioni infinitesime dell'angolo $d\theta$, si può approssimare la variazione 
@@ -3892,10 +3925,10 @@ $d\theta\to 0\Rightarrow \sin d\theta\approx d\theta$, allora si può
 approssimare la varazione di posizione come $d\vec{r}=rd\theta\hat{\tau}$. 
 
 
-Il differenziale del lavoro sarà allora $\delta W =\vec{F}\cdot d\vec{r}=\vec{F}\cdot\hat{\tau}rd\theta$, 
+Il differenziale del lavoro è allora $\delta W =\vec{F}\cdot d\vec{r}=\vec{F}\cdot\hat{\tau}rd\theta$, 
 si scompone $\vec{F}$ nei suoi componenti $\delta W=(F_x\hat{x}+F_y\hat{y})\cdot\hat{\tau}rd\theta$. 
 Si considera l'angolo $\varphi$ tra il versore $\hat{\tau}$ e l'asse 
-verticale, allora: 
+verticale $y$, allora: 
 
 \begin{gather*}
     \begin{cases}
@@ -3934,33 +3967,32 @@ verticale, allora:
     \pic["$\varphi$",draw, angle eccentricity=1.2, angle radius=1cm]{angle=y--O--tau};
     \pic["$d\theta$",draw, angle eccentricity=1.2, angle radius=1cm]{angle=a--O--p};
 \end{tikzpicture}\end{center}
-    
+
+\subsection{Momento di un Sistema di Punti Materiali}
+
 In un insieme di punti, si calcolano i momenti rispetto 
-al sistema di riferimento inerziale concorde al centro 
+al sistema di riferimento inerziale solidale al centro 
 di massa del sistema $S_{c.d.m.}$. La somma 
-di tutti i momenti angolari del sistema sarà: $\vec{L}=\displaystyle\sum_{i=1}^{N}\vec{r}_i\times\vec{p}_i$, 
-derivandola si otterrà la somma dei momenti torcenti 
+di tutti i momenti angolari del sistema è: $\vec{L}=\displaystyle\sum_{i=1}^{N}\vec{r}_i\times\vec{p}_i$, 
+derivandola si ottiene la somma dei momenti torcenti 
 del sistema: 
 \begin{equation}
     \displaystyle\frac{d\vec{L}}{dt}=\sum_{i=1}^{N}\left(\frac{d\vec{r}_i}{dt}\times\vec{p}_i+\vec{r}_i\times\frac{d\vec{p}_i}{dt}\right)=\sum_{i=1}^{N}(\cancelto{0}{\vec{v_i}\times\vec{p}_i}+\vec{r}_i\times\vec{F}_i)=\vec{\tau}^{tot}
 \end{equation}
 Il momento torcente totale non è uguale al momento torcente 
-della forza totale del sistema, 
+della forza totale del sistema: 
 \begin{equation}
     \vec{\tau}^{tot}\neq\vec{r}\times\vec{F}^{tot}
 \end{equation}
-Poiché la posizione individuata dal vettore $\vec{r}$ non corrisponde ad alcun punto del sistema, né al suo centro di massa, per cui non è definito il valore a cui corrisponde. 
-Considerando $\vec{F}^{tot}=\vec{F}^{est}+\vec{F}^{int}$, la 
-somma dei momenti torcenti interni al sistema è nulla, poiché 
-le forze interne sono opposte a coppie, e la somma di momenti 
-torcenti di due forze opposte è nulla. Date due forze opposte 
+Poiché la posizione descritta dal vettore $\vec{r}$ non corrisponde ad alcun punto noto del sistema di punti, né al suo centro di massa, per cui il suo valore non è definito. 
+Poiché la somma delle forze interne al sistema è nulla, è nulla anche la risultante dei loro momenti torcenti. Date due forze interne opposte 
 $\vec{F}_{i\to j}=-\vec{F}_{j\to i}$, applicate su due punti 
 $\vec{r}_i$ e $\vec{r}_j$, la somma dei momenti delle due forze 
-sarà: $\vec{r}_j\times\vec{F}_{i\to j}+\vec{r}_i\times\vec{F}_{j\to i}=(r_i-r_j)\times\vec{F}_{j\to i}$, 
+è: $\vec{r}_j\times\vec{F}_{i\to j}+\vec{r}_i\times\vec{F}_{j\to i}=(r_i-r_j)\times\vec{F}_{j\to i}$, 
 il vettore distanza $\vec{d}=\vec{r}_i-\vec{r}_j$ è parallelo 
 alla direzione su cui agiscono le forze per cui il prodotto 
-vettoriale $\vec{d}\times\vec{F}_{j\to i}$ sarà nullo. 
-Il momento torcente sarà allora dato da:
+vettoriale $\vec{d}\times\vec{F}_{j\to i}$ è nullo. 
+Il momento torcente totale allora è dato dalla sole componenti esterne al sistema:
 \begin{equation}
     \vec{\tau}_P=\displaystyle\sum_{i=1}^{N}(\vec{r}_i\times\vec{F}^{est}_i+\vec{r}_i\times\vec{F}^{int}_i)=\sum_{i=1}^{N}\vec{r}_i\times\vec{F}^{est}_i
 \end{equation}
@@ -3974,61 +4006,65 @@ Il momento torcente sarà allora dato da:
     \draw[->,thick](1,2)--(1.5,1.5)node[right]{$\vec{F}_{j\to i}$};
 \end{tikzpicture}\end{center}
 
-\subsection{Momento di un Sistema di Punti}
 Dato un insieme di punti $\mathscr{S}$, aventi momenti espressi 
 rispetto al sistema di riferimento $S_P$ centrato 
-nel polo dove sono applicati i momenti, se si vuole 
-esprimere rispetto ad un altro sistema di riferimento $S$ 
+nel polo dove sono applicati i momenti. Dato un altro sistema di riferimento $S$ 
 inerziale centrato in $O$, distante $\vec{R}_{OP}$ dal centro 
-del sistema di riferimento $S_P$, si considera un vettore 
-posizione generale in $S$ $\vec{r}_i=\vec{r}_{P,i}+\vec{R}_{OP}$.
-Il momento angolare calcolato in $S_P$ sarà:
+del sistema di riferimento $S_P$. Si considera un vettore 
+posizione generale in $S$ $\vec{r}_i(S)=\vec{r}_i(S_P)+\vec{R}_{OP}(S)$. La quantità di moto non dipende dal sistema di riferimento: $\vec{p}_i(S_P)=\vec{p}_i(S)$. 
+Il momento angolare calcolato in $S_P$ è:
 \begin{gather*}
-    \vec{L}_P=\displaystyle\sum_{i=1}^{N}\vec{r}_{P,i}\times\vec{p}_i\\
-    \displaystyle\sum_{i=1}^{N}(\vec{r}_i-\vec{R}_{OP})\times\vec{p}_i
+    \vec{L}_P(S_P)=\displaystyle\sum_{i=1}^{N}\vec{r}_{i}(S_P)\times\vec{p}_i(S_P)\\
+    \vec{L}_P(S)=\displaystyle\sum_{i=1}^{N}(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\vec{p}_i(S)
 \end{gather*}
-Il momento torcente sarà:
+Derivando il momento angolare ottenuto nel sistema di riferimento inerziale $S$: 
 \begin{gather*}
-    \displaystyle\frac{d\vec{L}_P}{dt}=\sum_{i=1}^{N}\left(\frac{d}{dt}(\vec{r}_i-\vec{R}_{OP})\times\vec{p}_i+(\vec{r}_i-\vec{R}_{OP})\times\frac{d\vec{p}_i}{dt}\right)\\
-    \displaystyle\sum_{i=1}^{N}\vec{v}_i\times\vec{p}_i-\vec{V}_{OP}\times\sum_{i=1}^{N}\vec{p}_i+\sum_{i=1}^{N}(\vec{r}_{P,i}\times\vec{F}_i)\\
-    \vec{0}-\vec{V}_{OP}\times\vec{p}^{tot}+\vec{\tau}_P
+    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\sum_{i=1}^{N}\left(\frac{d}{dt}(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\vec{p}_i(S)+(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\frac{d\vec{p}_i(S_P)}{dt}\right)\\
+    \displaystyle\sum_{i=1}^{N}\vec{v}_i(S)\times\vec{p}_i(S)-\vec{V}_{OP}(S)\times\sum_{i=1}^{N}\vec{p}_i(S)+\sum_{i=1}^{N}(\vec{r}_{i}(S_P)\times\vec{F}_i(S_P))\\
+    \vec{0}-\vec{V}_{OP}(S)\times\vec{p}^{tot}(S)+\vec{\tau}_P(S_P)
 \end{gather*}
 \begin{equation}
-    \displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P-\vec{V}_{OP}\times\vec{p}^{tot}
+    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\vec{\tau}_P(S_P)-\vec{V}_{OP}(S)\times\vec{p}^{tot}(S)
 \end{equation}
-Se il polo è fermo, la quantità di moto totale del sistema è 
+Se una delle seguenti condizioni è verificata: il polo è fermo, la quantità di moto totale del sistema è 
 nulla, la velocità del polo e la quantità di moto 
 totale del sistema sono paralleli, oppure il polo coincide con 
-il centro di massa del sistema allora l'evoluzione del momento angolare del sistema dipende dal momento delle sole forze esterne rispetto a $P$: 
-$\displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P$
-
-\subsection{Coppie di Forze}
-Se su un sistema di punti materili è isolato, il momento angolare si conserva per qualsiasi polo e la quantità di moto si conserva; se il momento torcente risultante è nullo per un determinato polo, il momento 
+il centro di massa del sistema; allora l'evoluzione del momento angolare del sistema in un qualsiasi sistema di riferimento inerziale $S$ dipende interamente dal momento delle 
+forze esterne applicate sul polo $P$, nel sistema di riferimento del polo $S_P$: 
+\begin{equation}
+    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\vec{\tau}_P(S_P)
+\end{equation}
+Se su un sistema di punti materiali è isolato, il momento angolare si conserva per qualsiasi polo e la quantità di moto si conserva. Se non è isolato e il momento torcente risultante è nullo per un determinato polo, il momento 
 angolare si conserva solo per quel determinato polo. 
 
+\subsection{Coppie di Forze}
 
-Dato sistema composto da due punti materiali, perfettamente 
-isolato $\vec{F}^{est}=\vec{0}$, descritto rispetto a $S_{c.d.m.}$ 
+Dato un sistema composto da due punti materiali, perfettamente 
+isolato: $\vec{F}^{est}=\vec{0}$, descritto rispetto al sistema di riferimento del centro di massa $S_{c.d.m.}$ 
 dove la posizione del centro 
 di massa rimane costante $\vec{p}_{c.d.m.}=\vec{p}^{tot}=\vec{0}$. 
 Il sistema ruota intorno al centro di massa con una certa 
 velocità angolare $\vec{\omega}$. Il momento angolare del sistema 
-sarà dato dalla somma dei momenti angolari dei due punti: 
+è dato dalla somma dei momenti angolari dei due punti: 
 \begin{equation*}
     \vec{L}=\vec{L}_1+\vec{L}_2=\vec{r}_1\times m_1\vec{v}_1+\vec{r}_2\times m_2\vec{v}_2=(r_1m_1v_1+r_2m_2v_2)\hat{z}
 \end{equation*}
 Se i due punti hanno masse uguali, la loro distanza dal centro di 
-massa è uguale, e avranno una velocità uguale poiché hanno la stessa 
+massa è uguale, e hanno una velocità uguale poiché hanno la stessa 
 velocità angolare e distanza dal centro $\vec{v}=\vec{\omega}\times\vec{r},\:\vec{\omega}\perp\vec{r}\rightarrow v=\omega r$, 
-il momento angolare sarà $\vec{L}=2mrv\hat{z}=2mr^2\omega\hat{z}=2mr^2\vec{\omega}$. 
-Si considera $b$ la distanza tra le due masse $r_{m_1,m_2}$, 
+il momento angolare del sistema risulta essere $\vec{L}=2mrv\hat{z}=2mr^2\omega\hat{z}=2mr^2\vec{\omega}$. 
+Si considera $b$ la distanza tra le due masse $d_{m_1,m_2}$, 
 il momento angolare può essere espresso come:
 \begin{equation}
     \vec{L}=\displaystyle 2m\left(\frac{b}{2}\right)^2\vec{\omega}=\frac{mb^2}{2}\vec{\omega}=I\vec{\omega}
 \end{equation}
-dove $I=\displaystyle\frac{mb^2}{2}\;\left[kg\cdot m^2\right]$ viene definito momento di inerzia 
-e rappresenta la resistenaza del sistema ad una rotazione, analogamente a come  
-la massa inerziale rappresenta quanto un corpo resiste ad uno spostamento. 
+
+\subsubsection{Momento d'Inerzia}
+
+Dove $I=\displaystyle\frac{mb^2}{2}\;\left[kg\cdot m^2\right]$ viene definito momento d'inerzia 
+e rappresenta la resistena del sistema ad una rotazione, analogamente a come  
+la massa inerziale rappresenta quanto un corpo resiste ad uno spostamento. Il momento d'inerzia varia a seconda della disposizione dei punti nel sistema, come per il centro 
+di massa, ma cambia a seconda dell'asse $z$ su cui ruota. 
 
 \begin{center}\begin{tikzpicture}[scale=2]
     
@@ -4052,42 +4088,39 @@ la massa inerziale rappresenta quanto un corpo resiste ad uno spostamento.
 \end{tikzpicture}\end{center}
 
 In generale si può rappresentare il momento angolare di un sistema 
-come il prodotto tra il momento di inerzia $I$ del sistema e la velocità angolare del sistema. 
-La prima equazione cardinale sarà quindi strettamente collegata 
-alla traslazione di un sistema $\vec{a}_{c.d.m.}=\displaystyle\frac{d\vec{p}_{c.d.m.}}{Mdt}=\frac{\vec{F}^{est}}{M}$, 
-mentre la seconda equazione cardinale sarà strettamente 
-collegata alla rotazione di un sistema $\displaystyle\frac{d\vec{L}}{dt}=\frac{dI\vec{\omega}}{dt}=\vec{\tau}^{est}$. 
+come il prodotto tra il momento di inerzia $I$ del sistema e la velocità angolare $\vec\omega$ del sistema. 
+La prima equazione cardinale determina il moto traslatorio di un sistema $\vec{a}_{c.d.m.}=\displaystyle\frac{d\vec{p}_{c.d.m.}}{Mdt}=\frac{\vec{F}^{est}}{M}$, 
+mentre la seconda equazione cardinale determina il moto rotazionale di un sistema $\vec{\alpha}=\displaystyle\frac{d\vec{L}}{Idt}=\frac{\vec{\tau}}{I}$. 
 
 \subsection{Densità}
 
 Dato un corpo esteso, di massa totale $M$ e volume $V$. Se esso è continuo è possibile dividerlo 
 in volumetti di piccolo volume $dV$, distanti $\vec{r}_i$ dal centro del sistema di 
-riferimento, ciascuno avente una massa $dm$. La suddivisione del corpo sarà 
+riferimento, ciascuno avente una massa $dm$. La suddivisione del corpo è 
 $dV=dxdydz$ in $3$ dimensioni, $dS=dxdy$ in $2$ dimensioni, 
 $dL=dx$ in $1$ dimensione. 
 
-Data una suddivisione sempre più piccola del corpo, i suoi elementi tenderanno a diventare di volume infinitesimo $dV\to 0$ e 
-la massa di tenderà anch'essa ad un valore infinitesimo $dm\to 0$.
+Data una suddivisione sempre più piccola del corpo, i suoi elementi tendono a diventare di volume infinitesimo $dV\to 0$ e 
+la massa tende anch'essa ad un valore infinitesimo $dm\to 0$.
 
 Si definisce la densità (di massa) $\rho$ di uno 
 di questi volumetti il rapporto tra la loro massa infinitesima e la 
 grandezza della loro suddivisione. In base alla dimensione 
-del corpo si avrà densità volumica $\displaystyle\frac{dm}{dV}\;\left[\displaystyle\frac{kg}{m^3}\right]$, 
+del corpo si ha densità volumica $\displaystyle\frac{dm}{dV}\;\left[\displaystyle\frac{kg}{m^3}\right]$, 
 densità superficiale $\displaystyle\frac{dm}{dS}\;\left[\displaystyle\frac{kg}{m^2}\right]$ e densità 
 lineare $\displaystyle\frac{dm}{dL}\;\left[\displaystyle\frac{kg}{m}\right]$. 
 \\
 Un corpo viene definito omogeneo se la densità di ogni 
-suddivisione del corpo è uguale $\rho_i=\rho_j$, ovvero se in ogni suddivisione infinitesima contiene la stessa massa $dm$. 
+suddivisione del corpo è uguale $\rho_i=\rho_j$, ovvero se ogni suddivisione infinitesima contiene la stessa massa $dm$. 
 La densità di un corpo omogeneo può essere calcolata dal rapporto 
 tra la massa totale e la sua dimensione $\rho=\displaystyle\frac{M}{V}$. 
-Per un corpo non omogeneo si ha: 
+Per un corpo non omogeneo la densità è una funzione della posizione $\rho(\vec{r})$, si può calcolare la massa integrandola su tutto il corpo: 
 \begin{equation}
     M=\displaystyle\int_M dm=\int_V \rho(x,y,z) dV 
 \end{equation}
 
 
-Il centro di 
-massa calcolato rispetto a tutte le divisioni sarà: 
+Il centro di massa di un corpo esteso può essere calcolato considerando tutte le sue suddivisioni infinitesime: 
 \begin{equation}
     \vec{r}_{c.d.m.}=\lim_{N\to\infty}\displaystyle\frac{\sum_{i=1}^{N}m_i\vec{r}_i}{\sum_{i=1}^{N}m_i}=\displaystyle\frac{1}{M}\int_M\vec{r}dm=\displaystyle\frac{1}{M}\int_V\vec{r}\rho dV
 \end{equation}
@@ -4096,22 +4129,23 @@ ad un integrale triplo sulle tre direzioni $x$, $y$ e $z$ su cui è definito il 
 
 
 Per cui la posizione del centro di massa di un corpo omogeneo non dipende dalla massa contenuta dal corpo, ma dalla sua forma. Se il corpo è simmetrico rispetto ad un punto, un 
-asse o un piano, il centro di massa appartiene all'asse o al piano oppure coincide con il punto. Se sono presenti più di un asse o piano di simmetria, il centro di massa 
+asse o un piano, il centro di massa appartiene a quel'asse o quel piano oppure coincide con quel punto. Se sono presenti più di un asse o piano di simmetria, il centro di massa 
 si trova sulla loro intersezione. 
 
 \subsection{Corpo Rigido}
+
 Viene definito corpo rigido un insieme di punti materiali la 
 cui distanza relativa non varia nel tempo $|\vec{r}_i-\vec{r}_j|=cost.$ Questo rappresenta un modello ideale di un corpo indeformabile. 
 La distanza di ogni punto del corpo con il centro di massa 
-rimarrà costante $|\vec{r}_i-\vec{r}_{c.d.m.}|=cost.\:\forall i\in[1,N]$, quindi è possibile ottenere la posizione 
+rimane costante $|\vec{r}_i-\vec{r}_{c.d.m.}|=cost.\:\forall i\in[1,N]$, quindi è possibile ottenere la posizione 
 del centro di massa, dati due punti del corpo rigido. Per cui un 
-corpo rigido ha sei gradi di libertà corrispondenti alla posizione dei due punti in un sistema di riferimento inerziale.  
+corpo rigido ha sei gradi di libertà corrispondenti alla posizione di due punti in un sistema di riferimento inerziale.  
 Viene definito corpo esteso un corpo rigido formato da un'
-infinità di punti materiali.
+infinità di punti materiali. 
 \\
 Considerando un corpo rigido, su cui agisce una forza peso $\vec{F}_{{P,i}}$, 
 su ogni punto del corpo, il momento torcente causato dalla forza 
-peso del corpo sarà dato da: 
+peso del corpo è dato da: 
 \begin{equation*}
     \vec{\tau}=\displaystyle\sum_{i=1}^{N}\vec{r}_i\times\vec{F}_{P,i}=
     \displaystyle\sum_{i=1}^{N}m_i\vec{r}_i\times\vec{g}\frac{M}{M}=
@@ -4130,13 +4164,13 @@ Dove $\displaystyle\frac{\sum_{i=1}^{N}F_i\vec{r}_i}{\sum_{i=1}^{N}F_i}$
 è il centro delle forze.
 \\
 Data un'asta rigida di lunghezza $L$ e di densità lineare omogenea $\rho=\displaystyle\frac{M}{L}$ , 
-il suo centro di massa sarà dato da:
+il suo centro di massa è dato da:
 \begin{equation*}
     x_{c.d.m.}=\displaystyle\frac{1}{M}\int_{0}^{L}x\rho dx=\frac{1}{L}\int_{0}^{L}xdx=\frac{x^2}{L}\Bigg|_0^L=\frac{L}{2} 
 \end{equation*}
 \\
 Se un corpo rigido si muove di un generico moto di traslazione a velocità costante $\vec{V}$, 
-il centro di massa avrà velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int_M\vec{V}dm}{\int_M dm}=\vec{V}$. La quantità di moto del corpo rigido sarà quindi 
+il centro di massa ha velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int_M\vec{V}dm}{\int_M dm}=\vec{V}$. La quantità di moto del corpo rigido è quindi 
 $\vec{p}^{tot}=\vec{p}_{c.d.m.}=M\vec{V}$. Essendo la velocità costante, per la prima equazione cardinale si ha $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}=\vec0$. 
 Se la velocità varia nel tempo $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}$. 
 La dinamica è quella di un punto materiale, non c'è rotazione rispetto al centro di massa, per cui il 
@@ -4157,18 +4191,17 @@ Se la velocità angolare non è costante si ha $\displaystyle\frac{d\vec{L}}{dt}
 
 In generale il moto di un corpo rigido può essere sempre considerato come la somma di una traslazione e di una rotazione. Ogni punto del corpo rigido viene traslato 
 allo stesso modo del centro di massa, e si può muovere rispetto ad esso di solo moto rotazionale. La velocità di traslazione $\vec{V}$ dipende dalla descrizione del moto, 
-mentre la velocità angolare $\vec{\omega}$ è inipendente dalla descrizione del moto. In generale i componenti $\vec{V}$ e $\vec{\omega}$ sono quindi indipendenti tra di loro, 
+mentre la velocità angolare $\vec{\omega}$ è indipendente dalla descrizione del moto. In generale i componenti $\vec{V}$ e $\vec{\omega}$ sono quindi indipendenti tra di loro, 
 il moto del corpo rigido è simile al moto di un sistema di riferimento non inerziale, poiché anch'esso contiene un termine di traslazione ed uno di rotazione. 
 
-Se il corpo si muove di moto di rototraslazione il moto sarà descritto da:
+Se il corpo si muove di moto di rototraslazione il moto è descritto da:
 \begin{equation}
     \begin{cases}
-        \displaystyle\frac{d\vec{p}}{dt}=\vec{F}^{tot}\\
-        \displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P-\vec{v}_P\times\vec{p}
+        \vec{a}_{c.d.m.}=\displaystyle\frac{1}{M}\frac{d\vec{p}}{dt}=\frac{\vec{F}^{tot}}{M}\\
+        \vec{\alpha}=\displaystyle\frac{1}{I}\frac{d\vec{L}_P}{dt}=\frac{\vec{\tau}_P-\vec{v}_P\times\vec{p}}{I}
     \end{cases}
 \end{equation}
-Segue che un corpo ridgido si trova in uno stato di quiete se 
-$\vec{F}^{tot}=\vec{0}$ e $\vec{\tau}_P=\vec{0}$. 
+Quindi un corpo rigido si trova in uno stato di quiete, o di moto rettilineo uniforme, se $\vec{F}^{tot}=\vec{0}$ e $\vec{\tau}_P=\vec{0}$. 
 \\
 Dato un corpo rigido che ruota, in un sistema di riferimento inerziale, intorno ad un asse $z$ fisso con una 
 velocità angolare $\vec{\omega}=\omega\hat{z}=vR\hat{z}$. Dove 
@@ -4180,19 +4213,11 @@ dall'asse $z$ di rotazione. Si esprime una variazione infinitesima di momento an
 \end{gather*}
 Questo momento angolare è ortogonale al piano individuato dai vettori $\vec{r}$ e $\vec{v}$, per cui si trova ad un angolo $\alpha=\displaystyle\frac{\pi}{2}-\theta$ dall'asse 
 di rotazione $z$. In generale il momento angolare $\vec{L}$ non è parallelo all'asse di rotazione, per cui in generale non esiste una relazione di proporzionalità tra la velocità angolare 
-e il momento angolare. Considerando solo la componente assiale del momento angolare sull'asse $z$ si ottiene: 
+lungo l'asse $z$ e il momento angolare. Considerando solo la componente assiale del momento angolare sull'asse $z$ si ottiene: 
 \begin{gather*}
     dL_z=dL\cos\left(\displaystyle\frac{\pi}{2}-\theta\right)=\omega Rr\sin\theta\:dm=\omega R^2dm\\
     L_z=\displaystyle\int_M\omega R^2dm=\omega\int_M R^2dm=\omega I_z
 \end{gather*}
-
-Viene definto momento d'inerzia rispetto all'asse $z$ $I_z$: 
-\begin{equation}
-    I_z=\displaystyle\int_M R^2dm=\int_V R^2\rho dV
-\end{equation}
-Il momento d'inerzia dipende dalle masse e dalla loro posizione rispetto all'asse di rotazione, non dipende solo dalla struttura del corpo come il centro di massa, poiché 
-bisogna conoscere anche la posizione del corpo rispetto all'asse di rotazione. 
-
 
 
 \begin{center}\begin{tikzpicture}[scale=2]
@@ -4221,19 +4246,31 @@ bisogna conoscere anche la posizione del corpo rispetto all'asse di rotazione.
     \pic["$\theta$", draw, angle eccentricity=1.2, angle radius=0.6cm]{angle=r--O--R};
 \end{tikzpicture}\end{center}
 
+\subsubsection{Momento d'Inerzia di un Corpo Rigido}
+
+Viene definto momento d'inerzia, rispetto all'asse fisso $z$, $I_z$ di un corpo rigido: 
+\begin{equation}
+    I_z=\displaystyle\int_M R^2dm=\int_V R^2\rho dV
+\end{equation}
+Il momento d'inerzia dipende dalle masse e dalla loro posizione rispetto all'asse di rotazione, non dipende solo dalla struttura del corpo come il centro di massa, poiché 
+bisogna conoscere anche la posizione del corpo rispetto all'asse di rotazione. 
+
+
+
+
 Se il corpo è formato da un numero discreto di punti allora 
-il momento di inerzia sarà dato dalla somma dei momenti di inerzia dei punti per lo stesso asse di rotazione: $I_z=\displaystyle\sum_{i=1}^{N}R_i^2m_i$. 
-Se dovesse cambiare la direzione dell'asse $z$, cambierebbe 
+il momento di inerzia è dato dalla somma dei momenti di inerzia dei punti per lo stesso asse di rotazione: $I_z=\displaystyle\sum_{i=1}^{N}R_i^2m_i$. 
+Se dovesse cambiare la forma del corpo, cambierebbe 
 il momento di inerzia, quindi si studia il momento d'inerzia 
 rispetto corpi fissi. 
 \\
-La componente ortogonale all'asse di rotazione si esprime tramite:
+La componente ortogonale all'asse di rotazione del momento angolare non dipende dal momento d'inerzia $I_z$:
 \begin{equation*}
     L_{xy}=\omega\int_V Rr\cos\theta \rho dV
 \end{equation*}
 
-Se corpo ruota su un asse di simmetria del corpo, il momento angolare totale ha una componente ortogonale all'asse di simmetria nulla. I contributi per ogni coppia di 
-punti simmetrici tra di loro hanno componenti ortogonali simmetriche tra di loro, quindi si bilanciano a vicenda, e la risultante dei momenti angolai ortogonali sarà nulla. 
+Se corpo ruota su un asse di simmetria del corpo, il momento angolare totale ha una componente ortogonale all'asse di rotazione nulla. I contributi per ogni coppia di 
+punti simmetrici tra di loro hanno componenti ortogonali simmetriche tra di loro, quindi si bilanciano a vicenda, e la risultante dei momenti angolari ortogonali è nulla. 
 Più in generale se il corpo ruota su un asse di inerzia il momento angolare è parallelo all'asse di rotazione. 
 \begin{equation}
     \vec{L}_{x,y}=\vec{0}\iff\vec{L}=\vec{L}_z=I_z\vec{\omega}
@@ -4272,24 +4309,23 @@ Viene definito come la distanza necessaria dall'asse $z$ ad un polo contentente 
 
 Per un corpo in rotazione su un asse d'inerzia: 
 \begin{equation}
-    \displaystyle\frac{d\vec{L}}{dt}=\frac{dI_z\vec{\omega}}{dt}=I_z\vec{\alpha}=\vec{\tau}
+    \displaystyle\frac{d\vec{L}}{dt}=I_z\frac{d\vec{\omega}}{dt}=I_z\vec{\alpha}=\vec{\tau}
 \end{equation}
 Questa è l'equazione del moto di rotazione. La conoscenza delle forze esterne permette di calcolare l'accellerazione angolare, se è noto il momento di inerzia, e date 
 le condizioni iniziali $\omega_0$ e $\theta_0$, è possibile ottenere la legge oraria del moto rotazionale. 
 
 
-In generale: 
+In generale la legge oraria del moto rotazionale viene ricavata dalla componente parallela all'asse di rotazione del momento torcente totale $\vec{\tau}$. 
 \begin{equation*}
     \displaystyle\frac{d\vec{L}}{dt}=\frac{d(\vec{L}_z+\vec{L}_{x,y})}{dt}=\vec{\tau}_z+\vec{\tau}_{x,y}
 \end{equation*}
-La legge oraria del moto rotazionale viene ricavata dalla componente parallela all'asse di rotazione del momento torcente totale $\vec{\tau}$. 
 
 
 L'energia cinetica del corpo in rotazione è data dalla somma delle energie 
 cinetiche dei singoli punti, considerando un corpo esteso il 
-numero di punti tenderà all'infinito:
+numero di punti tende all'infinito:
 \begin{equation}
-    K=\displaystyle\lim_{N\to\infty}\sum_{i=1}^{N}\frac{m_iv_i^2}{2}=\int_M\frac{v^2}{2}dm=\int_M\frac{\omega^2R^2}{2}dm=\frac{\omega^2}{2}\int_M R^2dm=\frac{\omega^2I_z}{2}
+    K=\displaystyle\lim_{N\to\infty}\sum_{i=1}^{N}\frac{m_iv_i^2}{2}=\int_M\frac{v^2}{2}dm=\int_M\frac{\omega^2R^2}{2}dm=\frac{\omega^2}{2}\int_M R^2dm=\frac{1}{2}I_z\omega^2
 \end{equation}
 Viene così definita l'energia cinetica rotazionel di un corpo rigido. 
 
@@ -4307,9 +4343,9 @@ Si considera un asse $z$ di un sistema di riferimento $S$, e
 un asse $z_{c.d.m.}$ parallelo di un sistema di riferimento $S_{c.d.m.}$. 
 I centri dei due sistemi $O$ e $c.d.m.$ sono distanti $\vec{R}_{O(c.d.m.)}$, 
 la distanza dall'asse $z$ di un punto del corpo in $S$ espresso rispetto al 
-sistema $S_{c.d.m.}$ sarà: $\vec{r}(S_O)=\vec{r}(S_{c.d.m.})+\vec{R}_{O(c.d.m.)}$,  
+sistema $S_{c.d.m.}$ è: $\vec{r}(S_O)=\vec{r}(S_{c.d.m.})+\vec{R}_{O(c.d.m.)}$,  
 dove $\vec{r}(S_{c.d.m.})$ è la stessa distanza nel sistema $S_{c.d.m.}$. 
-Considerando il momento di inerzia nel sistema $S_O$. 
+Considerando il momento di inerzia nel sistema $S_O$: 
 \begin{gather*}
     I_z=\displaystyle\int_M {r}^2(S_O)dm\\
     \int_M({r}(S_{c.d.m.})+{R}_{O(c.d.m.)})^2dm\\
@@ -4321,8 +4357,8 @@ Il componente $\displaystyle\int_M r(S_{c.d.m.})dm=r_{c.d.m.}(S_{c.d.m.})M$, cor
 
 \subsection{Pendolo Fisico}
 Quando un corpo rigido è vincolato ad un asse, soggetto 
-alla sua forza peso tenderà a ruotare attorno ad esso. 
-Poiché la forza peso agisce su un'unica direzione, il momento torcente generato sarà solamente sull'asse $z$, per cui $\vec{\tau}_{x,y}=\vec{0}$, 
+alla sua forza peso tende a ruotare attorno ad esso. 
+Poiché la forza peso agisce su un'unica direzione, il momento torcente generato è solamente sull'asse $z$, per cui $\vec{\tau}_{x,y}=\vec{0}$, 
 la somma delle forze agenti sul sitema è nulla, poiché 
 la forza peso viene bilanciata dalla reazione vincolare sul vincolo intorno a cui ruota: $\vec{N}+\vec{F}_P=\vec{0}=\displaystyle\frac{d\vec{p}}{dt}$ 
 allora il sistema non trasla, è soggetto alla sola rotazione. 
@@ -4333,14 +4369,14 @@ centro delle forze, di posizione coincidente al centro di massa del sistema $\ve
     \displaystyle\frac{d\vec{L}}{dt}=\frac{d\vec{L}_z}{dt}=\vec{\tau}_z\\
     I_z\displaystyle\frac{d\vec{\omega}}{dt}=\vec{r}\times\vec{F}_P\\
     I_z\ddot\theta\hat{z}=-rMg\sin\theta\hat{z}\\
-    \mbox{per }\theta<<1\rightarrow \sin\theta\approx\theta\Rightarrow\\
+    \mbox{per }\theta<<1\;rad\rightarrow \sin\theta\approx\theta\Rightarrow\\
     I_z\ddot\theta=-rMg\theta
 \end{gather*}
 Il moto del corpo per piccole oscillazione si può approssimare come un moto armonico: 
 \begin{equation}
     \omega=\displaystyle\sqrt{\displaystyle\frac{rMg}{I_z}}
 \end{equation}
-Avrà un periodo di oscillazione 
+Ha un periodo di oscillazione 
 \begin{equation*}
     T=2\pi\displaystyle\sqrt{\frac{I_z(S_O)}{rMg}}
 \end{equation*}
@@ -4371,6 +4407,7 @@ Per cui l'energia cinetica di un corpo rigido è data dalla somma dell'energia c
     \draw[-](0.75,0.525)--(0.85,0.475);
     \draw[-](cdm)--(.8,-0.5)coordinate(y);
     \draw[->](cdm)--(1.2,-0.2)coordinate(r);
+    \draw[->](r)--(1.2,-0.7)node[right]{$\vec{F}_P$};
 
     \draw[->](O)--(cdm)node[above]{$\vec{r}$};
 
@@ -4379,11 +4416,6 @@ Per cui l'energia cinetica di un corpo rigido è data dalla somma dell'energia c
     \draw[-]plot[smooth cycle]coordinates{(1.5,0)(1,1.4)(-0.2,0.7)(-0.8,1)(-1,-0.8)(0,-0.8)(0.5,-1)};
     \pic["$\theta$",draw,angle eccentricity=1.2,angle radius=1.5cm]{angle=y--cdm--r};
 \end{tikzpicture}\end{center}
-
-
-
-
-
 
 \clearpage
 
@@ -5164,9 +5196,13 @@ Considerando una variazione infinitesime si avrà:
     \delta W=-dU\\
     p\:dV=-c_Vn\:dT\\
     \displaystyle\frac{nR\:T}{V}dV=-c_Vn\:dT\\
-    \displaystyle R\frac{dV}{V}=-c_V\frac{dT}{T}\\
+    \displaystyle R\frac{dV}{V}=-c_V\frac{dT}{T}
+\end{gather*}
+\begin{gather*}
     \displaystyle R\int_{V_A}^{V_B}\frac{dV}{V}=-c_V\int_{T_A}^{T_B}\frac{dT}{T}\\
-    \displaystyle\frac{R}{c_V}\ln\left(\frac{V_B}{V_A}\right)=\ln\left(\frac{T_B}{T_A}\right)\\
+    \displaystyle\frac{R}{c_V}\ln\left(\frac{V_B}{V_A}\right)=\ln\left(\frac{T_B}{T_A}\right)
+\end{gather*}
+\begin{gather*}
     \displaystyle\left(\frac{V_B}{V_A}\right)^{\frac{R}{c_V}}=\frac{T_B}{T_A},\:\gamma=\frac{c_p}{c_V}=\frac{R+c_V}{c_V}=\frac{R}{c_V}+1\Rightarrow\frac{R}{c_V}=\gamma-1\\
     \displaystyle\left(\frac{V_B}{V_A}\right)^{\gamma-1}=\frac{T_B}{T_A}
 \end{gather*}
@@ -5194,7 +5230,7 @@ una trasformazione sia adiabatica che isoterma, ciò è possibile poiché si tra
 Se la trasformazione adiabatica è irreversibile tra due stati $A$ e $B$, allora si possono ottenere informazioni solo sulla variazione di energia interna, non sulle 
 relazioni tra le coordinate termodinamiche:
 \begin{equation*}
-    W_{AB}=-\Delta U_{AB}=-nc_V(T_B-T_A)=\displaystyle\frac{1}{\gamma-1}(p_AV_A-p_BV_B)
+    W_{AB}=-\Delta U_{AB}=-nc_V(T_B-T_A)=\displaystyle n\frac{1}{\gamma-1}(p_AV_A-p_BV_B)
 \end{equation*}
 Si avrà un'espansione adiabatica se la temperatura diminuisce, mentre si avrà una compressione adiabatica se la temperatura aumenta. 
 
