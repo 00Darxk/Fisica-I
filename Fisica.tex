@@ -126,7 +126,7 @@ Nel Sistema Internazionale il tempo viene misurato mediante
 il secondo ($s$).
 Un secondo viene definito come il tempo necessario per un 
 fotone emesso da un atomo di $Cesio-133$ per compiere 
-$9{,}192631770\times 10^9$ osccillazioni.
+$9{,}192631770\times 10^9$ oscillazioni.
 
 
 
@@ -237,7 +237,7 @@ Considerando gli assi di un sistema di riferimento cartesiano, possono essere de
 \subsection{Prodotto Scalare tra due Vettori}
 Dati due vettori $\vec{v}$, $\vec{w}$, viene definito il prodotto scalare ($\cdot$) tra due vettori l'operazione $f(\vec{v},\vec{w})=\vec{v}\cdot\vec{w}:V^{n}(O)\to\mathbb{R}$: 
 \begin{equation}
-    \vec{v}\cdot\vec{w} = \cos\theta |\vec{v}|\cdot|\vec{w}| \in \mathbb{R}
+    \vec{v}\cdot\vec{w} =  |\vec{v}|\cdot|\vec{w}| \cos\theta\in \mathbb{R}
 \end{equation}
 Dove $\theta$ rappresenta l'angolo compreso tra i due vettori, è indifferente se si considera l'angolo interno ($\theta$) o esterno ($\gamma = 2\pi - \theta$) poiché si avrebbe:
 \begin{gather*}
@@ -278,8 +278,8 @@ transitiva.
 Dato un vettore, vengono definiti componenti del vettore le sue proiezioni ortogonali rispetto agli assi del sistema di riferimento usato:
 
 \begin{gather}
-    \vec{v}\cdot\hat{x} = \cos\theta\:v = v_x\\
-    \vec{v}\cdot\hat{y} = \cos\left(\displaystyle\frac{\pi}{2} - \theta\right)\:v = \sin\theta\:v = v_y
+    \vec{v}\cdot\hat{x} = v\cos\theta = v_x\\
+    \vec{v}\cdot\hat{y} = v\cos\left(\displaystyle\frac{\pi}{2} - \theta\right) = v\sin\theta = v_y
 \end{gather}
 
 \`{E} possibile rappresentare un vettore tramite i suoi componenti: $\vec{v} = \vec{v}_x + \vec{v}_y = v_x\hat{x} + v_y\hat{y}$, dove $\vec{v}_x$ e $\vec{v}_y$ sono i vettori componenti di $\vec{v}$.
@@ -1033,7 +1033,8 @@ la sua direzione e verso: $\vec{r}(t)=r\cdot\hat{r}(t)$.
 Il versore $\hat{r}(t)$ può essere scritto in componenti: 
 \begin{equation}
     \hat{r}(t)=1\cdot \cos\theta(t)\hat{x}+1\cdot \sin\theta(t)\hat{y}
-\end{equation}.\\
+\end{equation}.
+\\
 Da questa relazione è possibile ottenere il versore del 
 vettore velocità: 
 
@@ -1117,15 +1118,12 @@ Si può dimostrare questa proprietà senza analizzare le componenti
 dei versori, considerando la differenza infinitesima tra due 
 vettori posizione in due istanti di tempo $t$ e $t+\Delta t$.
 Il vettore velocità $\vec{v}(t)$ è dato dalla derivata: 
-$r\cdot\displaystyle\frac{d\hat{r}(t)}{dt}=\lim_{\Delta t \to 0}
-\frac{\hat{r}(t+\Delta t)-\hat{r}(t)}{\Delta t}$. Per $\Delta t \to 0$, 
+$r\cdot\displaystyle\frac{d\hat{r}(t)}{dt}=\lim_{\Delta t \to 0}\frac{\hat{r}(t+\Delta t)-\hat{r}(t)}{\Delta t}$. Per $\Delta t \to 0$, 
 l'angolo $d\theta = \theta(t+\Delta t)-\theta(t)$, tra $\hat{r}(t)$ e $\hat{r}(t+\Delta t)$  
 anch'esso tende a $0$. Si può approssimare la differenza per 
-$\Delta t \to 0$ tra i due vettori posizione come $\hat{r}(t+\Delta t)-\hat{r}(t)
-=d\hat{r}\approx \sin(d\theta)\hat{\tau}(t)$, dato che $d\theta \to 0$, 
-$\sin(d\theta) = d\theta \implies d\hat{r}(t)=d\theta\hat{\tau}(t)$, 
-quindi $\vec{v}(t)=r\cdot\displaystyle\frac{d\hat{r}(t)}{dt}=r\cdot
-\frac{d\theta(t)}{dt}\hat{\tau}(t)=r\cdot\omega(t)\hat{\tau}(t)$ :
+$\Delta t \to 0$ tra i due vettori posizione come l'arco di circonferenza di ampiezza $d\theta$ e di raggio unitario, poiché si tratta di un versore: $d\hat{r}(t)\approx1\cdot d\theta\hat\tau(t)$, al diminuire di $d\theta$ 
+l'approssimazione diventa sempre più precisa. 
+Quindi per $d\theta\to0\,rad$ $\vec{v}(t)=r\cdot\displaystyle\frac{d\hat{r}(t)}{dt}=r\cdot\frac{d\theta(t)}{dt}\hat{\tau}(t)=r\cdot\omega(t)\hat{\tau}(t)$ :
 
 \begin{center}\begin{tikzpicture}[scale=2]
     \node[below] at(-0.1, 0) {$O$};
@@ -1147,8 +1145,7 @@ Se il punto si muove con velocità angolare costante, e quindi si
 muove di moto circolare uniforme:
 
 \begin{equation}
-    \vec{v}(t)=r\omega\hat{\tau}(t){,}\:
-    v=\omega r
+    \vec{v}(t)=r\omega\hat{\tau}(t)
 \end{equation}
 
 Si può trovare l'accellerazione del punto derivando il vettore 
@@ -1280,7 +1277,8 @@ di rotazione fisso, sarà descritto dalle leggi orarie:
 $\dot\omega(t)$ viene definita accellerazione angolare $\alpha(t)$, 
 $r\alpha(t)\hat{\tau}(t)$ viene definita accellerazione tangenziale 
 $\vec{a}_{tan}(t)$ mentre $r\omega^{2}(t)\hat{\nu}(t)$ viene definita 
-accellerazione centripeta $\vec{a}_{cen}(t)$.\\
+accellerazione centripeta $\vec{a}_{cen}(t)$.
+\\
 Il moto del punto viene definito dai versori $\hat{\tau}(t)$ e $\hat{\nu}(t)$, 
 perciò si può usare un sistema di riferimento centrato nel punto e con gli assi 
 concordi per direzione e verso ai versori $\hat{\tau}(t)$ e $\hat{\nu}(t)$:
@@ -1307,7 +1305,7 @@ l'analisi di moti vari, poiché è una rappresentazione sempre
 valida essendo dipendente dall'istante di tempo in cui ci 
 si trova.
 
-\subsubsection{Moto Vario}
+\subsubsection{Moto Curvilineo Vario}
 Si può aggiungere al sistema di riferimento $S(\tau(t), \nu(t))$, un altro 
 asse, chiamato $\beta$ ortgonale al piano ($\hat{\beta}=\hat{\tau}(t)\times\hat{\nu}(t)$) sulla base di $\tau$ e $\nu$ 
 che rappresenta una rotazione in senso antiorario se è diretto 
@@ -1342,24 +1340,53 @@ la velocità angolare e l'\\accellerazione angolare come vettori:
 \begin{equation}
     \vec{\omega}(t)=\omega(t)\cdot\hat{\beta}{,}\:\: \vec{\alpha}(t)=\alpha(t)\cdot\hat{\beta}
 \end{equation}
+Considerando la velocità tangenziale $\vec{v}=r\omega\hat\tau$, si può esprimere come prodotto vettoriale tra il vettore velocità angolare ed il versore raggio: 
+\begin{equation*}
+    \vec{v}=r\displaystyle\frac{d\hat{r}}{dt}=r\vec\omega\times\hat{r}=\vec\omega\times\vec{r}
+\end{equation*}
+In generale la derivata di un versore può essere espressa come il prodotto vettoriale tra il vettore velocità angolare della rotazione del versore per il versore stesso:
+\begin{equation}
+    \displaystyle\frac{d\hat{x}_i}{dt}=\vec\omega\times\hat{x}_i
+\end{equation}
+Questa espressione viene chiamata formula di Poisson. 
 
-Quindi si possono riscrivere la equazioni del moto circolare come:
+
+
+Considerando una qualsiasi traiettoria tridimensionale $\Gamma$, è utile analizzarla rispetto al sistema di riferimento $S(\tau,\nu,\beta)$ intrinseco, centrato nella 
+posizione del punto materiale lungo la traiettoria. Rispetto a questo sistema di riferimento la posizione del punto materiale è sempre nulla, poiché coincide con l'origine 
+del sistema $S$. Si considera l'asse $\tau$ sulla retta tangente alla traiettoria nella posizione del punto materiale, e diretta nel verso del moto. L'asse $\nu$ è perpendicolare 
+a quest'ultimo, ma per determinare il suo verso bisogna analizzare la traiettoria nell'intorno della posizione del punto materiale. 
+
+
+Dati tre è sempre definita una e una sola circonferenza passante per quei tre punti. Dato il punto della traiettoria dove si trova il punto materiale, si possono considerare 
+altri due punti, prima e dopo la posizione del punto materiale, sempre lungo la traiettoria, per definire una circonferenza. Il moto del punto materiale in quell'intorno della 
+traiettoria può quindi essere approssimato ad un moto circolare lungo la circonferenza così ottenuta, ma questa risulta soltanto un'approssimazione. Avvicinando i due punti 
+alla posizione del punto materiale, si ottiene un'approssimazione sempre migliore del moto del punto. La circonferenza tenderà ad un valore limite, per i due punti coincidenti 
+alla posizione del punto materiale, questa circonferenza così ottenuta è tangente alla traiettoria nella posiszione del punto materiale, dove sono presenti anche gli altri due 
+punti e viene chiamata circonferenza osculatrice. Il centro di questa circonferenza viene chiamato centro di curvatura, mentre la distanza del centro di curvatura dal punto 
+materiale raggio di curvatura $R$. Minore è il raggio di curvatura, maggiore sarà la curvatura della traiettoria in quell'intorno e viceversa. L'asse $\nu$ quindi si trova 
+sulla retta passante per il punto materiale ed il centro di curvatura, e punta verso il centro di curvatura della traiettoria. L'asse $\beta$ è ortogonale all'asse formato 
+dagli assi $\tau,\,\nu$ e di verso definito dal prodotto vettoriale $\tau\times\nu$. Il verso dell'asse $\beta$ definisce il cambiamento di piano della traiettoria, ovvero 
+la rotazione della circonferenza osculatrice. 
+
+
+
+In questo sistema di riferimento intrinseco si può esprimere la velocità come un vettore $\vec{v}=v\hat\tau$, poiché la velocità è sempre tangente alla traiettoria. Il punto 
+materiale effettua una traiettoria circolare nell'intorno della sua posizione, per cui è soggetto ad un'accellerazzione centripeta, o normale, alla sua traiettoria, per 
+effettuare la curvatura individuata dalla traiettoria. Per determinare la componente normale e tangenziale dell'accellerazione si deriva la velocità rispetto al tempo:
+\begin{gather*}
+    \vec{a}=\displaystyle\frac{d\vec{v}}{dt}=\frac{dv\hat\tau}{dt}\\
+    \displaystyle\frac{dv}{dt}\hat\tau+v\frac{d\hat\tau}{dt}
+\end{gather*}
+Per la formula di Poisson si può esprimere la derivata del versore $\hat\tau$: $\displaystyle\frac{d\hat\tau}{dt}=\vec{\omega}\times\hat\tau$. Poiché nella rappresentazione 
+intrinseca il punto materiale non effettua una rotazione, la componente velocità angolare si esprimere rispetto alla velocità tangenziale, ovvero la velocità del punto 
+materiale, e del raggio di curvatura $R$: $\omega=\displaystyle\frac{v}{R}$. Per cui esplicitando il modulo si può esprimere l'accellerazione del punto materiale:
 \begin{gather}
-    \begin{cases}
-        \vec{r}(t)=-r\hat{\nu}(t)\\
-        \vec{v}(t)=\vec{\omega}(t)\times\vec{r}(t)=r\omega(t)\hat{\beta}\times(-\hat{\nu}(t))=r\omega(t)\hat{\tau}(t)\\
-        \vec{a}(t)=\displaystyle\frac{d}{dt}(\vec{\omega}(t)\times\vec{r}(t))=
-        \vec{\alpha}(t)\times\vec{r}(t)+\vec{\omega}(t)\times\vec{v}(t)=
-        r\alpha(t)\hat{\tau}(t)+r\omega(t)^{2}\hat{\nu}(t)
-    \end{cases}
+    \vec{a}=\displaystyle\frac{dv}{dt}\hat\tau+v\frac{v}{R}\hat\beta\times\hat\tau=\frac{dv}{dt}\hat\tau+\frac{v^2}{R}\hat\nu
 \end{gather}
-
-Dati 3 punti esiste una sola circonferenza passante per essi, 
-quindi si può approssimare una qualsiasi traiettoria come una serie 
-di moti circolari in ogni intorno della posizione per vari istanti di tempo $t_i$. Il centro dei moti circolari viene definito centro di curvatura, 
-poiché il punto ruota in un certo intervallo di tempo intorno a quel punto, mentre il raggio di quel moto circolare viene definito raggio di curvatura. 
-Il versore $\hat{\beta}(t)$ determina il cambiamento di piano della 
-traiettoria in 3 dimensioni:
+L'accellerazione del punto materiale presenta una componente tangenziale $\displaystyle\frac{dv}{dt}\hat\tau$, e una componente normale o centripeta $\displaystyle\frac{v^2}{R}\hat\nu$, 
+poiché diretta sempre verso il centro di curvatura. Se la componente tangenziale è nulla, il moto è curvilineo uniforme, se è nulla la componente centripeta il moto è 
+rettilineo vario, se sono nulle entrambe il moto è rettilineo uniforme, invece se entrambe sono diverse da zero il moto è curvilineo vario. 
 
 \begin{center}\begin{tikzpicture}
     \draw[-]plot[smooth,domain=-2.5:-1.5](\x,{-0.5+(0.25-(\x+2)^2)^0.5});
@@ -1712,7 +1739,7 @@ mettere in moto un corpo che per mantenerlo in movimento:
     \draw[->](-0.5,0)--(2,0)node[right]{$t$};
     \draw[->](0,-0.5)--(0,1.5)node[above]{$F(t)$};
 
-    \draw[-]plot[smooth, domain=0:1](\x, {(\x)^2});
+    \draw[-](0,0)--(1,1);
     \draw[-](1,1)--(1,0.8)node[below]{$F_s(t)$};
     \draw[-](1,0.8)--(2,0.8)node[right]{$F_d$};
     \draw[dashed](0,1)node[left]{$F_{max}$}--(1,1);
@@ -1939,8 +1966,7 @@ Date queste condizioni le equazioni del moto del pendolo diventano:
 
 La tensione esercitata sul filo in funzione del tempo sarà per piccole oscillazioni:
 \begin{equation}
-    T(t)=mg\cos(\theta_0\cos(\omega_pt))+ml\displaystyle\frac{d}{dt}(\theta_0\cos(\omega_pt))^{2}=mg\cos(\theta_0\cos(\omega_pt))+
-    ml\theta_0^{2}\sin^2(\omega_pt)
+    T(t)=mg\cos(\theta_0\cos(\omega_pt))+ml\theta_0^2\omega_p^2\sin^2(\omega_pt)
 \end{equation}
 La tensione è massima nella posizione verticale per $\theta(t)=\theta_0\cos(\omega_pt)=0$ e minima per $\theta(t)=\theta_0\cos(\omega_pt)=\theta_0$.  
 
@@ -2314,7 +2340,7 @@ La legge oraria sarà quindi:
     \node[left]at(0,1.7){$x_{in}$};
     \node[above]at(3.3,0.2){$\displaystyle\frac{1}{2}x_{in}\left(1+\displaystyle\frac{\gamma}{\sqrt{\Delta}}\right)e^{\lambda_1t}+\displaystyle\frac{1}{2}x_{in}\left(1-\displaystyle\frac{\gamma}{\sqrt{\Delta}}\right)e^{\lambda_2t}$};
 
-    \draw[-]plot[smooth,domain=0:2.5](\x,{e^-(\x-0.5)});
+    \draw[-]plot[smooth,domain=0:2.5](\x,{1/2*(11*e^(-1.6*\x)-9*e^(-3*\x))});
 \end{tikzpicture}\end{center}
 
 \subsubsection{Moto Oscillatorio con Attrito Viscoso ed una Forzante}
@@ -2525,11 +2551,11 @@ cambieranno rispetto al tempo:
 \end{equation}
 \begin{gather*}
     \vec{v}=\displaystyle\frac{dr'}{dt}\hat{r}'+r'\frac{d\hat{r}'}{dt}+\frac{d\vec{R}}{dt}\\
-    v\hat{r}'+r'\omega\hat{\tau}+\vec{V}\\
-    \vec{v}'+r'\vec{\omega}\times\hat{r}+\vec{V}
+    v'\hat{r}'+r'\vec{\omega}\times\hat{r}+\vec{V}
 \end{gather*}
+Per la formula di Poisson si calcola la derivata temporale del versore $\hat{r}$. 
 Come in un moto circolare presenta una velocità tangeniale $\vec{\omega}\times\vec{r}'$, ma a differenza di un moto circolare dove il raggio è costante, presenta anche una 
-velocità perpendicolare $v\hat{r}'$ dovuta al cambiamento del raggio della rotazione. 
+velocità perpendicolare $v\hat{r}'$ dovuta all'avvicinamento o allontanamento tra i due sistema di riferimento. 
 \begin{equation}
     \vec{v}'+\vec{\omega}\times\vec{r}'+\vec{V}
 \end{equation}
@@ -2542,7 +2568,7 @@ velocità perpendicolare $v\hat{r}'$ dovuta al cambiamento del raggio della rota
     \vec{a}'+2\vec{\omega}\times\vec{v}'+\vec{\alpha}\times\vec{r}'+\vec{\omega}\times(\vec{\omega}\times\vec{r}')+\vec{A}
 \end{equation}
 
-Viene definita l'accellerazzione di trascinamento dovuta al moto 
+Viene definita l'accellerazione di trascinamento dovuta al moto 
 circolare e di traslazione di $S'$ intorno al centro $O$ e ad alla posizione del corpo nel sistema $S'$: 
 
 \begin{equation}
@@ -2707,8 +2733,8 @@ lavoro negativo.
     \draw[->](0,-0.25)--(0,1.25)node[right]{$z$};
 
     \draw[-]plot[smooth, domain=0:1](\x, {1-(\x)^2});
-    \node[left]at(0,1){$B$};
-    \node[below]at(1,0){$A$};
+    \node[left]at(0,1){$A$};
+    \node[below]at(1,0){$B$};
     \draw[->](0,1)--(0,0.5)node[right]{$\vec{F}_P$};
 \end{tikzpicture}\end{center}
 
@@ -3200,7 +3226,7 @@ La forza agente sul pianeta avrà modulo:
     \varepsilon=0\Rightarrow a=b=r\\
     F=m_p\displaystyle\frac{4\pi^2}{kr^2}
 \end{gather*}
-Anche la forza agente sul pianeta sarà allora inversamente proporzionale al quadrato della distanza tra il pianeta ed il Sole. Per il secondo 
+Anche la forza agente sul pianeta sarà allora inversamente proporzionale al quadrato della distanza tra il pianeta ed il Sole. Per il terzo 
 principio della dinamica il pianeta eserciterà sul Sole una forza uguale e contraria: $\vec{F}_{s\to p}=-\vec{F}_{p\to s}$. 
 \begin{gather*}
     \left|\vec{F}_{s\to p}\right|=m_p\displaystyle\frac{4\pi^2}{k_pr^2}=m_s\displaystyle\frac{4\pi^2}{k_sr^2}=\left|\vec{F}_{p\to s}\right|\\
@@ -3229,7 +3255,7 @@ posizione di equilibrio del sistema, dovuta a questo momento torcente. Sapendo l
 gravitazionale e la distanza tra questi è possibile, misurando la rotazione effettuata, calcolare il momento torcente ed in seguito la costante di gravitazione universale $G$. 
 \\
 Si vuole determinare se la forza gravitazionale è una forza conservativa o meno. 
-Data $\vec{F}=F(r)d\hat{r}$, si considera l'integrale del lavoro $W=\displaystyle\int_{\Gamma}F(r)\hat{r}\cdot d\vec{s}$. Analizzando  
+Data $\vec{F}=F(r)(-\hat{r})$, si considera l'integrale del lavoro $W=\displaystyle\int_{\Gamma}-F(r)\hat{r}\cdot d\vec{s}$. Analizzando  
 la traiettoria compiuta dal pianeta è possibile notare come il prodotto scalare $\hat{r}\cdot d\vec{s}$, corrisponda al modulo della variazione 
 infinitesima del vettore posisione nella traiettoria, per cui:
 \begin{equation*}
@@ -3250,7 +3276,7 @@ infinitesima del vettore posisione nella traiettoria, per cui:
 
 Essendo $F(r)$ una funzione di stato avrà sempre una primitiva, quindi è una forza conservativa ed il suo lavoro risultante sarà:
 \begin{equation*}
-    W=\displaystyle\int_{r_1}^{r_2}F(r)dr=f(r_2)-f(r_1)
+    W=\displaystyle\int_{r_1}^{r_2}-F(r)dr=f(r_2)-f(r_1)
 \end{equation*}
 Date due masse $m$ e $M$ di distanza $r$, il modulo della forza gravitazionale tra i due sarà dato da:  
 \begin{equation}
@@ -3258,7 +3284,7 @@ Date due masse $m$ e $M$ di distanza $r$, il modulo della forza gravitazionale t
 \end{equation}
 Essendo una forza conservativa si può ricavare l'energia potenziale integrando la forza gravitazionle:
 \begin{equation}
-    U(r)=-F(r)=\displaystyle-\int GmM\frac{1}{r^2}dr=-\frac{GmM}{r}+c
+    U(r)=-W(r)=\displaystyle\int F(r)dr=\displaystyle\int GmM\frac{1}{r^2}dr=-\frac{GmM}{r}+c
 \end{equation}
 Si può esprimere il lavoro della forza gravitazionale come differenza di energia potenziale:
 \begin{equation}
@@ -3297,7 +3323,7 @@ sarà perpendicolare al vettore velocità. Si potrà quindi esprimere la forza r
 Poiché il momento angolare dipende solamente dalla distanza, essendo la velocità angolare costante, la forza risultante sarà conservativa, e si potrà 
 calcolare l'energia potenziale. Si definisce energia potenziale efficace l'energia potenziale calcolata in questo sistema di riferimento:
 \begin{equation}
-    U^{eff}(r)=-\int F(r)dr=-\displaystyle\frac{GmM}{r}+\frac{L^2}{2mr^2}
+    U^{eff}(r)=-W=\displaystyle\int F(r)dr=-\displaystyle\frac{GmM}{r}+\frac{L^2}{2mr^2}
 \end{equation}
 
 \begin{center}
@@ -3466,7 +3492,7 @@ uniforme o è in stato di quiete. La quantità di moto interna del sistema $\vec
 \\
 Se la quantità di moto totale del sistema è nulla $\vec{p}^{tot}=\vec{0}$, allora 
 i punti appartenenti al sistema o divergono con quantità di 
-moto tali da bilanciarsi, oppure conbergono nel centro di 
+moto tali da bilanciarsi, oppure convergono nel centro di 
 massa. In quest'ultimo caso la posizione dei punti converge 
 ad una posizione $\vec{r}$, coincidente alla posizione del centro di massa:
 \begin{equation}
@@ -3558,7 +3584,7 @@ $K(S)=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv_i^{2}(S)$, e
 si considera l'espressione del cambiamento di coordinate $S\to S_{c.d.m.}$ della velocità $v_i(S)=v_i(S_{c.d.m.})+v_{c.d.m.}(S)$. Si esprime l'energia cinetica 
 rispetto al sistema di riferimento solidale al centro di massa tramite quest'espressione $S\to S_{c.d.m.}$: 
 \begin{gather*}
-    K(S)=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv^{2}(S)
+    K(S)=\displaystyle\frac{1}{2}\sum_{i=1}^{N}m_iv_i^{2}(S)
 \end{gather*}
 \begin{gather*}
     \displaystyle\frac{1}{2}\sum_{i=1}^{N}m_i(v^{2}_i(S_{c.d.m.})+2v_i(S_{c.d.m.}){v}_{c.d.m.}(S)+v_{c.d.m.}^{2}(S))\\
@@ -3896,15 +3922,7 @@ Derivando il momento angolare applicato su un polo $P$ rispetto al tempo, si ott
     \displaystyle\frac{d\vec{L}_P}{dt}=\frac{d\vec{r}_P}{dt}\times\vec{p}+\vec{r}_P\times\frac{d\vec{p}}{dt}=\vec{v}_P\times\vec{p}+\vec{r}_P\times\vec{F}=\cancelto{0}{\vec{v}_P\times(m\vec{v})}+\vec{\tau}_P=\vec{\tau}_P
 \end{equation}
 
-
-Poiché la velocità del punto $P$ e la velocità 
-$\vec{v}$ sono parallele, il loro prodotto vettoriale è nullo.
-Viene 
-definita seconda equazione cardinale la relazione tra il momento angolare e il momento torcente di un sistema, riferiti entrambi rispetto allo stesso polo, se il momento torcente di un sistema è nullo, allora si conserva 
-il momento angolare.
-\begin{equation*}
-    (ii)\:\displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P
-\end{equation*}
+Si considera per semplicità il caso dove la velocità del polo $P$ sia solidale alla velocità del punto materiale. 
 
 
 Un qualsiasi moto può essere approssimato localmente come un moto circolare. Considerando il lavoro svolto in un moto circolare $W=\displaystyle\int_{s_A}^{s_B}{F}_s ds$, lo spostamento infinitesimo può essere espresso 
@@ -3988,13 +4006,13 @@ Poiché la posizione descritta dal vettore $\vec{r}$ non corrisponde ad alcun pu
 Poiché la somma delle forze interne al sistema è nulla, è nulla anche la risultante dei loro momenti torcenti. Date due forze interne opposte 
 $\vec{F}_{i\to j}=-\vec{F}_{j\to i}$, applicate su due punti 
 $\vec{r}_i$ e $\vec{r}_j$, la somma dei momenti delle due forze 
-è: $\vec{r}_j\times\vec{F}_{i\to j}+\vec{r}_i\times\vec{F}_{j\to i}=(r_i-r_j)\times\vec{F}_{j\to i}$, 
+è: $\vec{r}_j\times\vec{F}_{i\to j}+\vec{r}_i\times\vec{F}_{j\to i}=(\vec r_i-\vec r_j)\times\vec{F}_{j\to i}$, 
 il vettore distanza $\vec{d}=\vec{r}_i-\vec{r}_j$ è parallelo 
 alla direzione su cui agiscono le forze per cui il prodotto 
 vettoriale $\vec{d}\times\vec{F}_{j\to i}$ è nullo. 
-Il momento torcente totale allora è dato dalla sole componenti esterne al sistema:
+Il momento torcente totale allora è dato dalla sole forze esterne al sistema:
 \begin{equation}
-    \vec{\tau}_P=\displaystyle\sum_{i=1}^{N}(\vec{r}_i\times\vec{F}^{est}_i+\vec{r}_i\times\vec{F}^{int}_i)=\sum_{i=1}^{N}\vec{r}_i\times\vec{F}^{est}_i
+    \vec{\tau}_P=\displaystyle\sum_{i=1}^{N}(\vec{r}_i\times\vec{F}^{est}_i+\cancelto{0}{\vec{r}_i\times\vec{F}^{int}_i})=\sum_{i=1}^{N}\vec{r}_i\times\vec{F}^{est}_i
 \end{equation}
 \begin{center}\begin{tikzpicture}[scale=2]
     \node[below]at(0,0){$O$};
@@ -4006,36 +4024,34 @@ Il momento torcente totale allora è dato dalla sole componenti esterne al siste
     \draw[->,thick](1,2)--(1.5,1.5)node[right]{$\vec{F}_{j\to i}$};
 \end{tikzpicture}\end{center}
 
-Dato un insieme di punti $\mathscr{S}$, aventi momenti espressi 
-rispetto al sistema di riferimento $S_P$ centrato 
-nel polo dove sono applicati i momenti. Dato un altro sistema di riferimento $S$ 
-inerziale centrato in $O$, distante $\vec{R}_{OP}$ dal centro 
-del sistema di riferimento $S_P$. Si considera un vettore 
-posizione generale in $S$ $\vec{r}_i(S)=\vec{r}_i(S_P)+\vec{R}_{OP}(S)$. La quantità di moto non dipende dal sistema di riferimento: $\vec{p}_i(S_P)=\vec{p}_i(S)$. 
-Il momento angolare calcolato in $S_P$ è:
+Dato un insieme di punti $\mathscr{S}$, ogni punto ha un suo momento angolare, la risultante di questi momenti corrisponde al momento angolare dell'intero sistema. 
+Per ogni punto $P_i$ si considera la distanza del punto dal polo $P$ $\vec{d}_{iP}$ per calcolarne il momento angolare $\vec{L}=\vec{d}_{iP}\times\vec{p}_i$. La distanza $\vec{d}_{iP}$ 
+corrisponde alla differenza delle posizioni del punto $P_i$ e del polo $P$: $\vec{d}_{iP}=\vec{r}_i-\vec{R}_P$, per cui si può esprimere il momento angolare rispetto alle 
+posizioni del polo $\vec{r}_P$ e del punto $\vec{r}_i$: 
 \begin{gather*}
-    \vec{L}_P(S_P)=\displaystyle\sum_{i=1}^{N}\vec{r}_{i}(S_P)\times\vec{p}_i(S_P)\\
-    \vec{L}_P(S)=\displaystyle\sum_{i=1}^{N}(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\vec{p}_i(S)
+    \vec{L}_P=\displaystyle\sum_{i=1}^{N}\vec{d}_{iP}\times\vec{p}_i\\
+    \vec{L}_P=\displaystyle\sum_{i=1}^N(\vec{r}_i-\vec{r}_P)\times\vec{p}_i
 \end{gather*}
 Derivando il momento angolare ottenuto nel sistema di riferimento inerziale $S$: 
 \begin{gather*}
-    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\sum_{i=1}^{N}\left(\frac{d}{dt}(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\vec{p}_i(S)+(\vec{r}_i(S)-\vec{R}_{OP}(S))\times\frac{d\vec{p}_i(S_P)}{dt}\right)\\
-    \displaystyle\sum_{i=1}^{N}\vec{v}_i(S)\times\vec{p}_i(S)-\vec{V}_{OP}(S)\times\sum_{i=1}^{N}\vec{p}_i(S)+\sum_{i=1}^{N}(\vec{r}_{i}(S_P)\times\vec{F}_i(S_P))\\
-    \vec{0}-\vec{V}_{OP}(S)\times\vec{p}^{tot}(S)+\vec{\tau}_P(S_P)
+    \displaystyle\frac{d\vec{L}_P}{dt}=\sum_{i=1}^N\frac{d(\vec{r}_i-\vec{r}_P)}{dt}\times\vec{p}_i+\sum_{i=1}^N(\vec{r}_i-\vec{r}_P)\times\frac{d\vec{p}_i}{dt}\\
+    \displaystyle\frac{d\vec{L}_P}{dt}=\sum_{i=1}^N\frac{d\vec{r}_i}{dt}\times\vec{p}_i-\sum_{i=1}^N\frac{d\vec{r}_P}{dt}\times\vec{p}_i+\sum_{i=1}^N(\vec{r}_i-\vec{r}_P)\times\vec{F}_i\\
+    \displaystyle\frac{d\vec{L}_P}{dt}=\sum_{i=1}^N\cancelto{0}{\vec{v}_i\times\vec{p}_i}-\vec{v}_P\times\sum_{i=1}^N\vec{p}_i+\vec{\tau}_P\\
 \end{gather*}
 \begin{equation}
-    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\vec{\tau}_P(S_P)-\vec{V}_{OP}(S)\times\vec{p}^{tot}(S)
+    \displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P-\vec{v}_P\times\vec{p}^{tot}
 \end{equation}
 Se una delle seguenti condizioni è verificata: il polo è fermo, la quantità di moto totale del sistema è 
 nulla, la velocità del polo e la quantità di moto 
 totale del sistema sono paralleli, oppure il polo coincide con 
-il centro di massa del sistema; allora l'evoluzione del momento angolare del sistema in un qualsiasi sistema di riferimento inerziale $S$ dipende interamente dal momento delle 
-forze esterne applicate sul polo $P$, nel sistema di riferimento del polo $S_P$: 
-\begin{equation}
-    \displaystyle\frac{d\vec{L}_P(S)}{dt}=\vec{\tau}_P(S_P)
-\end{equation}
-Se su un sistema di punti materiali è isolato, il momento angolare si conserva per qualsiasi polo e la quantità di moto si conserva. Se non è isolato e il momento torcente risultante è nullo per un determinato polo, il momento 
-angolare si conserva solo per quel determinato polo. 
+il centro di massa del sistema; allora l'evoluzione del momento angolare rispetto al polo $P$ dipende interamente dal momento delle forze applicate al polo $P$. Viene 
+definita quest'espressione seconda equazione cardinale:  
+\begin{equation*}
+    ii)\;\displaystyle\frac{d\vec{L}_P}{dt}=\vec{\tau}_P
+\end{equation*}
+Se su un sistema di punti materiali è isolato, ed una delle condizioni della seconda equazione cardinale è verificata, il momento angolare si conserva per qualsiasi polo e la 
+quantità di moto si conserva. Se non è isolato e il momento torcente risultante è nullo per un determinato polo, il momento angolare si conserva solo per quel determinato 
+polo. 
 
 \subsection{Coppie di Forze}
 
@@ -4064,7 +4080,7 @@ il momento angolare può essere espresso come:
 Dove $I=\displaystyle\frac{mb^2}{2}\;\left[kg\cdot m^2\right]$ viene definito momento d'inerzia 
 e rappresenta la resistena del sistema ad una rotazione, analogamente a come  
 la massa inerziale rappresenta quanto un corpo resiste ad uno spostamento. Il momento d'inerzia varia a seconda della disposizione dei punti nel sistema, come per il centro 
-di massa, ma cambia a seconda dell'asse $z$ su cui ruota. 
+di massa, ma cambia a seconda dell'asse $z$ su cui ruota, per cui uno stessi sistema può avere momneti d'inerzia differenti in base alla posizione dell'asse di rotazione. 
 
 \begin{center}\begin{tikzpicture}[scale=2]
     
@@ -4087,10 +4103,8 @@ di massa, ma cambia a seconda dell'asse $z$ su cui ruota.
     \draw[->](-1.5,0)--(-1.4,-0.5)node[below]{$\vec{v}_2$};
 \end{tikzpicture}\end{center}
 
-In generale si può rappresentare il momento angolare di un sistema 
+\`{E} possibile, in certi casi, rappresentare il momento angolare di un sistema di punti materiali 
 come il prodotto tra il momento di inerzia $I$ del sistema e la velocità angolare $\vec\omega$ del sistema. 
-La prima equazione cardinale determina il moto traslatorio di un sistema $\vec{a}_{c.d.m.}=\displaystyle\frac{d\vec{p}_{c.d.m.}}{Mdt}=\frac{\vec{F}^{est}}{M}$, 
-mentre la seconda equazione cardinale determina il moto rotazionale di un sistema $\vec{\alpha}=\displaystyle\frac{d\vec{L}}{Idt}=\frac{\vec{\tau}}{I}$. 
 
 \subsection{Densità}
 
@@ -4169,40 +4183,6 @@ il suo centro di massa è dato da:
     x_{c.d.m.}=\displaystyle\frac{1}{M}\int_{0}^{L}x\rho dx=\frac{1}{L}\int_{0}^{L}xdx=\frac{x^2}{L}\Bigg|_0^L=\frac{L}{2} 
 \end{equation*}
 \\
-Se un corpo rigido si muove di un generico moto di traslazione a velocità costante $\vec{V}$, 
-il centro di massa ha velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int_M\vec{V}dm}{\int_M dm}=\vec{V}$. La quantità di moto del corpo rigido è quindi 
-$\vec{p}^{tot}=\vec{p}_{c.d.m.}=M\vec{V}$. Essendo la velocità costante, per la prima equazione cardinale si ha $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}=\vec0$. 
-Se la velocità varia nel tempo $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}$. 
-La dinamica è quella di un punto materiale, non c'è rotazione rispetto al centro di massa, per cui il 
-momento angolare dipende solamente dalla posizione del centro di massa e dalla sua quantità di moto $\vec L=\vec{r}_{c.d.m.}\times\vec{p}_{c.d.m.}$. La seconda 
-equazione cardinale non aggiunge quindi alcuna informazione: $\displaystyle\frac{d\vec{L}}{dt}=\vec{r}_{c.d.m.}\times\vec{F}^{tot}$. 
-
-
-
-Se un corpo rigido si muove di moto rotazionale con una velocità 
-angolare costante $\vec{\omega}$, essendo un corpo rigido ogni punto avrà la stessa velocità angolare, ma una velocità tangenziale diversa a seconda della distanza 
-dall'asse di rotazione. Si analizza mediante la seconda equazione cardinale:
-\begin{equation}
-    \displaystyle\frac{d\vec{L}}{dt}=I\frac{d\vec\omega}{dt}=\vec{\tau}=\vec0
-\end{equation}
-Se la velocità angolare non è costante si ha $\displaystyle\frac{d\vec{L}}{dt}=I\vec{\alpha}=\vec{\tau}$. 
-
-
-
-In generale il moto di un corpo rigido può essere sempre considerato come la somma di una traslazione e di una rotazione. Ogni punto del corpo rigido viene traslato 
-allo stesso modo del centro di massa, e si può muovere rispetto ad esso di solo moto rotazionale. La velocità di traslazione $\vec{V}$ dipende dalla descrizione del moto, 
-mentre la velocità angolare $\vec{\omega}$ è indipendente dalla descrizione del moto. In generale i componenti $\vec{V}$ e $\vec{\omega}$ sono quindi indipendenti tra di loro, 
-il moto del corpo rigido è simile al moto di un sistema di riferimento non inerziale, poiché anch'esso contiene un termine di traslazione ed uno di rotazione. 
-
-Se il corpo si muove di moto di rototraslazione il moto è descritto da:
-\begin{equation}
-    \begin{cases}
-        \vec{a}_{c.d.m.}=\displaystyle\frac{1}{M}\frac{d\vec{p}}{dt}=\frac{\vec{F}^{tot}}{M}\\
-        \vec{\alpha}=\displaystyle\frac{1}{I}\frac{d\vec{L}_P}{dt}=\frac{\vec{\tau}_P-\vec{v}_P\times\vec{p}}{I}
-    \end{cases}
-\end{equation}
-Quindi un corpo rigido si trova in uno stato di quiete, o di moto rettilineo uniforme, se $\vec{F}^{tot}=\vec{0}$ e $\vec{\tau}_P=\vec{0}$. 
-\\
 Dato un corpo rigido che ruota, in un sistema di riferimento inerziale, intorno ad un asse $z$ fisso con una 
 velocità angolare $\vec{\omega}=\omega\hat{z}=vR\hat{z}$. Dove 
 $R$ è il raggio della rotazione che compie un punto del corpo, ovvero la distanza del punto su un piano $x,y$ 
@@ -4248,12 +4228,14 @@ lungo l'asse $z$ e il momento angolare. Considerando solo la componente assiale 
 
 \subsubsection{Momento d'Inerzia di un Corpo Rigido}
 
-Viene definto momento d'inerzia, rispetto all'asse fisso $z$, $I_z$ di un corpo rigido: 
+Viene definto momento d'inerzia $I_z$, rispetto all'asse fisso $z$, di un corpo rigido, l'integrale sull'intero corpo della distanza quadrata sul piano $(x,y)$ dall'asse $z$, 
+$R^2=x^2+y^2$:  
 \begin{equation}
     I_z=\displaystyle\int_M R^2dm=\int_V R^2\rho dV
 \end{equation}
 Il momento d'inerzia dipende dalle masse e dalla loro posizione rispetto all'asse di rotazione, non dipende solo dalla struttura del corpo come il centro di massa, poiché 
-bisogna conoscere anche la posizione del corpo rispetto all'asse di rotazione. 
+bisogna conoscere anche la posizione del corpo rispetto all'asse di rotazione. Il momento d'inerzia rispetto ad un asse fisso non considera la componente paralella della 
+posizione, solo la sua proiezione sul piano ortogonale all'asse $z$.  
 
 
 
@@ -4304,21 +4286,48 @@ Viene definito come la distanza necessaria dall'asse $z$ ad un polo contentente 
     I_z=mk^2
 \end{equation*}
 
+\subsubsection{Cinematica del Corpo Rigido}
+
+Se un corpo rigido si muove di un generico moto di traslazione a velocità costante $\vec{V}$, 
+il centro di massa ha velocità $\vec{v}_{c.d.m.}=\displaystyle\frac{\int_M\vec{V}dm}{\int_M dm}=\vec{V}$. La quantità di moto del corpo rigido è quindi 
+$\vec{p}^{tot}=\vec{p}_{c.d.m.}=M\vec{V}$. Essendo la velocità costante, per la prima equazione cardinale si ha $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}=\vec0$. 
+Se la velocità varia nel tempo $\displaystyle\frac{d\vec{p}_{c.d.m.}}{dt}=\vec{F}^{tot}$. 
+La dinamica è quella di un punto materiale, non c'è rotazione rispetto al centro di massa, per cui il 
+momento angolare dipende solamente dalla posizione del centro di massa e dalla sua quantità di moto $\vec L=\vec{r}_{c.d.m.}\times\vec{p}_{c.d.m.}$. La seconda 
+equazione cardinale non aggiunge quindi alcuna informazione: $\displaystyle\frac{d\vec{L}}{dt}=\vec{r}_{c.d.m.}\times\vec{F}^{tot}$. 
 
 
 
-Per un corpo in rotazione su un asse d'inerzia: 
+Se un corpo rigido si muove di moto rotazionale con una velocità 
+angolare $\vec{\omega}$ su asse di inerzia, ogni punto ha la stessa velocità angolare, ma una velocità tangenziale diversa a seconda della distanza 
+dall'asse di rotazione. Si analizza mediante la seconda equazione cardinale:
 \begin{equation}
-    \displaystyle\frac{d\vec{L}}{dt}=I_z\frac{d\vec{\omega}}{dt}=I_z\vec{\alpha}=\vec{\tau}
+    \displaystyle\frac{d\vec{L}}{dt}=I_z\frac{d\vec\omega}{dt}=I_z\vec\alpha=\vec{\tau}
 \end{equation}
-Questa è l'equazione del moto di rotazione. La conoscenza delle forze esterne permette di calcolare l'accellerazione angolare, se è noto il momento di inerzia, e date 
-le condizioni iniziali $\omega_0$ e $\theta_0$, è possibile ottenere la legge oraria del moto rotazionale. 
-
-
 In generale la legge oraria del moto rotazionale viene ricavata dalla componente parallela all'asse di rotazione del momento torcente totale $\vec{\tau}$. 
 \begin{equation*}
     \displaystyle\frac{d\vec{L}}{dt}=\frac{d(\vec{L}_z+\vec{L}_{x,y})}{dt}=\vec{\tau}_z+\vec{\tau}_{x,y}
 \end{equation*}
+Per ottenere una rotazione di velocità angolare costante, è necessario che la risultante dei momenti delle forze sia nulla. 
+
+
+
+In generale il moto di un corpo rigido può essere sempre considerato come la somma di una traslazione e di una rotazione. Ogni punto del corpo rigido viene traslato 
+allo stesso modo del centro di massa, e può ruotare indipendentemente su un asse $z$ traslato allo stesso modo. La velocità di traslazione $\vec{V}$ dipende dalla descrizione 
+del moto, mentre la velocità angolare $\vec{\omega}$ è indipendente dalla descrizione del moto. In generale i componenti $\vec{V}$ e $\vec{\omega}$ sono quindi indipendenti 
+tra di loro, il moto del corpo rigido è simile al moto di un sistema di riferimento non inerziale, poiché anch'esso contiene un termine di traslazione ed uno di rotazione. 
+
+Se il corpo si muove di moto di rototraslazione il moto è descritto da:
+\begin{equation}
+    \begin{cases}
+        \vec{a}_{c.d.m.}=\displaystyle\frac{1}{M}\frac{d\vec{p}}{dt}=\frac{\vec{F}^{tot}}{M}\\
+        \vec{\alpha}=\displaystyle\frac{1}{I_z}\frac{d\vec{L}_z}{dt}=\frac{\vec{\tau}_z-\vec{v}_P\times\vec{p}}{I_z}
+    \end{cases}
+\end{equation}
+Quindi un corpo rigido si trova in uno stato di quiete, o di moto rettilineo uniforme, se $\vec{F}^{tot}=\vec{0}$ e $\vec{\tau}_z=\vec{0}$. 
+
+
+
 
 
 L'energia cinetica del corpo in rotazione è data dalla somma delle energie 
@@ -4405,16 +4414,15 @@ Per cui l'energia cinetica di un corpo rigido è data dalla somma dell'energia c
     
     \draw[-](0.75,0.475)--(0.85,0.525);
     \draw[-](0.75,0.525)--(0.85,0.475);
-    \draw[-](cdm)--(.8,-0.5)coordinate(y);
-    \draw[->](cdm)--(1.2,-0.2)coordinate(r);
-    \draw[->](r)--(1.2,-0.7)node[right]{$\vec{F}_P$};
+    \draw[-](O)--(0,-0.9)coordinate(y);
+    \draw[thick, ->](cdm)--(0.8,-0.5)node[right]{$\vec{F}_P$};
 
-    \draw[->](O)--(cdm)node[above]{$\vec{r}$};
+    \draw[thick, ->](O)--(cdm)node[above]{$\vec{r}$};
 
-    \draw[dashed](-0.2,-0.5)node[right]{$z_{c.d.m.}$}--(1.3,1);
+    \draw[dashed](-0.4,-0.7)node[right]{$z_{c.d.m.}$}--(1.3,1);
 
     \draw[-]plot[smooth cycle]coordinates{(1.5,0)(1,1.4)(-0.2,0.7)(-0.8,1)(-1,-0.8)(0,-0.8)(0.5,-1)};
-    \pic["$\theta$",draw,angle eccentricity=1.2,angle radius=1.5cm]{angle=y--cdm--r};
+    \pic["$\theta$",draw,angle eccentricity=1.2,angle radius=1.2cm]{angle=y--O--cdm};
 \end{tikzpicture}\end{center}
 
 \clearpage
@@ -5267,7 +5275,7 @@ caratteristiche:
     delle particelle;
     \item Le particelle sono distribuite spazialmente uniformemente;
     \item Hanno velocità isotrope, ovvero la probabilità che 
-    il vettore posizione sia in una qualsiasi direazione è uniforme. 
+    il vettore posizione sia in una qualsiasi direzione è uniforme. 
 \end{itemize}
 Il gas si trova in un contenitore cubico di lato $a$, 
 si analizza il comportamento di una singola particella.
@@ -5790,7 +5798,7 @@ Poiché $BC$ e $DA$ sono isoterme:
     T_1=V_D^{\gamma-1}=T_2V_C^{\gamma-1}\\
     \displaystyle\frac{T_1}{T_2}=\left(\frac{V_B}{V_A}\right)^{\cancelto{1}{\gamma-1}}=\left(\frac{V_C}{V_D}\right)^{\cancelto{1}{\gamma-1}}
 \end{gather*}
-L'efficienza del ciclo ci Carnot di un gas ideale dipenderà solamente dalle temperature iniziali e finali del gas:
+L'efficienza del ciclo di Carnot di un gas ideale dipenderà solamente dalle temperature iniziali e finali del gas:
 \begin{equation}
     \eta_C=1-\displaystyle\frac{T_1}{T_2}
 \end{equation}
@@ -5810,7 +5818,8 @@ inutile.
 \subsubsection{Teorema di Carnot}
 Il teorema di Carnot rappresenta una prima espresssione matematica del secondo principio della termodinamica: 
 \begin{quotation}
-    Tutte le macchine termiche hanno un'efficienza minore o uguale ad una macchina di Carnot, che opera sulle stesse sorgenti. 
+    Tutte le macchine termiche, che operano su solo due sorgenti, hanno un'efficienza minore dell'efficienza di una macchina di Carnot che opera sulle stesse sorgenti, 
+    se irreversibile; mentre hanno un'efficienza uguale alla macchina di Carnot se sono reversibile. 
     \begin{equation}
         \eta\leq\eta_C
     \end{equation}
