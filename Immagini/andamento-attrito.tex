@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->](-0.5,0)--(2,0)node[right]{$F$};
+    \draw[->](0,-0.5)--(0,1.5)node[above]{$F_\mathrm{atr}(F)$};
+
+    \draw[very thick](0,0)--(1,1)--(1,0.8)node[below]{$F_s(F)$}--(2,0.8)node[right]{$F_d$};
+    \draw[dashed](0,1)node[left]{$F_{\max}$}--(1,1);
+\end{tikzpicture}
+\end{document}

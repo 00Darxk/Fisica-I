@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \coordinate(O) at(0,0);
+    \node[left]at(-1,-0.2){$O$};
+
+    \draw[->](-2,0)--(2,0)node[above]{$x$};
+    \draw[->](-1,-4)--(-1,1.5)node[above]{$y$};
+    \draw[-](O)--(0,-2.5)coordinate(p)node[left]{$m$};
+    
+    \draw[->,very thick](O)--(0,1)node[above]{$\mathbf{N}$};
+    \draw[->,very thick](O)--(0,-1)node[right]{$\mathbf{T}$};
+    \draw[->,very thick](p)--(0,-1.5)node[right]{$\mathbf{T}$};
+    \draw[->,very thick](p)--(0,-3.5)node[below]{$\mathbf{F}_P$};
+
+    \filldraw[black](O)circle(1pt);
+    \filldraw[black](p)circle(1.5pt);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \draw[->](-2,0)--(5,0)node[right]{$x$};
+    \draw[-](-2,2)--(0,0)coordinate(O);
+    \draw[-](-2,0)--(-2,2)node[below left]{$h$};
+    \draw[dashed](-2,2)--(5,2);
+    \draw[-](O)--(2,2);
+    \draw[-](O)--(5,2);
+    \draw[-](O)--(5,1);
+
+    \draw[-]plot[smooth,domain=-2.25:-1.75](\x,{2.25+(0.0625-(\x+2)^2)^0.5});
+    \draw[-]plot[smooth,domain=-2.25:-1.75](\x,{2.25-(0.0625-(\x+2)^2)^0.5});
+
+
+    \draw[dashed]plot[smooth,domain=1.75:2.25](\x,{0.25+(0.0625-(\x-2)^2)^0.5});
+    \draw[dashed]plot[smooth,domain=1.75:2.25](\x,{0.25-(0.0625-(\x-2)^2)^0.5});
+
+    \draw[->,thick](-1.75,2.25)--(-1,2.25)node[midway, above]{$\mathbf{v}_x$};
+    \draw[->,thick](2.25,0.25)--(3,0.25)node[midway, above]{$\mathbf{v}_x$};
+
+\end{tikzpicture}
+\end{document}

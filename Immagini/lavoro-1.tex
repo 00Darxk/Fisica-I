@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->,thick]plot[smooth]coordinates{(0,0)(0.5,0.2)(1,0)(1.5,-0.2)(2,0)};
+    \node[black]at(0,-0.5){$O$};
+
+    \node[above]at(2,0){$s$};
+    \node[below right]at(2,0){$\Gamma$};
+
+    \draw[->,very thick](0.2,-0.5)--(0,0)node[midway, right]{$\mathbf{r}$};
+    \draw[->,very thick](0,0)--(0.5,0.3)node[midway, above]{$\mathbf{F}$};
+\end{tikzpicture}
+\end{document}

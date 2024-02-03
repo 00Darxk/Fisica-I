@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[-](-1,0)--(1,0);
+    \draw[->](0,-3)coordinate(y)--(0,1)node[above]{$y$};
+    \draw[->](-2,-2)--(2,-2)node[right]{$x$};
+    \coordinate(O)at(0,0);
+    
+    \draw[-](O)--(1,-2)coordinate(m);
+    \filldraw[black](m)circle(2pt);
+    \filldraw[black](O)circle(1pt);
+
+    \node[above]at(1.2,-2){$m$};
+
+    \draw[->,thick](m)--(0.625,-2.1875)coordinate(Py)node[below]{$\mathbf{F}_{P,\tau}$};
+    \draw[->,thick](m)--(1,-3)coordinate(P)node[below]{$\mathbf{F}_P$};
+    \draw[->,thick](m)--(1.4375,-2.875)coordinate(Px)node[right]{$\mathbf{F}_{P,\nu}$};
+    
+    \draw[dashed](P)--(Px);
+    \draw[dashed](P)--(Py);
+
+    \draw[->,thick](m)--(0.5,-1)node[right]{$\mathbf{T}$};
+
+    \pic[draw,angle eccentricity=1.2,angle radius=4.5cm]{angle=y--O--m};
+    \pic["$\theta$",draw,angle eccentricity=1.2,angle radius=1cm]{angle=P--m--Px};
+    \pic["$\theta$",draw,angle eccentricity=1.2,angle radius=2cm]{angle=y--O--m};
+\end{tikzpicture}
+\end{document}

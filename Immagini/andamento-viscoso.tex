@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \node[below]at(0.2,0){$O$};
+    \draw[->](-0.25,0)--(3,0)node[right]{$t$};
+    \draw[->](0,-0.25)--(0,1.5)node[above]{$v(t)$};
+
+    \draw[dashed](0,1)node[left]{$\tau g +v_0$}--(3,1);
+    \node[left]at(0,0.5){$v_0$};
+    \draw[very thick]plot[smooth, domain=0:3](\x,{1-0.5*e^(-\x)});
+\end{tikzpicture}
+\end{document}

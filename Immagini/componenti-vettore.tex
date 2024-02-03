@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \coordinate (origin) at (0, 0);
+    \draw[->] (-0.5,0)--(2,0) coordinate (x) node[right]{$x$};
+    \draw[->] (0,-0.25)--(0,1.25) node[above]{$y$};
+    \node[below] at (0.2,0) {O};
+    \draw[->,very thick] (origin) -- (1.5, 1)node[above]{$\mathbf{v}$} coordinate (vettore);
+    \pic["$\theta$", draw=black, -, angle eccentricity=1.2, angle radius=1.5cm] {angle=x--origin--vettore};
+    \draw[->,very thick] (origin) -- (1.5, 0)node[below]{$\mathbf{v}_x$};
+    \draw[->,very thick] (origin) -- (0, 1)node[above right]{$\mathbf{v}_y$};
+    \draw[dashed] (1.5, 1) -- (1.5, 0);
+    \draw[dashed] (1.5, 1) -- (0, 1); 
+\end{tikzpicture}
+\end{document}

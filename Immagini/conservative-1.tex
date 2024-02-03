@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2.5]
+    \draw[->](-0.25,0)--(1.25,0)node[above]{$t$};
+    \draw[->](0,-0.25)--(0,1.25)node[right]{$z$};
+
+    \draw[-]plot[smooth, domain=0:1](\x, {1-(\x)^2});
+    \node[left]at(0,1){$A$};
+    \node[below]at(1,0){$B$};
+    \draw[->, very thick](0,1)--(0,0.5)node[right]{$\mathbf{F}_P$};
+\end{tikzpicture}
+\end{document}

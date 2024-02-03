@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.pathmorphing}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->](0,-0.5)--(0,2)node[above]{$p$};
+    \draw[->](-0.5,0)--(2,0)node[above]{$V$}; 
+    \draw[->,ultra thick](0.5,1.5)--(0.5,1);
+    \draw[-,ultra thick](0.5,1)--(0.5,0.5);
+    \draw[->,ultra thick](1,0.5)--(1,1);
+    \draw[-,ultra thick](1,1)--(1,1.5);  
+    \filldraw[black](0.5,0.5)circle(1pt); 
+    \filldraw[black](0.5,1.5)circle(1pt); 
+    \filldraw[black](1,1.5)circle(1pt); 
+    \filldraw[black](1,0.5)circle(1pt); 
+\end{tikzpicture}
+\end{document}

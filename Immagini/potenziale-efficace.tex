@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->,thick](0,0)--(2.5,0)node[above]{$r$};
+    \draw[->,thick](0,-1.5)--(0,2)node[left]{$U^\mathrm{eff}(r)$};
+    
+    \draw[dashed](0.837,0)node[below right]{$r_0$}--(0.837,-0.470);
+    \node[above]at(1,0){$U^\mathrm{eff}(r)(S_\mathrm{Sole})$};
+    \draw[-, very thick]plot[smooth, domain=0.3:2.4](\x,{0.3+0.54/(\x)^2-1.29/(\x)});
+    \draw[-,very thick]plot[smooth,domain=0.7:2.4](\x,{0.3-1.5/(\x)});
+    \node[below left]at(1.5,-0.5){$U(r)(S_\mathrm{Corpo})$};
+\end{tikzpicture}
+\end{document}

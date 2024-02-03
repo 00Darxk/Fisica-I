@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \node[below]at(0,0){$O$};
+    \draw[->,very thick](0,0)--(1,2)node[midway, right]{$\mathbf{r}_i$};
+    \draw[->,very thick](0,0)--(2,1)node[midway, above]{$\mathbf{r}_j$};
+    \draw[->,very thick](2,1)--(1,2)node[below]{$\mathbf{d}$};
+
+    \draw[->,very thick](2,1)--(1.5,1.5)node[midway, above right]{$\mathbf{F}_{i\to j}$};
+    \draw[->,very thick](1,2)--(1.5,1.5)node[midway, above right]{$\mathbf{F}_{j\to i}$};
+\end{tikzpicture}
+\end{document}

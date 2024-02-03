@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \coordinate (O) at (0,0);
+    \node[black]at (0.1, -0.2) {$O$};
+    \draw[->] (-0.5, 0) -- (2, 0) coordinate (x) node[above]{$x$};
+    \draw[->] (0,-0.5) --(0,1.5) coordinate (y) node[above]{$y$};
+    \draw[->](0.25,0.25)--(-1,-1)node[right]{$z$};
+    \draw plot [smooth] coordinates {(-0.8,0.3) (0,0.6) (0.8, 0.4) (2, 1.2)} node[above] {$\Gamma$};
+    \draw[->,very thick] (O) -- (0.8, 0.4) node[above] {$\mathbf{r}$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \node[below] at(-0.1, 0) {$O$};
+    \draw[->] (-0.2,0)--(1.5,0)coordinate(x)node[above]{$x$};
+    \draw[->] (0,-0.2)--(0,1.5)node[above]{$y$};
+
+    \draw[thick](1,0)arc(0:90:1);
+    \coordinate (r) at (0.707, 0.707);
+    \coordinate (nu) at (0.4, 0.4);
+    \coordinate (O) at(0,0);
+
+    \node[left] at (0,0.3) {$\mathbf{r}(t+ \mathrm{d} t)$};
+    \draw[->,very thick] (O) -- (.2,0.97) coordinate(r1);
+    \draw[->,very thick] (O)--(r) node[right]{$\mathbf{r}(t)$};
+    \draw[->,very thick] (r)--(0.207,1.207)coordinate(v1)node[right]{$\mathbf{v}(t)$};
+    \draw[->,very thick] (r1)--(-0.3,1.07)coordinate(v2)node[below]{$\mathbf{v}(t+\Delta t)$};
+    \draw[->,very thick] (v1)--(v2)node[midway, above]{$\Delta\mathbf{v}(t)$};
+
+    \draw[->, thick] (r)--(nu) node[midway, left]{$\mathbf{a}(t)$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->](-0.5,0)--(3,0)node[above]{$t$};
+    \draw[->](0,-0.5)--(0,2)node[above]{$x(t)$};
+
+    \node[below]at(-0.2,0){$O$};
+    \node[above]at(-0.2,0){$x_0$};
+
+
+    \node[left]at(0,1.7){$x_\mathrm{in}$};
+
+    \draw[very thick]plot[smooth,domain=0:2.5](\x,{1/2*(11*e^(-1.6*\x)-9*e^(-3*\x))});
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->](0,-0.5)--(0,2)node[above]{$p$};
+    \draw[->](-0.5,0)--(2,0)node[above]{$V$}; 
+    \draw[->,ultra thick]plot[smooth,domain=0.7:1](\x,{-0.2+0.7/(\x)^2});   
+    \draw[-,ultra thick]plot[smooth,domain=1:1.6](\x,{-0.2+0.7/(\x)^2});
+    \draw[-,ultra thick]plot[smooth,domain=0.7:1](\x,{0.5+0.7/(\x)^2});   
+    \draw[<-,ultra thick]plot[smooth,domain=1:1.6](\x,{0.5+0.7/(\x)^2});
+
+    \filldraw[black](0.7,1.229)circle(1pt);
+    \filldraw[black](0.7,1.929)circle(1pt);
+    \filldraw[black](1.6,0.073)circle(1pt);
+    \filldraw[black](1.6,0.773)circle(1pt);
+\end{tikzpicture}
+\end{document}

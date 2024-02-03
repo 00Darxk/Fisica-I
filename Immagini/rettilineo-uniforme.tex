@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale = 2]
+    \coordinate (O) at (-3,0);
+    \node[below] at (-3.2, 0) {$O$};
+    \draw[->] (-3.5, 0) -- (-0.8, 0) coordinate (t) node[above]{$t$};
+    \draw[->] (-3,-0.5) --(-3,1.5) coordinate (s) node[above]{$r_i(t)$};
+    \draw[-,very thick] (-3, 1)  -- (-2.7, 1) node[above] {$r_{i,0}$};
+    \draw[dashed] (-2.7, 1) -- (-2.7, 0) node[below] {$t_0$};
+    \draw[-, very thick] (-2.7, 1) -- (-1,1.4);
+    \draw[dashed] (-1,1.4) -- (-1, 0);
+
+    \coordinate (O) at (0,0);
+    \node[below] at (-0.2,0) {$O$};
+    \draw[->] (-0.5, 0) -- (2.2, 0) coordinate (t) node[above]{$t$};
+    \draw[->] (0,-0.5) --(0,1.5) coordinate (v) node[above]{$v_i(t)$};
+    \draw[very thick](0,0)--(0.3,0);
+    \draw[-,very thick] (0.3, 0)node[below] {$t_0$}  -- (0.3, 1) node[above] {$v_{i,0}$};
+    \draw[-,very thick] (0.3, 1) -- (2,1);
+    \draw[dashed] (2,1) -- (2, 0);
+\end{tikzpicture}
+\end{document}

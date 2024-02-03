@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[thick](0,0)circle(1);
+    \draw[->,very thick](0,0)coordinate(O)--(1,0)node[midway, below]{$\mathbf{r}$};
+    \draw[->,very thick](O)--(0.5,0.857)node[midway, above, left]{$\mathbf{r}+\mathrm{d}\mathbf{r}$};
+    \draw[->,very thick](1,0)coordinate(r1)--(0.5,0.857)coordinate(r2)node[midway, left]{$\mathrm{d}\mathbf{s}$};
+
+    \pic["$\alpha$",draw, angle eccentricity=1.2, angle radius=0.7cm]{angle=r1--O--r2};
+\end{tikzpicture}
+\end{document}

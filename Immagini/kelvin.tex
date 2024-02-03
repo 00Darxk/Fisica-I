@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[-](-0.5,0.5)--(0,0.5);
+    \draw[-](-0.5,-0.5)--(0,-0.5);
+    \draw[-](0,0.5)--(0,-0.5);
+    \node[left]at(0,0){$T_1$};
+
+    \node[]at(1.1,0){$K$};
+    \draw[->,ultra thick](0,0)--(0.5,0)node[midway, above]{$Q$};
+    \draw[->,ultra thick](0.6,0)arc(180:-178:0.5);
+    \draw[->,ultra thick](1.7,0)--(2,0)node[right]{$W$};
+\end{tikzpicture}
+\end{document}

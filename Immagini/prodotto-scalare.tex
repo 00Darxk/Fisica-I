@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{quotes,angles}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \coordinate (origin) at (0, 0);
+    \draw[->] (-0.5,0)--(2.5,0) coordinate (x) node[right]{$x$};
+    \draw[->] (0,-0.25)--(0,1.25) node[above]{$y$};
+    \node[text width = 1cm] at (0, 0.2) {O};
+    \draw[->, thick] (origin) -- (1.2, 0) coordinate (v)node[below]{$\mathbf{v}$};
+    \draw[->, thick] (origin) -- (0.7, 1.2) coordinate (w)node[right]{$\mathbf{w}$};
+    \pic["$\theta$", draw=black, -, angle eccentricity=1.2, angle radius=1cm] {angle=x--origin--w};
+    \draw[dashed] (w) -- (0.7, 0)node[below]{$w_x$};
+    \filldraw[black](0.7,0)circle(0.5pt);
+    \filldraw[black](2,0)circle(0.5pt);
+    \node[black] at (2, -0.2) {$w_x\cdot v$};
+\end{tikzpicture}
+\end{document}

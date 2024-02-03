@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[->](-0.5,0)--(2,0)node[above]{$V$};
+    \draw[->](0,-0.5)--(0,2)node[right]{$p$}; 
+
+    \draw[->,ultra thick](0.5,1)node[above]{$A$}--(1,1);
+    \draw[-,ultra thick](1,1)--(1.5,1)node[right]{$B$};
+
+    \draw[->,ultra thick](1.5,1)--(1.5,0.6);
+    \draw[-,ultra thick](1.5,0.6)--(1.5,0.2)node[right]{$C$};
+
+    \draw[->,ultra thick](1.5,0.2)--(1.2,0.3);
+    \draw[-,ultra thick](1.2,0.3)--(0.9,0.4)node[above]{$D$};
+
+    \draw[->,ultra thick](0.9,0.4)--(0.7,0.7);
+    \draw[-,ultra thick](0.7,0.7)--(0.5,1);
+
+
+    \draw[dashed](0.5,1)--(0.5,0);
+    \draw[dashed](1.5,0.2)--(1.5,0);
+    \draw[dashed](0.9,0.4)--(0.9,0);
+\end{tikzpicture}
+\end{document}
