@@ -11,4 +11,4 @@ Appunti tratti del corso di Fisica I, Canale II, Anno Accademico 2022/23, Dipart
 ##
 
 
-Per segnalare eventuali refusi, correzioni o integrazioni, contattatemi su [Telegram](https://t.me/von_Sturm), oppure aprite una [nuova issue](https://github.com/00Darxk/Fisica-I-LaTeX/issues/new) o [pull request](https://github.com/00Darxk/Fisica-I-LaTeX/pulls), con le relative modifiche, nella repository. 
+Per segnalare eventuali refusi, correzioni o integrazioni, contattatemi su [Telegram](https://t.me/von_Sturm), oppure aprite una [nuova issue](https://github.com/00Darxk/Fisica-I/issues/new) o [pull request](https://github.com/00Darxk/Fisica-I/pulls), con le relative modifiche, nella repository. 
